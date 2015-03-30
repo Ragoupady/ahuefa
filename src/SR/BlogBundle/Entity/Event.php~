@@ -1,0 +1,524 @@
+<?php
+
+namespace SR\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+
+
+/**
+ * Event
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="SR\BlogBundle\Entity\EventRepository")
+ */
+class Event
+{
+   
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+     /**
+     * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image",cascade={"persist"})
+     */
+     private $image;
+
+     /**
+     * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\EventCategory",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+     private $eventCategory;
+
+
+    /**
+    * @ORM\OneToMany(targetEntity="SR\BlogBundle\Entity\Movie", mappedBy="event",cascade={"remove","persist"})
+    */
+     private $movies; // Notez le « s », un évenement est lié à plusieurs films
+
+
+    /**
+    * @ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\Tag")
+    */
+    private $tags;
+
+
+    /**
+    * @ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\News")
+    */
+    private $news;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\User")
+    * @ORM\JoinColumn(nullable=true)
+    */
+    private $user;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text")
+     */
+    private $content;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="post_date", type="datetime")
+     */
+    private $postDate;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="status", type="boolean")
+     */
+    private $status;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="event_status", type="boolean")
+     */
+    private $eventStatus;
+
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="event_start_date", type="datetime")
+     */
+    private $eventStartDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="event_end_date", type="datetime")
+     */
+    private $eventEndDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="event_rate", type="string", length=255)
+     */
+    private $eventRate;
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="event_guest", type="string", length=255)
+     */
+    private $eventGuest;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="event_location", type="string", length=255)
+     */
+    private $eventLocation;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Event
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Event
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set postDate
+     *
+     * @param \DateTime $postDate
+     * @return Event
+     */
+    public function setPostDate($postDate)
+    {
+        $this->postDate = $postDate;
+
+        return $this;
+    }
+
+    /**
+     * Get postDate
+     *
+     * @return \DateTime 
+     */
+    public function getPostDate()
+    {
+        return $this->postDate;
+    }
+
+    /**
+     * Set status
+     *
+     * @param boolean $status
+     * @return Event
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return boolean 
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set eventStatus
+     *
+     * @param boolean $eventStatus
+     * @return Event
+     */
+    public function setEventStatus($eventStatus)
+    {
+        $this->eventStatus = $eventStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get eventStatus
+     *
+     * @return boolean 
+     */
+    public function getEventStatus()
+    {
+        return $this->eventStatus;
+    }
+
+    
+
+
+    /**
+     * Set eventStartDate
+     *
+     * @param \DateTime $eventStartDate
+     * @return Event
+     */
+    public function setEventStartDate($eventStartDate)
+    {
+        $this->eventStartDate = $eventStartDate;
+
+        return $this;
+    }
+
+    /**
+     * Get eventStartDate
+     *
+     * @return \DateTime 
+     */
+    public function getEventStartDate()
+    {
+        return $this->eventStartDate;
+    }
+
+    /**
+     * Set eventEndDate
+     *
+     * @param \DateTime $eventEndDate
+     * @return Event
+     */
+    public function setEventEndDate($eventEndDate)
+    {
+        $this->eventEndDate = $eventEndDate;
+
+        return $this;
+    }
+
+    /**
+     * Get eventEndDate
+     *
+     * @return \DateTime 
+     */
+    public function getEventEndDate()
+    {
+        return $this->eventEndDate;
+    }
+
+    /**
+     * Set eventRate
+     *
+     * @param string $eventRate
+     * @return Event
+     */
+    public function setEventRate($eventRate)
+    {
+        $this->eventRate = $eventRate;
+
+        return $this;
+    }
+
+    /**
+     * Get eventRate
+     *
+     * @return string 
+     */
+    public function getEventRate()
+    {
+        return $this->eventRate;
+    }
+
+
+    /**
+     * Set eventGuest
+     *
+     * @param string $eventGuest
+     * @return Event
+     */
+    public function setEventGuest($eventGuest)
+    {
+        $this->eventGuest = $eventGuest;
+
+        return $this;
+    }
+
+    /**
+     * Get eventGuest
+     *
+     * @return string 
+     */
+    public function getEventGuest()
+    {
+        return $this->eventGuest;
+    }
+
+    /**
+     * Set eventLocation
+     *
+     * @param string $eventLocation
+     * @return Event
+     */
+    public function setEventLocation($eventLocation)
+    {
+        $this->eventLocation = $eventLocation;
+
+        return $this;
+    }
+
+    /**
+     * Get eventLocation
+     *
+     * @return string 
+     */
+    public function getEventLocation()
+    {
+        return $this->eventLocation;
+    }
+
+    /**
+     * Set image
+     *
+     * @param \SR\BlogBundle\Entity\Image $image
+     * @return Event
+     */
+    public function setImage(\SR\BlogBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \SR\BlogBundle\Entity\Image 
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->tags = new ArrayCollection();
+        $this->movies = new ArrayCollection();
+    }
+
+    /**
+     * Add tags
+     *
+     * @param \SR\BlogBundle\Entity\Tag $tags
+     * @return Event
+     */
+    public function addTag(\SR\BlogBundle\Entity\Tag $tags)
+    {
+        $this->tags[] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Remove tags
+     *
+     * @param \SR\BlogBundle\Entity\Tag $tags
+     */
+    public function removeTag(\SR\BlogBundle\Entity\Tag $tags)
+    {
+        $this->tags->removeElement($tags);
+    }
+
+    /**
+     * Get tags
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \SR\BlogBundle\Entity\User $user
+     * @return Event
+     */
+    public function setUser(\SR\BlogBundle\Entity\User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \SR\BlogBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Add news
+     *
+     * @param \SR\BlogBundle\Entity\News $news
+     * @return Event
+     */
+    public function addNews(\SR\BlogBundle\Entity\News $news)
+    {
+        $this->news[] = $news;
+
+        return $this;
+    }
+
+    /**
+     * Remove news
+     *
+     * @param \SR\BlogBundle\Entity\News $news
+     */
+    public function removeNews(\SR\BlogBundle\Entity\News $news)
+    {
+        $this->news->removeElement($news);
+    }
+
+    /**
+     * Get news
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getNews()
+    {
+        return $this->news;
+    }
+
+
+
+    public function getMovies()
+    {
+        return $this->movies;
+    }
+
+
+// j'ai enlevé le type ArrayCollection pour pouvoir faire une mise à jour d'un film dans un evenement.
+//Ca marche mais je dois chercher pouquoi lors d'une mise àjour on a pas un ArrayCollection mais un Doctrine\ORM\PersistentCollection. Pour corriger finalement j'ai vu qu'il faut mettre Collection
+    public function setMovies( Collection $movies)  
+    {
+    
+        foreach ($movies as $movie){
+        
+             $movie->setEvent($this);
+
+        }
+
+        $this->movies = $movies;
+    }
+}

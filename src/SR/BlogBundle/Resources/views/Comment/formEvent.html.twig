@@ -1,0 +1,8 @@
+{# src/SR/BlogBundle/Resources/views/Comment/formEvent.html.twig #}
+
+<form action="{{ path('sr_blog_comment_create_event', { 'id' : comment.event.id } ) }}" method="post" {{ form_enctype(form) }} class="blogger">
+    {{ form_widget(form) }}
+    <p>
+        
+    </p>
+</form>

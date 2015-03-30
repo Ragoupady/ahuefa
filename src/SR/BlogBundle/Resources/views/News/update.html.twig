@@ -1,0 +1,125 @@
+{# src/SR/BlogBundle/Resources/views/News/update.html.twig #}
+{% extends "SRBlogBundle::layout.html.twig" %}
+
+{% block body %}
+          <h1> Modifier l'article</h1></br>
+
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+    {# Les erreurs générales du formulaire. #}
+    {{ form_errors(form) }}
+
+    <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.title, "Titre de l'article", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.title) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+
+    {# Idem pour un autre champ. #}
+    <div class="form-group">
+      {{ form_label(form.content, "Contenu de l'article", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_errors(form.title) }}
+      <div class="col-sm-4">
+        {{ form_widget(form.content, {'attr': {'cols': '80', 'rows': '50'}}) }}
+      </div>
+    </div>
+
+  {# Génération du label + error + widget pour la Date de l'article#}
+	<div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.newsDate, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.newsDate) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.newsDate, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+
+  {# Génération du label + error + widget pour newsStatus#}
+	<div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.newsStatus, "Publier", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.newsStatus) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.newsStatus, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+
+      {# Génération du label + error + widget pour Image#}
+  <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.image, "Image", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.image) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.image, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+
+
+
+  {# Génération du label + error + widget pour les catégories de l'article#}
+  <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.newsCategories, "Catégories", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.newsCategories) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.newsCategories, {'attr': {'class': 'form-control'}}) }}
+      </div>
+    </div>
+
+
+
+    {# Génération du label + error + widget pour Image#}
+  <div class="form-group">
+      {# Génération du label. #}
+      {{ form_label(form.image, "Image de l'événement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+      {# Affichage des erreurs pour ce champ précis. #}
+      {{ form_errors(form.image) }}
+
+      <div class="col-sm-4">
+        {# Génération de l'input. #}
+        {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+      </div>
+    </div>
+  {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
+  {{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+
+  {# Génération automatique des champs pas encore écrits.
+     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+     et tous les champs cachés (type « hidden »). #}
+  {{ form_rest(form) }}
+  
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+</div>
+
+{% endblock %}
+
+
+
+

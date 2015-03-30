@@ -1,0 +1,215 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}AHUEFA International France - Association loi 1901{% endblock %}</title>
+
+  {% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  {% endblock %}
+</head>
+
+<body>
+        
+        
+
+  {# Menu Horizontal #}
+  <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AHUEFA</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{{path('sr_blog_home')}}">Accueil</a></li>
+                        
+          
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Qui sommes nous ? <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="{{path('sr_blog_historique')}}">Historique</a></li>
+                   <li class="divider"></li>
+                  <li><a href="{{path('sr_blog_objectif')}}">Objectifs</a></li>
+                   <li class="divider"></li>
+                  <li class="dropdown dropdown-submenu"><a href="{{path('sr_blog_actions')}}" class="dropdown-toggle" data-toggle="dropdown">Nos actions</a>
+                     <li class="divider"></li>
+                     <ul class="dropdown-menu">
+                        <li><a href="{{path('sr_blog_actions_voyage_transculturel')}}">Le Voyage Transculturel</a></li>
+                        <li><a href="{{path('sr_blog_actions_consultation')}}">Consultation psychologique individuelle</a></li>
+                        <li><a href="{{path('sr_blog_actions_mediation')}}">Mediation ETHNOCLINIQUE</a></li>
+                        <li><a href="{{path('sr_blog_actions_appui_pro')}}">L’APPUI TECHNIQUE AUX PROFESSIONNELS</a></li>
+                        <li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a href="{{path('sr_blog_equipe')}}">Notre équipe</a></li>
+                   <li class="divider"></li>
+                  <li><a href="{{path('sr_blog_partenaire')}}">Nos partenaires</a></li>
+                </ul>
+
+              </li>
+
+
+               <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles & Evénements <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+
+                  <li><a href="{{path('sr_blog_article')}}"> Nos Articles</a></li>
+                  <li><a href="{{path('sr_blog_evenement')}}">Nos Evenements</a></li>
+
+
+                </ul>
+              </li>
+
+            </ul>
+            <form class="navbar-form navbar-left " role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Rechercher">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="color:blue"></span></button>
+      </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="../navbar-fixed-top/">Contact</a></li>
+              {% if app.user%}
+              <li class="active"><a href="{{path('fos_user_security_logout')}}">Se Déconnecter <span class="sr-only">(current)</span></a></li>
+              {% else %}
+               <li class="active"><a href="{{path('fos_user_security_login')}}">Se connecter <span class="sr-only">(current)</span></a></li>
+               {% endif %}
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      
+    </div>
+
+
+
+ 
+
+    <div class="jumbotron" style="background-image:url('http://www.audiovente.com/project/resources/img/original/bombe-aerosol-de-peint-000161666-4_1.jpg');">
+      <div class="container" style=");">
+
+      <h1>AHUEFA International France</h1>
+      <p>
+        Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.
+        
+      </p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="http://ahuefa.org">
+          En savoir plus »
+        </a>
+      </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+      <div id="menu" class="col-md-3">
+        <h3>Menu</h3>
+        <ul class="nav nav-pills nav-stacked">
+
+          <li><a href="{{path('sr_blog_actions_voyage_transculturel')}}">Le Voyage Transculturel</a></li>
+          <li><a href="{{path('sr_blog_actions_consultation')}}">Consultation psychologique individuelle</a></li>
+          <li><a href="{{path('sr_blog_actions_mediation')}}">Mediation ETHNOCLINIQUE</a></li>
+          <li><a href="{{path('sr_blog_actions_appui_pro')}}">L’APPUI TECHNIQUE AUX PROFESSIONNELS</a></li>
+          <li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>
+
+
+
+        </ul>
+
+        
+
+    <h4 class="list-group-item-heading"> Prochain évenement</h4>
+ 
+
+
+
+        {{render(controller("SRBlogBundle:Event:menu", {'limit' : 1}))}}
+
+
+    <h4 class="list-group-item-heading">Derniers articles</h4>
+
+        
+        {{ render(controller("SRBlogBundle:News:menu", {'limit': 3})) }}
+
+
+       
+      </div>
+      <div id="content" class="col-md-9">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <hr>
+
+    <footer>
+      <p>Ragoupady © {{ 'now'|date('Y') }}</p>
+    </footer>
+  </div>
+
+  {% block javascripts %}
+    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{asset('bundles/srblog/ckeditor/ckeditor.js')}}"></script>
+  {% endblock %}
+
+      <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
+
+</body>
+
+</html>
+

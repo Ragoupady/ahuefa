@@ -1,0 +1,22 @@
+{# src/SR/BlogBundle/Resources/views/News/view.html.twig #}
+{% extends "SRBlogBundle::layout.html.twig" %}
+
+{% block body %}
+         <h1>{{news.title}}</h1>
+	<img src="{{ asset(news.image.webPath) }}" alt="{{ news.image.alt }}"/>
+	         {{news.content| raw}}
+	 	<p>Ecrit par : {{news.user.username}} le {{news.newsDate|date("d/m/Y") }}</p>
+
+	         
+	<a href="{{path('sr_blog_article_update',{'id': news.id})}}">Modifier</a>
+	<a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a>
+
+	
+	
+
+	{% include'SRBlogBundle:Comment:index.html.twig' with { 'comments': comments }%}
+
+        <h3>Ajouter un commentaire</h3>
+    {% render(controller('SRBlogBundle:Comment:new', { 'item' : news } )) %}
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{# src/SR/BlogBundle/Resources/views/Event/menu.html.twig #}
+
+
+
+{# Ce template n'hérite de personne,
+   tout comme le template inclus avec {{ include() }}. #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for event in listEvent %}
+    <li>
+
+
+      <a href="{{ path('sr_blog_evenement_view', {'id': event.id}) }}">
+        {{ event.title }}
+      </a>
+
+
+      
+    </li>
+  {% endfor %}
+</ul>
+
+
+

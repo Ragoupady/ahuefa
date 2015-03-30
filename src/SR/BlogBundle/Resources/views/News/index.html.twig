@@ -1,0 +1,38 @@
+{# src/SR/BlogBundle/Resources/views/News/index.html.twig #}
+{% extends "SRBlogBundle::layout.html.twig" %}
+
+{% block body %}
+          <p> Nos articles</p></br>
+
+         
+<ul>
+
+	{%for news in listNews%}
+	<li><a href= "{{path('sr_blog_article_view',{'id': news.id})}}">{{news.title}}</a>
+      {% if is_granted('ROLE_ADMIN')%}
+      <a href= "{{path('sr_blog_article_update',{'id': news.id})}}"> (Modifier)</a>
+      {% endif %}
+
+      {% if is_granted('ROLE_MODERATEUR') %}
+      <a href= "{{path('sr_blog_article_delete',{'id': news.id})}}"> (Supprimer)</a>
+      {% endif %}
+
+  </li>
+	{%endfor%}
+
+
+</ul>
+
+<ul class="pagination">
+  {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+  {% for p in range(1, nbPages) %}
+    <li{% if p == page %} class="active"{% endif %}>
+      <a href="{{ path('sr_blog_article', {'page': p}) }}">{{ p }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+<a href="{{path('sr_blog_article_add')}}">Ajouter un Article</a>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{# src/SR/BlogBundle/Resources/views/News/menu.html.twig #}
+
+
+
+{# Ce template n'hérite de personne,
+   tout comme le template inclus avec {{ include() }}. #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for news in listNews %}
+    <li>
+      <a href="{{ path('sr_blog_article_view', {'id': news.id}) }}">
+        {{ news.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

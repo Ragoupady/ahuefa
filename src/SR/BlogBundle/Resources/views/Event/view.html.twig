@@ -1,0 +1,51 @@
+{# src/SR/BlogBundle/Resources/views/Event/view.html.twig #}
+{% extends "SRBlogBundle::layout.html.twig" %}
+
+{% block body %}
+         
+        <h1></h1>
+         <h1>{{event.eventCategory.name}} : {{event.title}}</h1>
+
+         <p>{{event.content}}</p>
+
+         <p>{{event.postDate|date("m/d/Y")}}</p>
+
+		<img src="{{ asset(event.image.webPath) }}" alt="{{ event.image.alt }}"/>
+         <p>Publié : {{event.status}}</p>
+
+         <p>Statut de l'évenement :{{event.eventStatus}}</p>
+
+         <p>Heure de début: {{event.eventStartDate|date("m/d/Y")}}</p>
+
+         <p>Heure de fin: {{event.eventEndDate|date("m/d/Y")}}</p>
+
+         <p>Tarif: {{event.eventRate}}</p>
+
+         <p>Invités: {{event.eventGuest}}</p>
+
+         <p>Lieux: {{event.eventLocation}}</p>
+<ul>
+         {%for movie in event.movies %}
+                <h3>Film {{ loop.index }}</h4>
+                <p>Titre : {{ movie.title|e }}</p>
+                <p>Durée : {{ movie.duration|date('H:i:s')}}</p>
+                <p>Année{{ movie.year|e }}</p>
+                <img src="{{ asset(movie.image.webPath) }}" alt="{{ movie.image.alt }}"/>
+                <p>Contenu : {{ movie.movieContent|e }}</p>
+                <p>Autheur : {{ movie.author|e }}</p>
+                <p>Description Autheur : {{ movie.authoBio|e }}</p>
+
+   		 {% endfor %}
+
+</ul>
+<a href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Modifier</a>
+<a href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a>
+
+         
+    {% include'SRBlogBundle:Comment:index.html.twig' with { 'comments': comments }%}
+
+        <h3>Ajouter un commentaire</h3>
+    {% render(controller('SRBlogBundle:Comment:new', { 'item' : event } )) %}
+
+
+{% endblock %}

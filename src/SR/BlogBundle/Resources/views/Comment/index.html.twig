@@ -1,0 +1,10 @@
+{# src/SR/BlogBundle/Resources/views/Comment/index.html.twig #}
+
+	<div id="commentaire">
+	<h2>Commentaires</h2>
+		<ul class="nav nav-pills nav-stacked">
+			{% for comment in comments %}
+				<li>{{ comment.content|e }}</li>
+			{% endfor %}
+		</ul>
+	</div>      
