@@ -2,19 +2,42 @@
 {% extends "SRBlogBundle::layout.html.twig" %}
 
 {% block body %}
-          <p> Nos articles</p></br>
+          <h2> Nos articles</h2></br>
+
+<p>Cette section contient les articles écrits par les contributeurs d’Ahuefa.
+Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa pour obtenir le statut de contributeur.</p>
+ 
 
          
 <ul>
 
 	{%for news in listNews%}
-	<li><a href= "{{path('sr_blog_article_view',{'id': news.id})}}">{{news.title}}</a>
-      {% if is_granted('ROLE_ADMIN')%}
-      <a href= "{{path('sr_blog_article_update',{'id': news.id})}}"> (Modifier)</a>
-      {% endif %}
+	<li class="list-group-item"><a href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} .... </a>
+   
+     
+ <div class="btn-group">
+  <button type="button" class="btn btn-danger btn-xs">Action</button>
+  <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
+  <span class="caret"></span>
+  <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="{{path('sr_blog_article_add')}}">Nouveau</a></li>
+    <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
+    <li class="divider"></li>
+    <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
+  </ul>
+</div>
+</br>
+</br>
+
+
+
+      
+      
 
       {% if is_granted('ROLE_MODERATEUR') %}
-      <a href= "{{path('sr_blog_article_delete',{'id': news.id})}}"> (Supprimer)</a>
+      
       {% endif %}
 
   </li>
@@ -33,6 +56,8 @@
 </ul>
 
 
-<a href="{{path('sr_blog_article_add')}}">Ajouter un Article</a>
+
+
+
 
 {% endblock %}

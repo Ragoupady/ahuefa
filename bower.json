@@ -1,0 +1,19 @@
+{
+  "name": "bower",
+  "version": "0.0.1",
+  "authors": [
+    "ragoupady <sagadevin.ragoupady@gmail.com>"
+  ],
+  "main": "bower",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

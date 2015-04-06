@@ -9,8 +9,8 @@
   <title>{% block title %}AHUEFA International France - Association loi 1901{% endblock %}</title>
 
   {% block stylesheets %}
-    {# On charge le CSS de bootstrap depuis le site directement #}
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    {# On charge le CSS de bootstrap depuis le dossier bootstrap/dist/css/ qui se situe dans Web à la racine du projet #}
+      <link href="{{ asset('bootstrap/dist/css/bootstrap.css') }}" type="text/css" rel="stylesheet" />
   {% endblock %}
 </head>
 
@@ -101,7 +101,7 @@
 
  
 
-    <div class="jumbotron" style="background-image:url('http://www.audiovente.com/project/resources/img/original/bombe-aerosol-de-peint-000161666-4_1.jpg');">
+    <div class="jumbotron" style="background-image:url('http://www.colorhexa.com/402116.png');">
       <div class="container" style=");">
 
       <h1>AHUEFA International France</h1>
@@ -206,6 +206,7 @@
       <footer class="footer">
       <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
+        
       </div>
     </footer>
 
