@@ -2,28 +2,42 @@
 {% extends "SRBlogBundle::layout.html.twig" %}
 
 {% block body %}
-          <p> Le Voyage transculturel</p></br>
+<div class="contenu_static">
+	<h2> Le Voyage transculturel</h2>
 
-          <p>
+	<p>
+	Le « Voyage transculturel » est un débat-cinéma mensuel organisé par l’association Ahuefa International France, en collaboration avec le Ciné 104 et la Ville de Pantin.
+	</p>
 
-Le « Voyage transculturel » est un débat-cinéma mensuel organisé par l’association Ahuefa International France, en collaboration avec le Ciné 104 et la Ville de Pantin.
+	<p>
+	L’évènement s’organise autour de la projection d’un film qui aborde dans toute leur multitude la culture, la diversité, les communautés ou les sociétés, en France ou ailleurs ; qui nous a touché et que nous avons eu envie de partager.
+	</p>
 
-L’évènement s’organise autour de la projection d’un film qui aborde dans toute leur multitude la culture, la diversité, les communautés ou les sociétés, en France ou ailleurs ; qui nous a touché et que nous avons eu envie de partager.
+	<p>
+	La projection est suivie d’un débat, moment privilégié d’échanges et de réactions entre le public et les invités d’Ahuefa, qui ont participé au film.
+	</p>
 
-La projection est suivie d’un débat, moment privilégié d’échanges et de réactions entre le public et les invités d’Ahuefa, qui ont participé au film.
+	<p>
+	Enfin, nous nous retrouvons dans l’espace de réception du Ciné 104, où l’association convie chacun à poursuivre la discussion autour d’un buffet, accompagné par les animations des artistes, musiciens et invités.
+	</p>
 
-Enfin, nous nous retrouvons dans l’espace de réception du Ciné 104, où l’association convie chacun à poursuivre la discussion autour d’un buffet, accompagné par les animations des artistes, musiciens et invités.
+	<p>
+	C’est l’occasion pour les membres d’Ahuefa et un public toujours plus nombreux, de se rencontrer et de penser la diversité culturelle en relation avec le développement dans la cité.
+	A travers ce projet, l’association Ahuefa collabore avec de nombreux artistes (réalisateurs, plasticiens, musiciens). 
+	</p>
 
-C’est l’occasion pour les membres d’Ahuefa et un public toujours plus nombreux, de se rencontrer et de penser la diversité culturelle en relation avec le développement dans la cité.
-A travers ce projet, l’association Ahuefa collabore avec de nombreux artistes (réalisateurs, plasticiens, musiciens). 
 
-Informations
-L’évènement se tient au Ciné 104 – 104, avenue Jean Lolive – 93500 Pantin. (Métro : Eglise de Pantin, ligne 5)
-Vous trouverez les dates des prochaines séances du Voyage transculturel sur notre page Facebook.
-Pour recevoir directement par e-mail les prochaines dates du Voyage transculturel, communiquez-nous votre e-mail dans le champ dédié de la colonne droite de la page.
-Retrouvez régulièrement les compte-rendus des derniers Voyage transculturel sur notre site, à la page événements.
-Retrouvez les liens vers les sites des artistes sur la page Liens
-Le tarif* moyen d’un billet pour Le Voyage transculturel est de 4,00€, collation comprise**.
+	<h3>Informations</h3>
 
-    </p>
+	<ul>
+		<li>L’évènement se tient au Ciné 104 – 104, avenue Jean Lolive – 93500 Pantin. (Métro : Eglise de Pantin, ligne 5)
+		</li>
+		<li>Vous trouverez les dates des prochaines séances du Voyage transculturel sur notre page <a href="https://www.facebook.com/voyagetransculturel">Facebook</a>.</li>
+		<li>Pour recevoir directement par e-mail les prochaines dates du Voyage transculturel, communiquez-nous votre e-mail dans le champ dédié de la colonne droite de la page.</li>
+		<li>Retrouvez régulièrement les compte-rendus des derniers Voyage transculturel sur notre site, à la page <a href="{{path('sr_blog_evenement')}}">Nos événements</a></li>
+	 	<li>Retrouvez les liens vers les sites des artistes sur la page <a href="{{path('sr_blog_partenaire')}}">Nos partenaires</a></li>
+		<li>Le tarif* moyen d’un billet pour Le Voyage transculturel est de 4,00€, collation comprise**.</li>
+
+	</ul>
+</div>
 {% endblock %}

@@ -7,19 +7,19 @@
 <p>Cette section contient les articles écrits par les contributeurs d’Ahuefa.
 Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa pour obtenir le statut de contributeur.</p>
  
+<div class="space">
 
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default"><a href="{{path('sr_blog_article_add')}}">Nouvel article</a></button>
-  </div>
-
-
+  <p><a href="{{path('sr_blog_article_add')}}" class="bouton">Nouvel article</a></p>
+  <p><a href="#" class="bouton2">Nouvel catégorie</a></p>
+ 
 </div>
+<br>
 
 	{%for news in listNews%}
-  	<li class="list-group-item"><a href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} .... </a>
+  	<li class="list-group-item"><a class="titre_index" href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} </a> <p class="auteur_index"> écrit par {{news.user.username}} le {{news.newsDate|date("d/m/Y") }} </p></li>
+    <li class="list-group-item"> {{news.content[:300] |striptags|raw }} ...</li>
      
-  <div class="ragou">
+  
    <div class="btn-group">
       <button type="button" class="btn btn-danger btn-xs">Action</button>
       <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -28,12 +28,12 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
       </button>
 
       <ul class="dropdown-menu" role="menu">
-        <li><a href="{{path('sr_blog_article_add')}}">Nouveau</a></li>
+        
         <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
         <li class="divider"></li>
         <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
       </ul>
-  </div>
+  
 </div>
   </br>
   </br>
