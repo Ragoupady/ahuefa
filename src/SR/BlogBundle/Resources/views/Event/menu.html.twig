@@ -5,19 +5,24 @@
 {# Ce template n'hérite de personne,
    tout comme le template inclus avec {{ include() }}. #}
 
+
+
+
 <ul class="nav nav-pills nav-stacked">
-  {% for event in listEvent %}
-    <li>
+  
+	{% if listEvent is empty %}
+        <p>Aucun évenement à venir</p></br>
+    {% endif %}
 
+	{% for event in listEvent %}
+	    <li>
 
-      <a href="{{ path('sr_blog_evenement_view', {'id': event.id}) }}">
-        {{ event.title }}
-      </a>
-
-
-      
-    </li>
-  {% endfor %}
+	      <a href="{{ path('sr_blog_evenement_view', {'id': event.id}) }}">
+	        {{ event.title }}
+	      </a>
+ 
+	    </li>
+	{% endfor %}
 </ul>
 
 
