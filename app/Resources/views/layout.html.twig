@@ -10,7 +10,7 @@
 
   {% block stylesheets %}
     {# On charge le CSS de bootstrap depuis le dossier bootstrap/dist/css/ qui se situe dans Web à la racine du projet #}
-      <link href="{{ asset('bootstrap/dist/css/bootstrap.css') }}" type="text/css" rel="stylesheet" />
+      <link href="{{ asset('bootstrap/less/bootstrap.less') }}" type="text/css" rel="stylesheet/less" />
   {% endblock %}
 </head>
 
@@ -201,6 +201,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="{{asset('bundles/srblog/ckeditor/ckeditor.js')}}"></script>
+     <script src="{{asset('less/dist/less.js')}}"></script>
   {% endblock %}
 
       <footer class="footer">

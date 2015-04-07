@@ -8,39 +8,41 @@
 Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa pour obtenir le statut de contributeur.</p>
  
 
-         
-<ul>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default"><a href="{{path('sr_blog_article_add')}}">Nouvel article</a></button>
+  </div>
+
+
+</div>
 
 	{%for news in listNews%}
-	<li class="list-group-item"><a href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} .... </a>
-   
+  	<li class="list-group-item"><a href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} .... </a>
      
- <div class="btn-group">
-  <button type="button" class="btn btn-danger btn-xs">Action</button>
-  <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
-  <span class="caret"></span>
-  <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="{{path('sr_blog_article_add')}}">Nouveau</a></li>
-    <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
-    <li class="divider"></li>
-    <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
-  </ul>
+  <div class="ragou">
+   <div class="btn-group">
+      <button type="button" class="btn btn-danger btn-xs">Action</button>
+      <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+      </button>
+
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="{{path('sr_blog_article_add')}}">Nouveau</a></li>
+        <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
+        <li class="divider"></li>
+        <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
+      </ul>
+  </div>
 </div>
-</br>
-</br>
+  </br>
+  </br>
 
+        {% if is_granted('ROLE_MODERATEUR') %}
+        
+        {% endif %}
 
-
-      
-      
-
-      {% if is_granted('ROLE_MODERATEUR') %}
-      
-      {% endif %}
-
-  </li>
+    </li>
 	{%endfor%}
 
 
