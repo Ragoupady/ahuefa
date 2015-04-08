@@ -74,7 +74,7 @@ class NewsController extends Controller
    
 
     /**
-    * @Security(" has_role('ROLE_ADMIN')")
+    * @Security(" has_role('ROLE_USER')")
     */
     public function updateAction($id, Request $request)
     {
@@ -99,7 +99,7 @@ class NewsController extends Controller
 
         
     /**
-    * @Security("has_role('ROLE_MODERATEUR')")
+    * @Security("has_role('ROLE_USER')")
     */
 
     public function deleteAction($id, Request $request)

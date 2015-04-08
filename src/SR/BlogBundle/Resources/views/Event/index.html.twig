@@ -2,14 +2,19 @@
 {% extends "SRBlogBundle::layout.html.twig" %}
 
 {% block body %}
-          <p> Nos évenements</p></br>
-
+          <h2> Nos évenements</h2>
          
 <ul>
 
-	{%for event in listEvent%}
-	<li><a href= "{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a></li>
-	{%endfor%}
+  {% if listEvent is empty %}
+    <p>Aucun événement</p>
+  {% else %}
+
+  	{%for event in listEvent%}
+  	<li><a href= "{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a></li>
+  	{%endfor%}
+
+  {% endif %}
 
 
 </ul>

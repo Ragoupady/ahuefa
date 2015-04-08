@@ -1,8 +1,19 @@
 {# src/SR/BlogBundle/Resources/views/Comment/formNews.html.twig #}
 
+
 <form action="{{ path('sr_blog_comment_create_news', { 'id' : comment.news.id } ) }}" method="post" {{ form_enctype(form) }} class="blogger">
-    {{ form_widget(form) }}
-    <p>
-        
-    </p>
+
+    <div class="col-sm-13">
+        {# Génération de l'input. #}
+        {{ form_widget(form.content, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+  {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
+  {{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-default'}}) }}
+
+  {# Génération automatique des champs pas encore écrits.
+     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+     et tous les champs cachés (type « hidden »). #}
+  {{ form_rest(form) }}
+
 </form>

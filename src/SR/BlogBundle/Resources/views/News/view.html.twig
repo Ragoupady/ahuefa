@@ -2,21 +2,26 @@
 {% extends "SRBlogBundle::layout.html.twig" %}
 
 {% block body %}
-         <h1>{{news.title}}</h1>
-	<img src="{{ asset(news.image.webPath) }}" alt="{{ news.image.alt }}"/>
-	         {{news.content| raw}}
-	 	<p>Ecrit par : {{news.user.username}} le {{news.newsDate|date("d/m/Y") }}</p>
 
-	         
-	<a href="{{path('sr_blog_article_update',{'id': news.id})}}">Modifier</a>
-	<a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a>
+<div class="contenu_static">         
+	<h1>{{news.title}}</h1>
+	<p>Par : {{news.user.username}} le {{news.newsDate|date("d/m/Y") }}</p>
 
-	
-	
+	 
+	<img class="image_post" src="{{ asset(news.image.webPath) }}" alt="{{ news.image.alt }}"/>
+		         {{news.content| raw}}
+		 	
+
+		         
+	<a class="bouton" href="{{path('sr_blog_article_update',{'id': news.id})}}">Modifier</a>
+	<a class="bouton2" href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a><br><br>
+
+		
+		
 
 	{% include'SRBlogBundle:Comment:index.html.twig' with { 'comments': comments }%}
 
-        <h3>Ajouter un commentaire</h3>
-    {% render(controller('SRBlogBundle:Comment:new', { 'item' : news } )) %}
-
+	<h3>Ajouter un commentaire</h3>
+	    {% render(controller('SRBlogBundle:Comment:new', { 'item' : news } )) %}
+</div>
 {% endblock %}

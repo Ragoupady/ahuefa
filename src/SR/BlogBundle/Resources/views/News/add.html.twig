@@ -85,8 +85,10 @@
       {{ form_errors(form.image) }}
 
       <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+        <span class="btn btn-default btn-file">
+          {# Génération de l'input. #}
+          {{ form_widget(form.image, {'attr': {'class': ''}}) }}
+        </span>
       </div>
     </div>
 
