@@ -5,28 +5,30 @@
    
 <div class="contenu_static">    
         
-    <h1>{{event.eventCategory.name}}</h1>
-    <h2> {{event.title}}</h2>
+    <h1 class="event_type">{{event.eventCategory.name}}</h1>
+    <h3> {{event.title}}</h3>
 
     <img class="image_event"src="{{ asset(event.image.webPath) }}" alt="{{ event.image.alt }}"/>
     <div class="resume_film_encadre">
-        <p class="resume_film_contenu">Le {{event.eventStartDate| localizeddate('full', 'none')}} à {{event.eventStartDate|date("H:i")}}</p>
-        <p class="resume_film_contenu">Lieux:   {{event.eventLocation}}</p>
-        <p class="resume_film_contenu">Nombre de film :     {{event.movies| length}}</p>
-        <p class="resume_film_contenu">Tarif:       {{event.eventRate}}</p>
-        <p class="resume_film_contenu">Invités:     {{event.eventGuest}}</p>
+        <p class="resume_film_contenu"><span class="quand_resume">Quand :</span> Le {{event.eventStartDate| localizeddate('full', 'none')}} à {{event.eventStartDate|date("H:i")}}</p>
+        <p class="resume_film_contenu"><span class="quand_resume">Où :</span> {{event.eventLocation}}</p>
+        <p class="resume_film_contenu"><span class="quand_resume">Nombre de films : </span>    {{event.movies| length}}</p>
+        <p class="resume_film_contenu"><span class="quand_resume">Tarif:</span>       {{event.eventRate}}</p>
+        <p class="resume_film_contenu"><span class="quand_resume">Invités: </span>    {{event.eventGuest}}</p>
 
     </div>
+
+    <div id="map-canvas"></div>
 
     <p>{{event.content| raw}}</p>
 
 
-<ul>
+<ul class="bloc_movies">
          {%for movie in event.movies %}
             {% if event.movies| length < 2 %}  
-                <h2>Film projeté</h2>
+                <h3 class="film_projete">Film projeté</h3>
             {% else %} 
-                <h2>Film projeté N°{{ loop.index }}</h2>
+                <h3 class="film_projete">Film projeté N°{{ loop.index }}</h3>
             {% endif %}
                 <h3 class="movie_title">{{ movie.title|e }}</h3>
                 <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>

@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
   <title>{% block title %}AHUEFA International France - Association loi 1901{% endblock %}</title>
 
@@ -14,9 +14,27 @@
   {% endblock %}
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:700italic' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+        html, body, #map-canvas {  margin: 0; padding: 0;}
+        
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=fr&region=FR&key=AIzaSyBwBVUW3YT_rVM4HFA68-h5l9VRqIg92lo"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var mapOptions = {
+                center: { lat: -34.397, lng: 150.644},
+                zoom: 8
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
 </head>
 
-<body onload="initialize()">
+<body>
         
 
   {# Menu Horizontal #}
@@ -117,7 +135,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" >
     <div class="item active">
-      <img class="carousel-page" src="http://www.vacentaylor.com/wp-content/uploads/2011/10/Bronze-Buddha-1200x400.jpg" alt="...">
+      <img class="carousel-page" src="https://assets.rbl.ms/632416/1200x400.jpg" alt="...">
       <div class="carousel-caption">
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
@@ -130,7 +148,7 @@
     </div>
     <div class="item">
       
-      <img class="carousel-page"src="http://www.lumic-design.ch/wp-content/uploads/2014/03/36313632.jpg" alt="...">
+      <img class="carousel-page"src="http://www.solucea.com/wp-content/uploads/2013/11/Fotolia_46645136_S.jpg" alt="...">
 
       <div class="carousel-caption">
           <h1>AHUEFA International France</h1>
@@ -143,7 +161,7 @@
       </div>
     </div>
     <div class="item">
-      <img class="carousel-page" src="http://www.buddha-figures.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/r/a/raeucherstaebchen_tara-aromatic_box-195mm_2.jpg" alt="...">
+      <img class="carousel-page" src="http://www.socianova.com/site/includes/img/produits/3/2.png" alt="...">
       <div class="carousel-caption">
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
