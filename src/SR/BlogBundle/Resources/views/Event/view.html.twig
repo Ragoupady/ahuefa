@@ -11,9 +11,9 @@
     <img class="image_event"src="{{ asset(event.image.webPath) }}" alt="{{ event.image.alt }}"/>
     <div class="resume_film_encadre">
         <p class="resume_film_contenu"><span class="quand_resume">Quand :</span> Le {{event.eventStartDate| localizeddate('full', 'none')}} à {{event.eventStartDate|date("H:i")}}</p>
-        <p class="resume_film_contenu"><span class="quand_resume">Où :</span> {{event.eventLocation}}</p>
-        <p class="resume_film_contenu"><span class="quand_resume">Nombre de films : </span>    {{event.movies| length}}</p>
-        <p class="resume_film_contenu"><span class="quand_resume">Tarif:</span>       {{event.eventRate}}</p>
+        <p class="resume_film_contenu"><span class="quand_resume">Où :</span> <span id="adresse">{{event.eventLocation}}</span></p>
+        
+        <p class="resume_film_contenu"><span class="quand_resume">Participation aux frais:</span>       {{event.eventRate}}</p>
         <p class="resume_film_contenu"><span class="quand_resume">Invités: </span>    {{event.eventGuest}}</p>
 
     </div>

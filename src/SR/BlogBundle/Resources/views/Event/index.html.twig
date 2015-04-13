@@ -3,6 +3,14 @@
 
 {% block body %}
           <h2> Nos évenements</h2>
+
+<div class="space">
+
+  <p><a href="{{path('sr_blog_evenement_add')}}" class="bouton">Nouvel Evénement</a></p>
+  <p><a href="#" class="bouton2">Type Evénement</a></p>
+ 
+</div>
+<br><br>
          
 <ul>
 
@@ -11,7 +19,29 @@
   {% else %}
 
   	{%for event in listEvent%}
-  	<li><a href= "{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a></li>
+  	<li class="list-group-item">
+      <div class="event_bloc_index">
+      {{event.postDate| localizeddate('medium', 'none')}}
+      </div>
+      <div class="event_bloc_index_contenu">
+         <a href= "{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a>
+      </div>
+    </li>
+       <div class="btn-group">
+      <button type="button" class="btn btn-danger btn-xs">Action</button>
+      <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+      </button>
+
+      <ul class="dropdown-menu" role="menu">
+        
+        <li><a href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Editer</a></li>
+        <li class="divider"></li>
+        <li><a href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a></li>
+      </ul>
+  
+    </div>
   	{%endfor%}
 
   {% endif %}
@@ -28,5 +58,5 @@
   {% endfor %}
 </ul>
 
-<a href="{{path('sr_blog_evenement_add')}}">Ajouter</a>
+
 {% endblock %}

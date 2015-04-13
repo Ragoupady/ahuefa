@@ -15,12 +15,14 @@
     {% endif %}
 
 	{% for event in listEvent %}
-	    <li>
 
-	      <a href="{{ path('sr_blog_evenement_view', {'id': event.id}) }}">
-	        {{ event.title }}
-	      </a>
- 
+	    <li class="last_event">
+	    	<p class="last_event_date">{{event.postDate|localizeddate('none', 'none', null, null, 'EEEE')|title}} {{event.postDate|localizeddate('none', 'none', null, null, 'd MMMM Y')}}</p>
+	    	<div class="last_event_content">
+		    	<a href="{{ path('sr_blog_evenement_view', {'id': event.id}) }}">
+		        	{{ event.title }}
+		     	</a>
+ 			</div>
 	    </li>
 	{% endfor %}
 </ul>

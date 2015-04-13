@@ -19,19 +19,75 @@
         html, body, #map-canvas {  margin: 0; padding: 0;}
         
     </style>
+   
+    {# GOOGLE MAP #}
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=fr&region=FR&key=AIzaSyBwBVUW3YT_rVM4HFA68-h5l9VRqIg92lo"></script>
     <script type="text/javascript">
-        function initialize() {
-            var mapOptions = {
-                center: { lat: -34.397, lng: 150.644},
-                zoom: 8
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        }
+        
+      var geocoder;
+      var map;
+      var markers = new Array();
+      var i = 0;
+
+      /* Initialisation de la carte  */       
+       
+      function initialize() {
+        /* Instanciation du geocoder  */
+        geocoder = new google.maps.Geocoder();
+        var pantin = new google.maps.LatLng(48.892294, 2.409040);
+        var myOptions  = {
+          zoom: 17,
+          center: pantin,
+          mapTypeId: google.maps.MapTypeId.ROADMAP 
+        };
+        $adress=document.getElementById('adresse').innerHTML;
+        
+        
+        codeAddress($adress);
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+
+      }
+
+
+
+    function codeAddress($adress) {
+     /* Récupération de la valeur de l'adresse saisie */
+     var address = $adress;
+     /* Appel au service de geocodage avec l'adresse en paramètre */
+     geocoder.geocode( { 'address': address}, function(results, status) {
+      /* Si l'adresse a pu être géolocalisée */
+      if (status == google.maps.GeocoderStatus.OK) {
+       /* Récupération de sa latitude et de sa longitude */
+
+       
+       map.setCenter(results[0].geometry.location);
+      
+
+       /* Affichage du marker */
+       var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+       });
+
+
+       /* Permet de supprimer le marker précédemment affiché */
+       markers.push(marker);
+       if(markers.length > 1)
+        markers[(i-1)].setMap(null);
+        i++;
+       } else {
+        alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+       }
+      });
+  }
+
+           
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
-
+    {# END GOOGLE MAP #}
 </head>
 
 <body>
@@ -109,7 +165,7 @@
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="color:blue"></span></button>
       </form>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar-fixed-top/">Contact</a></li>
+              <li><a href={{path('sr_blog_contact')}}>Contact</a></li>
               {% if app.user%}
               <li class="active"><a href="{{path('fos_user_security_logout')}}">Se Déconnecter <span class="sr-only">(current)</span></a></li>
               {% else %}
@@ -202,13 +258,29 @@
         {% endblock %}
       </div>
 
-      
+      <div id="content_int">
+
+
+
+     
+<!-- AddThis Button BEGIN -->
+<!-- <div class="addthis_toolbox addthis_pill_combo" style="float:right;">
+  <a class="addthis_button_facebook_like" fb:like:layout="button_count" style="opacity:1;"></a>
+  <a class="addthis_button_tweet"></a>
+  <a class="addthis_button_print">Print This Page</a>
+            
+  <a class="addthis_counter addthis_pill_style"></a>
+</div>
+ -->
+
+
+
         <div id="menu" class="col-md-3">
           <div class="menu">
-            <h4 class="list-group-item-heading"> Prochain évenement</h4>
+            <h4 class="menu_titre"> Prochain évenement</h4>
              {{render(controller("SRBlogBundle:Event:menu", {'limit' : 1}))}}
 
-            <h4 class="list-group-item-heading">Derniers articles</h4>
+            <h4 class="menu_titre">Derniers articles</h4>
             {{ render(controller("SRBlogBundle:News:menu", {'limit': 3})) }}
           </div>
         </div>
@@ -217,9 +289,7 @@
 
     <hr>
 
-    <footer>
-      <p>Ragoupady © {{ 'now'|date('Y') }}</p>
-    </footer>
+
 
   </div>
 
@@ -242,6 +312,7 @@
 
       <footer class="footer">
       <div class="container">
+         <p>Ragoupady © {{ 'now'|date('Y') }}</p>
         <p class="text-muted">Place sticky footer content here.</p>
         
       </div>

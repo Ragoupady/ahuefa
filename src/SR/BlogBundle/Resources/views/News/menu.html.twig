@@ -12,7 +12,7 @@
     {% endif %}
 
 	{% for news in listNews %}
-	    <li>
+	    <li class="last_news">
 	      <a href="{{ path('sr_blog_article_view', {'id': news.id}) }}">
 	        {{ news.title }}
 	      </a>

@@ -34,7 +34,7 @@ class EventType extends AbstractType
                                           'allow_add' => true,
                                           'allow_delete'=> true))
             ->add('eventGuest','text')
-            ->add('eventLocation')
+            ->add('eventLocation','text',array('attr'=> array('placeholder' => 'ex: "104 Avenue Jean Lolive, 93500 Pantin"')))
             ->add('envoyer','submit')
            // ->add('tags')
           //  ->add('news')

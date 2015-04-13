@@ -15,14 +15,18 @@ class MovieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', 'text')
-            ->add('image', new ImageType())
-            ->add('duration','time', array('widget' => 'choice'))
+            ->add('title', 'text',array('attr'=> array('class'=>'form-control','placeholder' => 'ex: "Matrix"'),
+                                        'label_attr' => array('class' => 'col-sm-20 control-label')))
 
-            ->add('year','text')
-            ->add('movieContent','textarea',array('attr'=> array('class'=>'ckeditor')))
-            ->add('author','text')
-            ->add('authoBio','textarea')
+
+            ->add('image', new ImageType(),array('attr'=> array('class'=>'btn btn-default btn-file')) )
+            ->add('duration','time', array('widget' => 'choice',
+                                            'attr'=> array('class'=>'form-control')))
+
+            ->add('year','text',array('attr'=> array('class'=>'form-control','placeholder' => 'ex: "2002"')))
+            ->add('movieContent','textarea',array('attr'=> array('class'=>'form-control')))
+            ->add('author','text',array('attr'=> array('class'=>'form-control')))
+            ->add('authoBio','textarea',array('attr'=> array('class'=>'form-control')))
        
         ;
     }

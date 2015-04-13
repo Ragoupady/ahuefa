@@ -145,6 +145,14 @@ sr_blog_contact:
     path:     /contact
     defaults: { _controller: SRBlogBundle:Soutien:contact}
 
+sr_blog_contact_send:
+    path:     /contact/send
+    defaults: { _controller: SRBlogBundle:Soutien:contact_send}
+
+sr_blog_contact_confirmation:
+    path:    /contact/confirmation
+    defaults: { _controller: SRBlogBundle:Soutien:confirmation}
+
 sr_blog_comment_create_News:
     path:     /comment/article
     defaults: { _controller: SRBlogBundle:Comment:addCommentNews}
