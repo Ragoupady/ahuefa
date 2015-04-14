@@ -31,7 +31,7 @@ class News
     private $image;
 
     /**
-    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory")
+    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory",cascade={"remove"})
     *
     */
     private $newsCategories;

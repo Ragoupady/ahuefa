@@ -42,6 +42,25 @@ class NewsRepository extends EntityRepository
 
 	}	
 
+		/**
+		* Cette methode permet de retourner une liste d'article correspondant à un mots
+		* $content permet d'indiquer le mot contenu dans les articles qu'on souhaite retourner
+		*/
+	public function getNewsSearch($content)
+	{
+		$qb = $this->createQueryBuilder('n')
+					->where('n.title LIKE :title')
+					->setParameter('title', '%'.$content.'%')
+					->orWhere('n.content LIKE :content')
+					->setParameter('content', '%'.$content.'%')
+					->orderBy('n.newsDate','DESC')
+					;
+				
+		
+		return $qb->getQuery()->getResult();
+
+	}	
+
 	public function getNewsComments($id)
 	{	
 		$qb = $this->createQueryBuilder('n')

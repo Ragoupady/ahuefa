@@ -28,10 +28,10 @@ class SoutienController extends Controller
         return $this->render('SRBlogBundle:Soutien:contact.html.twig');
     }
 
-    public function contact_sendAction(Request $request)
+    public function contact_sendAction(Request $request, $typeContact)
     {   
-        echo "ragouuuuuu";
-        $typeContact= "Contact";       // Variable utile pour faire la différence entre les contact, soutiens etc..
+       
+
         $message = $this->sendEmail($typeContact,$request);
         $this->get('mailer')->send($message);
         

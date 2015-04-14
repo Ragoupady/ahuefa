@@ -111,9 +111,15 @@ class NewsController extends Controller
         $form = $this->createFormBuilder()->getForm();
 
         if($form->handleRequest($request)->isValid())
-        {    
+        {    $em    =   $this->getDoctrine()->getManager(); 
+             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($id);
+             foreach ($comments as $comment) {
+            
+                $em->remove($comment);
+                 
+             }
 
-             $em    =   $this->getDoctrine()->getManager();
+             
              $em->remove($news);
              $em->flush();
 

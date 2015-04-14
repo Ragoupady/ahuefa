@@ -37,4 +37,24 @@ class EventRepository extends EntityRepository
 		return $query->getResult();
 
 	}
+
+
+		/**
+		* Cette methode permet de retourner une liste d'événement correspondant à un mots
+		* $content permet d'indiquer le mot contenu dans les événement qu'on souhaite retourner
+		*/
+	public function getEventsSearch($content)
+	{
+		$qb = $this->createQueryBuilder('e')
+					->where('e.title LIKE :title')
+					->setParameter('title', '%'.$content.'%')
+					->orWhere('e.content LIKE :content')
+					->setParameter('content', '%'.$content.'%')
+					->orderBy('e.postDate','DESC')
+					;
+				
+		
+		return $qb->getQuery()->getResult();
+
+	}	
 }

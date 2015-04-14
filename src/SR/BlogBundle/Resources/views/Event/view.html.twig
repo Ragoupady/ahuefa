@@ -53,5 +53,73 @@
     {% render(controller('SRBlogBundle:Comment:new', { 'item' : event } )) %}
 </div>  
 
+{# GOOGLE MAP #}
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=fr&region=FR&key=AIzaSyBwBVUW3YT_rVM4HFA68-h5l9VRqIg92lo"></script>
+    <script type="text/javascript">
+        
+      var geocoder;
+      var map;
+      var markers = new Array();
+      var i = 0;
+
+      /* Initialisation de la carte  */       
+       
+      function initialize() {
+        /* Instanciation du geocoder  */
+        geocoder = new google.maps.Geocoder();
+        var pantin = new google.maps.LatLng(48.892294, 2.409040);
+        var myOptions  = {
+          zoom: 17,
+          center: pantin,
+          mapTypeId: google.maps.MapTypeId.ROADMAP 
+        };
+        $adress=document.getElementById('adresse').innerHTML;
+        
+        
+        codeAddress($adress);
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+
+      }
+
+
+
+    function codeAddress($adress) {
+     /* Récupération de la valeur de l'adresse saisie */
+     var address = $adress;
+     /* Appel au service de geocodage avec l'adresse en paramètre */
+     geocoder.geocode( { 'address': address}, function(results, status) {
+      /* Si l'adresse a pu être géolocalisée */
+      if (status == google.maps.GeocoderStatus.OK) {
+       /* Récupération de sa latitude et de sa longitude */
+
+       
+       map.setCenter(results[0].geometry.location);
+      
+
+       /* Affichage du marker */
+       var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+       });
+
+
+       /* Permet de supprimer le marker précédemment affiché */
+       markers.push(marker);
+       if(markers.length > 1)
+        markers[(i-1)].setMap(null);
+        i++;
+       } else {
+        alert("Le geocodage n\'a pu etre effectue pour la raison suivante: " + status);
+       }
+      });
+  }
+
+           
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    {# END GOOGLE MAP #}
 
 {% endblock %}

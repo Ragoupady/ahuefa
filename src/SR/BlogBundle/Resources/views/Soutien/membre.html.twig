@@ -1,1 +1,12 @@
-Hello {{ name }}!
+{# src/SR/BlogBundle/Resources/views/Soutien/membre.html.twig #}
+{% extends "SRBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+<h2>Devenir membre</h2>
+
+<p>Si vous souhaitez devenir membre d'AHUEFA, vous pouvez nous envoyer un message à l'aide du formulaire ci-dessous :</p>
+{% set typeContact = 'Devenir Membre :' %}
+{% include 'SRBlogBundle:Soutien:formulaire.html.twig' %}
+
+{% endblock %}

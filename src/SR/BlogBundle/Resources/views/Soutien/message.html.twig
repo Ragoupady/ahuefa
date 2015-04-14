@@ -1,1 +1,12 @@
-Hello {{ name }}!
+{# src/SR/BlogBundle/Resources/views/Soutien/message.html.twig #}
+{% extends "SRBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+<h2>Nous soutenir</h2>
+
+<p>Envoyer un message de soutien.</p>
+{% set typeContact = 'Soutien :' %}
+{% include 'SRBlogBundle:Soutien:formulaire.html.twig' %}
+
+{% endblock %}

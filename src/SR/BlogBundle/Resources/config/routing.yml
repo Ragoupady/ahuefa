@@ -146,7 +146,7 @@ sr_blog_contact:
     defaults: { _controller: SRBlogBundle:Soutien:contact}
 
 sr_blog_contact_send:
-    path:     /contact/send
+    path:     /contact/send/{typeContact}
     defaults: { _controller: SRBlogBundle:Soutien:contact_send}
 
 sr_blog_contact_confirmation:
@@ -164,3 +164,8 @@ sr_blog_comment_create_Event:
     defaults: { _controller: SRBlogBundle:Comment:addCommentEvent}
     requirements:
         id: \d+
+
+
+sr_blog_search:
+    path:     /search
+    defaults: { _controller: SRBlogBundle:Main:search}
