@@ -129,6 +129,10 @@ sr_blog_evenement_delete:
     requirements:
         id: \d+
 
+sr_blog_evenement_add_category:
+    path:    /evenement/addCategory
+    defaults: { _controller: SRBlogBundle:Event:addCategory}
+
 sr_blog_soutien_membre:
     path:     /soutien/membre
     defaults: { _controller: SRBlogBundle:Soutien:membre}

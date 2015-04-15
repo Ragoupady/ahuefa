@@ -150,4 +150,28 @@ class EventController extends Controller
         return $this->render('SRBlogBundle:Event:menu.html.twig',array('listEvent' => $listEvent));
 
     }
+
+    public function addCategory(Request $request)
+    {
+        
+        $eventCategory = new EventCategory();
+        $form = $this->createForm(new EventCategoryType, $event);
+        $form->handleRequest($request);
+
+        if($form->isValid())
+        {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($eventCategory);
+            $em->flush();
+            
+
+            return $this->redirect($this->generateUrl('sr_blog_home'));
+
+
+        }
+
+        return $this->render('SRBlogBundle:Event:addCategory.html.twig',array('form' => $form->createView()));
+    }
 }
+

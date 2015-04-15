@@ -55,6 +55,10 @@ class SoutienController extends Controller
 
     public function confirmationAction()
     {
+         $breadcrumbs = $this->get("white_october_breadcrumbs");
+          
+          $breadcrumbs->prependRouteItem("Home", "sr_blog_home");
+          $breadcrumbs->addRouteItem("Confirmation", "sr_blog_contact_confirmation");
         return $this->render('SRBlogBundle:Soutien:confirmation.html.twig');
     }
 }
