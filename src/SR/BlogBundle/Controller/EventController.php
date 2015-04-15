@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use SR\BlogBundle\Entity\Event;
 use SR\UserBundle\Entity\User;
 use SR\BlogBundle\Entity\Movie;
+use SR\BlogBundle\Entity\EventCategory;
+use SR\BlogBundle\Form\EventCategoryType;
 use SR\BlogBundle\Form\EventType;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\Request;
@@ -151,11 +153,11 @@ class EventController extends Controller
 
     }
 
-    public function addCategory(Request $request)
+    public function addCategoryAction(Request $request)
     {
         
         $eventCategory = new EventCategory();
-        $form = $this->createForm(new EventCategoryType, $event);
+        $form = $this->createForm(new EventCategoryType, $eventCategory);
         $form->handleRequest($request);
 
         if($form->isValid())

@@ -15,7 +15,10 @@ class EventCategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name','text')
+            ->add('name','text',array('attr'=> array('placeholder' => 'ex: "Psychologie"',
+                                                    'label'=> 'Contenu du film')))
+            ->add('creer','submit')
+                                                            
         ;
     }
     
