@@ -89,6 +89,10 @@ sr_blog_article_delete:
     requirements:
         id: \d+
 
+sr_blog_article_addCategory:
+    path:     /articles/addCategory
+    defaults: { _controller: SRBlogBundle:News:addCategory }
+
 sr_blog_comment_create_news:
     path:     /comment/{id}
     defaults: { _controller: SRBlogBundle:Comment:createNews }
@@ -166,6 +170,12 @@ sr_blog_comment_create_News:
 sr_blog_comment_create_Event:
     path:     /comment/evenement
     defaults: { _controller: SRBlogBundle:Comment:addCommentEvent}
+    requirements:
+        id: \d+
+
+sr_blog_comment_delete:
+    path:     /comment/delete/{id}
+    defaults: { _controller: SRBlogBundle:Comment:delete}
     requirements:
         id: \d+
 

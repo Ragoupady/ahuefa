@@ -16,6 +16,7 @@ class NewsCategoryType extends AbstractType
     {
         $builder
             ->add('name','text')
+            ->add('creer','submit')
         ;
     }
     

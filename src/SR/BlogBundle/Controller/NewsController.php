@@ -3,11 +3,16 @@
 namespace SR\BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 use SR\BlogBundle\Entity\News;
 use SR\UserBundle\Entity\User;
+use SR\BlogBundle\Entity\Comment;
+use SR\BlogBundle\Entity\NewsCategory;
+
 use SR\BlogBundle\Form\NewsType;
 use SR\BlogBundle\Form\CommentType;
-use SR\BlogBundle\Entity\Comment;
+use SR\BlogBundle\Form\NewsCategoryType;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Finder\Exception\AccessDeniedException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -137,6 +142,28 @@ class NewsController extends Controller
         $listNews = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->getNewsHome($limit);
 
         return $this->render('SRBlogBundle:News:menu.html.twig', array('listNews'=>$listNews));
+
+    }
+
+    public function addCategoryAction(Request $request)
+    {
+        $newsCategory = new newsCategory();
+        $form = $this->createForm(new newsCategoryType, $newsCategory);
+
+        $form->handleRequest($request);  
+
+        if($form->isValid())
+        {
+            
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($newsCategory);
+            $em->flush();
+            
+
+            return $this->redirect($this->generateUrl('sr_blog_article'));
+        }
+
+        return $this->render('SRBlogBundle:News:addCategory.html.twig', array('form'   => $form->createView()));
 
     }
 }

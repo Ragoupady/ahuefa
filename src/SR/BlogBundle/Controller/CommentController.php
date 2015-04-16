@@ -10,6 +10,7 @@ use SR\BlogBundle\Entity\Comment;
 use SR\BlogBundle\Form\CommentType;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class CommentController extends Controller
@@ -155,6 +156,29 @@ class CommentController extends Controller
 
 	}
 
+
+	public function deleteAction($id,Request $request)
+	{
+		$comment = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->find($id);
+
+         // On crée un formulaire vide, qui ne contiendra que le champ CSRF
+         // Cela permet de protéger la suppression d'annonce contre cette faille
+        $form = $this->createFormBuilder()->getForm();
+
+        if($form->handleRequest($request)->isValid())
+        { 
+
+			$em = $this->getDoctrine()->getManager();
+			$em->remove($comment);
+			$em->flush();
+
+			return $this->redirect($this->generateUrl('sr_blog_article_view', array('id'=> $comment->getNews()->getId())));
+		
+		}
+		
+		return $this->render('SRBlogBundle:Comment:delete.html.twig', array('comment' => $comment,
+                                                                         'form'   => $form->createView()));
+	}
 }
 
 

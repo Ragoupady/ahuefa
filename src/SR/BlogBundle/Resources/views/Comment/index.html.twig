@@ -11,6 +11,7 @@
 					<li class="list-group-item">
 						<span class="auteur_comment">{{ comment.user.username }} </span> <span class="postDate_comment">Le {{ comment.postDate|date("d/m/Y \\à H:i") }} : </span> <br>
 						<span>{{ comment.content|e }}</span>
+						<a href="{{path('sr_blog_comment_delete',{'id':comment.id})}}">Supprimer</a>
 					</li>
 				{% endfor %}
 			{% endif %}
