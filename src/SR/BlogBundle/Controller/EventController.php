@@ -42,6 +42,11 @@ class EventController extends Controller
     public function viewAction($id)
     {
         $event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+
+        if (!$event) {
+          throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+        }
+
         $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($id);
         return $this->render('SRBlogBundle:Event:view.html.twig', array('event' => $event,
                                                                        'comments' => $comments
@@ -83,12 +88,12 @@ class EventController extends Controller
         
 
         if (!$event) {
-        throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+            throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
         }
 
         $originalMovies= new ArrayCollection();
 
-          // Crée un tableau contenant les objets Tag courants de la
+          // Crée un tableau contenant les objets Movie courants de la
          // base de données
 
         foreach ($event->getMovies() as $movie) {
@@ -125,6 +130,9 @@ class EventController extends Controller
     public function deleteAction($id, Request $request)
     {
         $event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+        if (!$event) {
+         throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+        }
           
           // On crée un formulaire vide, qui ne contiendra que le champ CSRF
          // Cela permet de protéger la suppression d'annonce contre cette faille

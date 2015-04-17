@@ -162,7 +162,7 @@ sr_blog_contact_confirmation:
     defaults: { _controller: SRBlogBundle:Soutien:confirmation}
 
 sr_blog_comment_create_News:
-    path:     /comment/article
+    path:       
     defaults: { _controller: SRBlogBundle:Comment:addCommentNews}
     requirements:
         id: \d+

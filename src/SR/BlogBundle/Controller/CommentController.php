@@ -59,6 +59,9 @@ class CommentController extends Controller
 	{
 		//récupérer la news à l'aide de l'id
 		$news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
+		if (!$news) {
+       	 throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+        }
 		//créer un commentaire
 		$comment = new Comment();
    		$comment->setNews($news);
@@ -108,6 +111,9 @@ class CommentController extends Controller
 	{
 		//récupérer l'event à l'aide de l'id
 		$event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+		if (!$event) {
+        	throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+        }
 		//créer un commentaire
 		$comment = new Comment();
    		$comment->setEvent($event);
@@ -160,6 +166,9 @@ class CommentController extends Controller
 	public function deleteAction($id,Request $request)
 	{
 		$comment = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->find($id);
+		if (!$comment) {
+        	throw $this->createNotFoundException('Aucun commentaire trouvée pour cet id : '.$id);
+        }
 
          // On crée un formulaire vide, qui ne contiendra que le champ CSRF
          // Cela permet de protéger la suppression d'annonce contre cette faille

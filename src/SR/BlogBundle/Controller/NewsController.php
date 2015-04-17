@@ -30,6 +30,11 @@ class NewsController extends Controller
         // On calcule le nombre total de pages grâce au count($listAdverts) qui retourne le nombre total d'annonces
         $nbPages = ceil(count($listNews)/$nbPerPage);
 
+        if ($page > $nbPerPage ) {
+            throw $this->createNotFoundException('Pas de page pour ce numéro de page : '.$page);
+        }
+
+
         return $this->render('SRBlogBundle:News:index.html.twig', array('listNews' => $listNews,
                                                                         'nbPages'  => $nbPages,
                                                                         'page'     => $page));
@@ -38,6 +43,10 @@ class NewsController extends Controller
     public function viewAction($id)
     {
         $news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
+        if (!$news) {
+            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+        }
+
         $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($id);
 
         return $this->render('SRBlogBundle:News:view.html.twig', array('news' => $news,
@@ -84,6 +93,11 @@ class NewsController extends Controller
     public function updateAction($id, Request $request)
     {
         $news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
+        if (!$news) {
+            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+        }
+
+
         $form = $this->createForm(new NewsType, $news);
         
         $form->handleRequest($request);
@@ -110,6 +124,10 @@ class NewsController extends Controller
     public function deleteAction($id, Request $request)
     {
         $news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
+        if (!$news) {
+            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+        }
+
 
          // On crée un formulaire vide, qui ne contiendra que le champ CSRF
          // Cela permet de protéger la suppression d'annonce contre cette faille
