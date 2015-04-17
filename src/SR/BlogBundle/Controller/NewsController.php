@@ -72,6 +72,7 @@ class NewsController extends Controller
             $user = $this->getUser();
             $news->setUser($user);
 
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($news);
             $em->flush();
@@ -101,6 +102,8 @@ class NewsController extends Controller
         $form = $this->createForm(new NewsType, $news);
         
         $form->handleRequest($request);
+
+        var_dump($news);
 
         if($form->isValid())
         {

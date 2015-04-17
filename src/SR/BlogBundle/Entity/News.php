@@ -29,7 +29,7 @@ class News
 
 
     /**
-    * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image", cascade={"persist"})
+    * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image", cascade={"persist","remove"})
     */
     private $image;
 
@@ -50,7 +50,7 @@ class News
     */
     private $user;
 
-    /**
+    /** 
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
@@ -61,6 +61,7 @@ class News
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     * @Assert\NotBlank
      */
     private $content;
 
@@ -68,6 +69,7 @@ class News
      * @var \DateTime
      *
      * @ORM\Column(name="news_date", type="datetime")
+     * @Assert\DateTime
      */
     private $newsDate;
 
@@ -188,7 +190,7 @@ class News
      * @return News
      */
     public function setImage(\SR\BlogBundle\Entity\Image $image = null)
-    {
+    {   
         $this->image = $image;
 
         return $this;

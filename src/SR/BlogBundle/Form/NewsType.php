@@ -17,7 +17,7 @@ class NewsType extends AbstractType
         $builder
             ->add('title','text')
             ->add('content','textarea',array('attr'=> array('class'=>'ckeditor')))
-            ->add('image', new ImageType())
+            ->add('image', new ImageType(),array('required'=>false))
             ->add('newsDate','date')
             ->add('newsStatus','checkbox', array('required' => true))
             ->add('newsCategories','entity',array('class'=>'SRBlogBundle:NewsCategory',

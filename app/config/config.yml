@@ -86,9 +86,13 @@ avalanche_imagine:
             options: 
                 size: [700, 300]
                 mode: outbound 
+                cache_type: false
+                cache_expires: 1 day
 
         thumbnail_event:
             type:    thumbnail
             options: 
                 size: [300, 200]
-                mode: outbound 
+                mode: outbound
+                cache_type: false
+                cache_expires: 1 day

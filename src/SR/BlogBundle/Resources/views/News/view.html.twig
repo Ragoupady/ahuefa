@@ -7,8 +7,10 @@
 	<h1>{{news.title}}</h1>
 	<p>Par : {{news.user.username}} le {{news.newsDate|date("d/m/Y") }}</p>
 
-	 
-	<img  class="image_post"src="{{ asset(news.image.webPath| apply_filter('thumbnail_filter')) }}" alt="{{ news.image.alt }}"/>
+	{% if news.image.id is defined %}
+		<img  class="image_post"src="{{ asset(news.image.webPath| apply_filter('thumbnail_filter')) }}" alt="{{ news.image.alt }}"/>
+	{% endif %}
+
 		         {{news.content| raw}}
 		 	
 

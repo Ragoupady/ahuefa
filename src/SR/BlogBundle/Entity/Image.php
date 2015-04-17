@@ -5,6 +5,8 @@ namespace SR\BlogBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
+
+
 /**
  * Image
  *
@@ -37,7 +39,7 @@ class Image
      */
     private $alt;
 
- private $file;
+    private $file;
 
   // On ajoute cet attribut pour y stocker le nom du fichier temporairement
   private $tempFilename;
@@ -53,7 +55,7 @@ class Image
   public function setFile(UploadedFile $file)
   {
     $this->file = $file;
-
+    
     // On vérifie si on avait déjà un fichier pour cette entité
     if (null !== $this->url) {
       // On sauvegarde l'extension du fichier pour le supprimer plus tard
@@ -74,6 +76,7 @@ class Image
     // Si jamais il n'y a pas de fichier (champ facultatif)
     if (null === $this->file) {
       return;
+      
     }
 
     // Le nom du fichier est son id, on doit juste stocker également son extension
