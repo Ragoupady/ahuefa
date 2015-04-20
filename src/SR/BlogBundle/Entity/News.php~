@@ -3,8 +3,13 @@
 namespace SR\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+
+use Symfony\Component\Validator\Constraints as Assert;
+
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * News
@@ -26,12 +31,12 @@ class News
 
 
     /**
-    * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image", cascade={"persist"})
+    * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image", cascade={"persist","remove"})
     */
     private $image;
 
     /**
-    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory")
+    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory",cascade={"remove"})
     *
     */
     private $newsCategories;
@@ -42,15 +47,16 @@ class News
     private $tags;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\User")
+    * @ORM\ManyToOne(targetEntity="SR\UserBundle\Entity\User")
     * @ORM\JoinColumn(nullable=false)
     */
     private $user;
 
-    /**
+    /** 
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     *@Assert\NotBlank
      */
     private $title;
 
@@ -58,6 +64,7 @@ class News
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     * @Assert\NotBlank
      */
     private $content;
 
@@ -65,6 +72,7 @@ class News
      * @var \DateTime
      *
      * @ORM\Column(name="news_date", type="datetime")
+     * @Assert\DateTime
      */
     private $newsDate;
 
@@ -75,6 +83,11 @@ class News
      */
     private $newsStatus;
 
+    /**
+    *@Gedmo\Slug(fields={"title"})
+    *@ORM\Column(length=128, unique=true)
+    */
+    private $slug;
 
     /**
      * Get id
@@ -185,7 +198,7 @@ class News
      * @return News
      */
     public function setImage(\SR\BlogBundle\Entity\Image $image = null)
-    {
+    {   
         $this->image = $image;
 
         return $this;
@@ -206,7 +219,7 @@ class News
     public function __construct()
     {
         $this->newsCategories = new \Doctrine\Common\Collections\ArrayCollection();
-       
+        $this->newsDate = new \DateTime();
     }
 
     /**
@@ -278,10 +291,10 @@ class News
     /**
      * Set user
      *
-     * @param \SR\BlogBundle\Entity\User $user
+     * @param \SR\UserBundle\Entity\User $user
      * @return News
      */
-    public function setUser(\SR\BlogBundle\Entity\User $user)
+    public function setUser(\SR\UserBundle\Entity\User $user)
     {
         $this->user = $user;
 
@@ -291,11 +304,16 @@ class News
     /**
      * Get user
      *
-     * @return \SR\BlogBundle\Entity\User 
+     * @return \SR\UserBundle\Entity\User 
      */
     public function getUser()
     {
         return $this->user;
     }
 
+
+    public function __toString()
+{
+    return $this->getTitle();
+}
 }

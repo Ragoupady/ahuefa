@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Event
@@ -32,7 +35,7 @@ class Event
      private $image;
 
      /**
-     * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\EventCategory",cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\EventCategory")
      * @ORM\JoinColumn(nullable=false)
      */
      private $eventCategory;
@@ -56,7 +59,7 @@ class Event
     private $news;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\User")
+    * @ORM\ManyToOne(targetEntity="SR\UserBundle\Entity\User")
     * @ORM\JoinColumn(nullable=true)
     */
     private $user;
@@ -65,6 +68,7 @@ class Event
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     * @Assert\NotBlank
      */
     private $title;
 
@@ -72,6 +76,7 @@ class Event
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     * @Assert\NotBlank
      */
     private $content;
 
@@ -134,7 +139,11 @@ class Event
      */
     private $eventLocation;
 
-
+    /**
+    *@Gedmo\Slug(fields={"title"})
+    *@ORM\Column(length=128, unique=true)
+    */
+    private $slug;
 
     /**
      * Get id
@@ -447,10 +456,10 @@ class Event
     /**
      * Set user
      *
-     * @param \SR\BlogBundle\Entity\User $user
+     * @param \SR\UserBundle\Entity\User $user
      * @return Event
      */
-    public function setUser(\SR\BlogBundle\Entity\User $user)
+    public function setUser(\SR\UserBundle\Entity\User $user)
     {
         $this->user = $user;
 
@@ -460,7 +469,7 @@ class Event
     /**
      * Get user
      *
-     * @return \SR\BlogBundle\Entity\User 
+     * @return \SR\UserBundle\Entity\User 
      */
     public function getUser()
     {
@@ -520,5 +529,28 @@ class Event
         }
 
         $this->movies = $movies;
+    }
+
+    /**
+     * Set eventCategory
+     *
+     * @param \SR\BlogBundle\Entity\EventCategory $eventCategory
+     * @return Event
+     */
+    public function setEventCategory(\SR\BlogBundle\Entity\EventCategory $eventCategory)
+    {
+        $this->eventCategory = $eventCategory;
+
+        return $this;
+    }
+
+    /**
+     * Get eventCategory
+     *
+     * @return \SR\BlogBundle\Entity\EventCategory 
+     */
+    public function getEventCategory()
+    {
+        return $this->eventCategory;
     }
 }

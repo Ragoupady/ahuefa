@@ -30,7 +30,7 @@ class NewsController extends Controller
         // On calcule le nombre total de pages grâce au count($listAdverts) qui retourne le nombre total d'annonces
         $nbPages = ceil(count($listNews)/$nbPerPage);
 
-        if ($page > $nbPages ) {
+        if ($page > $nbPages && $nbPages!=0 ) {
             throw $this->createNotFoundException('Pas de page pour ce numéro de page : '.$page);
         }
 

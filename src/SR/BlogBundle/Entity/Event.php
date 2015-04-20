@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Event
@@ -138,7 +139,11 @@ class Event
      */
     private $eventLocation;
 
-
+    /**
+    *@Gedmo\Slug(fields={"title"})
+    *@ORM\Column(length=128, unique=true)
+    */
+    private $slug;
 
     /**
      * Get id
@@ -547,5 +552,51 @@ class Event
     public function getEventCategory()
     {
         return $this->eventCategory;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Event
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Add movies
+     *
+     * @param \SR\BlogBundle\Entity\Movie $movies
+     * @return Event
+     */
+    public function addMovie(\SR\BlogBundle\Entity\Movie $movies)
+    {
+        $this->movies[] = $movies;
+
+        return $this;
+    }
+
+    /**
+     * Remove movies
+     *
+     * @param \SR\BlogBundle\Entity\Movie $movies
+     */
+    public function removeMovie(\SR\BlogBundle\Entity\Movie $movies)
+    {
+        $this->movies->removeElement($movies);
     }
 }
