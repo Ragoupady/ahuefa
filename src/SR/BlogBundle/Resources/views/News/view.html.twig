@@ -15,8 +15,8 @@
 		 	
 
 {% if is_granted('ROLE_MODERATEUR') %}     
-	<a class="bouton" href="{{path('sr_blog_article_update',{'id': news.id})}}">Modifier</a>
-	<a class="bouton2" href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a><br><br>
+	<a class="bouton" href="{{path('sr_blog_article_update',{'slug': news.slug})}}">Modifier</a>
+	<a class="bouton2" href="{{path('sr_blog_article_delete',{'slug': news.slug})}}">Supprimer</a><br><br>
 {% endif %}
 		
 		

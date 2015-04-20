@@ -44,8 +44,8 @@
 
 </ul>
 {% if is_granted('ROLE_MODERATEUR') %}
-    <a class="bouton" href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Modifier</a>
-    <a class="bouton2" href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a><br><br>
+    <a class="bouton" href="{{path('sr_blog_evenement_update',{'slug': event.slug})}}">Modifier</a>
+    <a class="bouton2" href="{{path('sr_blog_evenement_delete',{'slug': event.slug})}}">Supprimer</a><br><br>
 {% endif %}
          
     {% include'SRBlogBundle:Comment:index.html.twig' with { 'comments': comments }%}

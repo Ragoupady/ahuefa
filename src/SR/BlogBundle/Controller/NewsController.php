@@ -40,14 +40,13 @@ class NewsController extends Controller
                                                                         'page'     => $page));
     }
 
-    public function viewAction($id)
+    public function viewAction(News $news, $slug)
     {
-        $news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
         if (!$news) {
-            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$news->getId());
         }
 
-        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($id);
+        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($news->getId());
 
         return $this->render('SRBlogBundle:News:view.html.twig', array('news' => $news,
                                                                        'comments' => $comments
@@ -58,7 +57,7 @@ class NewsController extends Controller
 
 
     /**
-    * @Security(" has_role('ROLE_USER')")
+    * @Security("has_role('ROLE_USER')")
     */
     public function addAction(Request $request)
     {
@@ -93,11 +92,10 @@ class NewsController extends Controller
     /**
     * @Security(" has_role('ROLE_USER')")
     */
-    public function updateAction($id, Request $request)
+    public function updateAction(News $news, $slug, Request $request)
     {
-        $news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
         if (!$news) {
-            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '. $news->getId());
         }
 
 
@@ -115,7 +113,7 @@ class NewsController extends Controller
 
             $request->getSession()->getFlashBag()->add('notice', 'Annonce bien modifiée.');
 
-            return $this->redirect($this->generateUrl('sr_blog_article_view', array('id' => $news->getId())));
+            return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug' => $slug)));
     }
             //si c'est la premiere fois qu'on arrive dans la page ou que le formulaire est invalide, on montre le formulaire de mofification
             return $this->render('SRBlogBundle:News:update.html.twig', array('form'   => $form->createView()));
@@ -126,9 +124,8 @@ class NewsController extends Controller
     * @Security("has_role('ROLE_USER')")
     */
 
-    public function deleteAction($id, Request $request)
+    public function deleteAction(News $news, $slug, Request $request)
     {
-        $news = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->find($id);
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
         }
@@ -140,7 +137,7 @@ class NewsController extends Controller
 
         if($form->handleRequest($request)->isValid())
         {    $em    =   $this->getDoctrine()->getManager(); 
-             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($id);
+             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($news->getId());
              foreach ($comments as $comment) {
             
                 $em->remove($comment);
