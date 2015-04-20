@@ -3,13 +3,15 @@
 
 {% block body %}
           <h2> Nos évenements</h2>
+{% if is_granted('ROLE_MODERATEUR') %}
+  <div class="space">
 
-<div class="space">
 
-  <p><a href="{{path('sr_blog_evenement_add')}}" class="bouton">Nouvel Evénement</a></p>
-  <p><a href="{{path('sr_blog_evenement_add_category')}}" class="bouton2">Type Evénement</a></p>
- 
-</div>
+    <p><a href="{{path('sr_blog_evenement_add')}}" class="bouton">Nouvel Evénement</a></p>
+    <p><a href="{{path('sr_blog_evenement_add_category')}}" class="bouton2">Type Evénement</a></p>
+
+  </div>
+{% endif %}
 <br><br>
          
 <ul>
@@ -27,21 +29,24 @@
          <a href= "{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a>
       </div>
     </li>
-       <div class="btn-group">
-      <button type="button" class="btn btn-danger btn-xs">Action</button>
-      <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-      <span class="sr-only">Toggle Dropdown</span>
-      </button>
+      {% if is_granted('ROLE_MODERATEUR') %}
+        <div class="btn-group">
 
-      <ul class="dropdown-menu" role="menu">
-        
-        <li><a href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Editer</a></li>
-        <li class="divider"></li>
-        <li><a href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a></li>
-      </ul>
-  
-    </div>
+          <button type="button" class="btn btn-danger btn-xs">Action</button>
+            <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+
+          <ul class="dropdown-menu" role="menu">
+            
+            <li><a href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Editer</a></li>
+            <li class="divider"></li>
+            <li><a href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a></li>
+          </ul>
+
+        </div>
+      {% endif %}
   	{%endfor%}
 
   {% endif %}

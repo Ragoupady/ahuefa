@@ -9,34 +9,50 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
  
 <div class="space">
 
+{% if is_granted('ROLE_MODERATEUR') %}
   <p><a href="{{path('sr_blog_article_add')}}" class="bouton">Nouvel article</a></p>
   <p><a href="{{path('sr_blog_article_addCategory')}}" class="bouton2">Nouvel catégorie</a></p>
- 
+{% endif %}
 </div>
 <br>
 
 	{%for news in listNews%}
-  	<li class="list-group-item"><a class="titre_index" href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} </a> <p class="auteur_index"> écrit par {{news.user.username}} le {{news.newsDate|date("d/m/Y") }} </p></li>
-    <li class="list-group-item"> {{news.content[:300] |striptags|raw }} ...</li>
-     
-  
-   <div class="btn-group">
-      <button type="button" class="btn btn-danger btn-xs">Action</button>
-      <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-      <span class="sr-only">Toggle Dropdown</span>
-      </button>
+  	<li class="list-group-item bloc_news">
+      {% if news.image.id is defined %}
+        <img  class="image_news_minature"src="{{ asset(news.image.webPath| apply_filter('miniature')) }}" alt="{{ news.image.alt }}"/>
+      {% endif %}
 
-      <ul class="dropdown-menu" role="menu">
-        
-        <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
-        <li class="divider"></li>
-        <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
-      </ul>
-  
-    </div>
-  </br>
-  </br>
+      <a class="titre_index" href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} </a> 
+      <br>
+      <p class="auteur_index"> écrit par {{news.user.username}} le {{news.newsDate|date("d/m/Y") }} </p><br>
+
+    </li>
+    <li class="list-group-item">
+     {{news.content[:300] |striptags|raw }} ...
+     <a  href= "{{path('sr_blog_article_view',{'id': news.id})}}">Lire</a>
+   </li>
+
+     
+  {% if is_granted('ROLE_MODERATEUR') %}
+
+     <div class="btn-group">
+        <button type="button" class="btn btn-danger btn-xs">Action</button>
+        <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+        </button>
+
+        <ul class="dropdown-menu" role="menu">
+          
+          <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
+          <li class="divider"></li>
+          <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
+        </ul>
+    
+      </div>
+  {% endif %}
+    </br>
+    </br>
 
         {% if is_granted('ROLE_MODERATEUR') %}
         

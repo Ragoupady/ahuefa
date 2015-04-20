@@ -19,16 +19,13 @@ class NewsType extends AbstractType
             ->add('content','textarea',array('attr'=> array('class'=>'ckeditor')))
             ->add('image', new ImageType(),array('required'=>false))
             ->add('newsDate','date')
-            ->add('newsStatus','checkbox', array('required' => true))
+            ->add('newsStatus','checkbox', array('required' => false))
             ->add('newsCategories','entity',array('class'=>'SRBlogBundle:NewsCategory',
                                                   'property'=> 'name',
                                                   'multiple'=> true))
             
             ->add('envoyer','submit')
-            //->add('image', new ImageType()) // Ajoutez cette ligne
-            //->add('newsCategories', new ImageType()) // Ajoutez cette ligne)
-            //->add('tags')
-           // ->add('user')
+
         ;
     }
     

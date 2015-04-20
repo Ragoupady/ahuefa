@@ -20,11 +20,11 @@ class EventType extends AbstractType
                                                     'property'=> 'name',
                                                     'multiple'=> false))
             ->add('title','text')
-            ->add('image', new ImageType())
+            ->add('image', new ImageType(),array('required'=>false))
             ->add('content','textarea',array('attr'=> array('class'=>'ckeditor')))
             ->add('postDate','date')
-            ->add('status','checkbox')
-            ->add('eventStatus','checkbox')
+            ->add('status','checkbox',array('required'=>false))
+            ->add('eventStatus','checkbox',array('required'=>false))
             ->add('eventStartDate','date')
             ->add('eventEndDate','date')
             ->add('eventRate','text')
@@ -33,12 +33,10 @@ class EventType extends AbstractType
                                           'by_reference' => false,
                                           'allow_add' => true,
                                           'allow_delete'=> true))
-            ->add('eventGuest','text')
-            ->add('eventLocation','text',array('attr'=> array('placeholder' => 'ex: "104 Avenue Jean Lolive, 93500 Pantin"')))
+            ->add('eventGuest','text',array('required'=>false))
+            ->add('eventLocation','text',array('attr'=> array('placeholder' => 'ex: "104 Avenue Jean Lolive, 93500 Pantin"','required'=>false)))
             ->add('envoyer','submit')
-           // ->add('tags')
-          //  ->add('news')
-          //  ->add('user')
+
         ;
     }
     

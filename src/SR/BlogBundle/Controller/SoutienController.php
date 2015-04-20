@@ -42,7 +42,17 @@ class SoutienController extends Controller
 
     public function sendEmail($typeContact,$request)
     {
-        $contenu_mail= $request->request->get('message');
+        $name= $request->request->get('name');
+        $firstname= $request->request->get('firstname');
+        $email= $request->request->get('email');
+        $phone= $request->request->get('phone');
+        $messageMail= $request->request->get('message');
+
+        $contenu_mail = 'Nom: '.$name."\n".'Prénom: '.$firstname."\n".'Email: '.$email."\n".'Téléphone: '.$phone."\n".$messageMail;
+
+
+
+
         $message = \Swift_Message::newInstance()
             ->setSubject($typeContact)
             ->setFrom('ragou.dev@gmail.com')
@@ -55,10 +65,7 @@ class SoutienController extends Controller
 
     public function confirmationAction()
     {
-         $breadcrumbs = $this->get("white_october_breadcrumbs");
-          
-          $breadcrumbs->prependRouteItem("Home", "sr_blog_home");
-          $breadcrumbs->addRouteItem("Confirmation", "sr_blog_contact_confirmation");
+
         return $this->render('SRBlogBundle:Soutien:confirmation.html.twig');
     }
 }

@@ -96,3 +96,12 @@ avalanche_imagine:
                 mode: outbound
                 cache_type: false
                 cache_expires: 1 day
+
+
+        miniature:
+            type:    thumbnail
+            options: 
+                size: [100, 100]
+                mode: outbound
+                cache_type: false
+                cache_expires: 1 day

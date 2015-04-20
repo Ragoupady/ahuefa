@@ -39,7 +39,9 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">AHUEFA</a>
+                <a class="navbar-brand" href="#">
+                    <img src="http://placehold.it/150x50&text=Logo" alt="">
+                </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -140,12 +142,12 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" >
     <div class="item active">
-      <img class="carousel-page" src="https://assets.rbl.ms/632416/1200x400.jpg" alt="...">
+      <img class="carousel-page" src="https://davidjrodger.files.wordpress.com/2013/09/image-of-mars-as-a-concept-of-what-futuristic-race-pilots-might-see-science-fiction.jpg?w=1200&h=400&crop=1" alt="...">
       <div class="carousel-caption">
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
           <p>
-          <a class="btn btn-primary btn-lg" href="http://ahuefa.org">
+          <a class="btn btn-primary btn-lg bouton_carousel" href="http://ahuefa.org">
             En savoir plus »
           </a>
           </p>
@@ -153,25 +155,25 @@
     </div>
     <div class="item">
       
-      <img class="carousel-page"src="http://www.solucea.com/wp-content/uploads/2013/11/Fotolia_46645136_S.jpg" alt="...">
+      <img class="carousel-page"src="https://davidjrodger.files.wordpress.com/2013/09/image-of-mars-as-a-concept-of-what-futuristic-race-pilots-might-see-science-fiction.jpg?w=1200&h=400&crop=1" alt="...">
 
       <div class="carousel-caption">
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
           <p>
-          <a class="btn btn-primary btn-lg" href="http://ahuefa.org">
+          <a class="btn btn-primary btn-lg bouton_carousel" href="http://ahuefa.org">
             En savoir plus »
           </a>
           </p>
       </div>
     </div>
     <div class="item">
-      <img class="carousel-page" src="http://www.socianova.com/site/includes/img/produits/3/2.png" alt="...">
+      <img class="carousel-page" src="https://davidjrodger.files.wordpress.com/2013/09/image-of-mars-as-a-concept-of-what-futuristic-race-pilots-might-see-science-fiction.jpg?w=1200&h=400&crop=1" alt="...">
       <div class="carousel-caption">
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
           <p>
-          <a class="btn btn-primary btn-lg" href="http://ahuefa.org">
+          <a class="btn btn-primary btn-lg bouton_carousel" href="http://ahuefa.org">
             En savoir plus »
           </a>
           </p>
@@ -202,7 +204,7 @@
 
     <div class="row">
 
-      <div id="content" class="col-md-9">
+      <div id="content" class="col-md-8">
         {% block body %}
         {% endblock %}
       </div>
@@ -224,7 +226,7 @@
 
 
 
-        <div id="menu" class="col-md-3">
+        <div id="menu" class="col-md-offset-1 col-md-3">
           <div class="menu">
             <h4 class="menu_titre"> Prochain évenement</h4>
              {{render(controller("SRBlogBundle:Event:menu", {'limit' : 1}))}}
@@ -249,7 +251,7 @@
     <script src="{{asset('bundles/srblog/ckeditor/ckeditor.js')}}"></script>
     <script src="{{asset('less/dist/less.js')}}"></script>
     <script src="{{asset('bootstrap/js/carousel.js')}}"></script>
-    <
+    
 
      <script>
       $('.carousel').carousel({
@@ -261,8 +263,8 @@
 
       <footer class="footer">
       <div class="container">
-         <p>Ragoupady © {{ 'now'|date('Y') }}</p>
-        <p class="text-muted">Place sticky footer content here.</p>
+        <br>
+        <p class="text-muted">AHUEFA International France © {{ 'now'|date('Y') }}</p>
         
       </div>
     </footer>

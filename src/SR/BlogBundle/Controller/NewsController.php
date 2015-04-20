@@ -30,7 +30,7 @@ class NewsController extends Controller
         // On calcule le nombre total de pages grâce au count($listAdverts) qui retourne le nombre total d'annonces
         $nbPages = ceil(count($listNews)/$nbPerPage);
 
-        if ($page > $nbPerPage ) {
+        if ($page > $nbPages ) {
             throw $this->createNotFoundException('Pas de page pour ce numéro de page : '.$page);
         }
 
@@ -57,7 +57,9 @@ class NewsController extends Controller
     
 
 
-
+    /**
+    * @Security(" has_role('ROLE_USER')")
+    */
     public function addAction(Request $request)
     {
 
@@ -103,7 +105,7 @@ class NewsController extends Controller
         
         $form->handleRequest($request);
 
-        var_dump($news);
+        
 
         if($form->isValid())
         {
@@ -166,6 +168,9 @@ class NewsController extends Controller
 
     }
 
+    /**
+    * @Security("has_role('ROLE_USER')")
+    */
     public function addCategoryAction(Request $request)
     {
         $newsCategory = new newsCategory();

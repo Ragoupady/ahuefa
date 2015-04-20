@@ -32,7 +32,10 @@ class EventController extends Controller
     ;
         // On calcule le nombre total de pages grâce au count($listEvent) qui retourne le nombre total d'evenement
          $nbPages = ceil(count($listEvent)/$nbPerPage);
-
+         
+        if ($page > $nbPages ) {
+            throw $this->createNotFoundException('Pas de page pour ce numéro de page : '.$page);
+        }
 
         return $this->render('SRBlogBundle:Event:index.html.twig', array('listEvent' => $listEvent,
                                                                         'nbPages'  => $nbPages,
@@ -54,6 +57,9 @@ class EventController extends Controller
     
     }
 
+    /**
+    * @Security(" has_role('ROLE_USER')")
+    */
     public function addAction(Request $request)
     {
         
@@ -81,6 +87,10 @@ class EventController extends Controller
 
     }
 
+
+    /**
+    * @Security("has_role('ROLE_USER')")
+    */
     public function updateAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -127,6 +137,9 @@ class EventController extends Controller
             ));
     }
 
+    /**
+    * @Security("has_role('ROLE_USER')")
+    */
     public function deleteAction($id, Request $request)
     {
         $event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
@@ -161,6 +174,9 @@ class EventController extends Controller
 
     }
 
+    /**
+    * @Security("has_role('ROLE_USER')")
+    */
     public function addCategoryAction(Request $request)
     {
         
