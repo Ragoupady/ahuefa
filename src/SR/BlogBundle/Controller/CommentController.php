@@ -19,7 +19,7 @@ class CommentController extends Controller
 
 	public function newAction($item)
 	{
-		
+		var_dump($item);
 		if($item instanceof News)
 		{
 
@@ -108,9 +108,11 @@ class CommentController extends Controller
 
 
 	public function createEventAction($id, Request $request)
-	{
+	{ 
 		//récupérer l'event à l'aide de l'id
 		$event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+		var_dump($event);
+
 		if (!$event) {
         	throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
         }
