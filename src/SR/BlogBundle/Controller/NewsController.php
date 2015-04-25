@@ -46,7 +46,7 @@ class NewsController extends Controller
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$news->getId());
         }
 
-        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($news->getId());
+        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostNewsComments($news->getId());
 
         return $this->render('SRBlogBundle:News:view.html.twig', array('news' => $news,
                                                                        'comments' => $comments
@@ -151,7 +151,7 @@ class NewsController extends Controller
              return $this->redirect($this->generateUrl('sr_blog_article'));
         }
 
-        return $this->render('SRBlogBundle:News:delete.html.twig', array('news' => $news,
+        return $this->render('SRBlogBundle:News:deleteNews.html.twig', array('news' => $news,
                                                                          'form'   => $form->createView()));
     }
 

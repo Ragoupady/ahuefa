@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 class CommentRepository extends EntityRepository
 {
 
-	public function getPostComments($id)  // methode utilisée pour récupérer les commentaires des News mais aussi des Event
+	public function getPostNewsComments($id)  // methode utilisée pour récupérer les commentaires d'une News
 	{
 		$qb = $this->createQueryBuilder('c')
 				  ->orderBy('c.postDate', 'DESC')
@@ -21,6 +21,23 @@ class CommentRepository extends EntityRepository
 				  ->setParameter('id', $id);
 
 		$result = $qb->getQuery()->getResult();
+
+		return $result;
+
+
+
+	}
+
+	public function getPostEventComments($id)  // methode utilisée pour récupérer les commentaires d'une Event
+	{
+		$qb = $this->createQueryBuilder('c')
+				  ->orderBy('c.postDate', 'DESC')
+				  ->where('c.event=:id')
+				  ->setParameter('id', $id);
+
+		$result = $qb->getQuery()->getResult();
+
+		
 
 		return $result;
 

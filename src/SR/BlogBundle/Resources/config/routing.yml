@@ -90,13 +90,13 @@ sr_blog_article_addCategory:
     defaults: { _controller: SRBlogBundle:News:addCategory }
 
 sr_blog_comment_create_news:
-    path:     /comment/{id}
+    path:     /article/comment/{id}
     defaults: { _controller: SRBlogBundle:Comment:createNews }
     requirements:
         id: \d+
 
 sr_blog_comment_create_event:
-    path:     /comment/{id}
+    path:     /evenement/comment/{id}
     defaults: { _controller: SRBlogBundle:Comment:createEvent }
     requirements:
         id: \d+
@@ -151,21 +151,16 @@ sr_blog_contact_confirmation:
     path:    /contact/confirmation
     defaults: { _controller: SRBlogBundle:Soutien:confirmation}
 
-sr_blog_comment_create_News:
-    path:  /comment/article     
-    defaults: { _controller: SRBlogBundle:Comment:addCommentNews}
+
+sr_blog_article_comment_delete:
+    path:     /article/comment/delete/{id}
+    defaults: { _controller: SRBlogBundle:Comment:deleteNews}
     requirements:
         id: \d+
 
-sr_blog_comment_create_Event:
-    path:     /comment/evenement
-    defaults: { _controller: SRBlogBundle:Comment:addCommentEvent}
-    requirements:
-        id: \d+
-
-sr_blog_comment_delete:
-    path:     /comment/delete/{id}
-    defaults: { _controller: SRBlogBundle:Comment:delete}
+sr_blog_evenement_comment_delete:
+    path:     /evenement/comment/delete/{id}
+    defaults: { _controller: SRBlogBundle:Comment:deleteEvent}
     requirements:
         id: \d+
 

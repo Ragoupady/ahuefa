@@ -12,10 +12,10 @@
 
   {# On met l'id du commentaire dans la route de l'action du formulaire #}
   
-  <form action="{{ path('sr_blog_comment_delete', {'id': comment.id}) }}" method="post">
-    <a href="{{ path('sr_blog_article_view', {'id': comment.news.id}) }}" class="btn btn-default">
+  <form action="{{ path('sr_blog_evenement_comment_delete', {'id': comment.id}) }}" method="post">
+    <a href="{{ path('sr_blog_evenement_view', {'slug': comment.event.slug}) }}" class="btn btn-default">
       <i class="glyphicon glyphicon-chevron-left"></i>
-      Retour à l'annonce
+      Retour à l'événement
     </a>
     {# Ici j'ai écrit le bouton de soumission à la main #}
     <input type="submit" value="Supprimer" class="btn btn-danger" />

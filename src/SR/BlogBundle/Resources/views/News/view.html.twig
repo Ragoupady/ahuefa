@@ -21,12 +21,12 @@
 		
 		
 
-	{% include'SRBlogBundle:Comment:index.html.twig' with { 'comments': comments }%}
+	{% include'SRBlogBundle:Comment:indexNews.html.twig' with { 'comments': comments }%}
 
 
 <h3>Ajouter un commentaire</h3>
 {% if is_granted('ROLE_USER') %}
-    {% render(controller('SRBlogBundle:Comment:new', { 'item' : news } )) %}
+    {% render(controller('SRBlogBundle:Comment:newNews', { 'news' : news } )) %}
 
 {% else %}
  <p>Vous devez être enregistré pour laisser un commentaire.</p>

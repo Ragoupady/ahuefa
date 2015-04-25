@@ -53,7 +53,8 @@ class EventController extends Controller
           throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }
 
-        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($event->getId());
+        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostEventComments($event->getId());
+        
         return $this->render('SRBlogBundle:Event:view.html.twig', array('event' => $event,
                                                                        'comments' => $comments
                                                                        ));
@@ -166,7 +167,7 @@ class EventController extends Controller
 
 
 
-        return $this->render('SRBlogBundle:Event:delete.html.twig', array('event' => $event,
+        return $this->render('SRBlogBundle:Event:deleteEvent.html.twig', array('event' => $event,
                                                                           'form' => $form->createView()));
     }
 
