@@ -17,14 +17,11 @@ class CommentController extends Controller
 {
 
 
-	public function newAction($item)
+	public function newNewsAction(News $news)
 	{
-		var_dump($item);
-		if($item instanceof News)
-		{
 
 			$comment = new Comment();
-			$comment->setNews($item);
+			$comment->setNews($news);
 
 			$form   = $this->createForm(new CommentType(), $comment);
 
@@ -33,13 +30,18 @@ class CommentController extends Controller
 	           																	    'form'   => $form->createView()
        		 ));		
 
-		}
+		
 
-		if($item instanceof Event)
-		{
+	}
+
+
+
+	public function newEventAction(Event $event)
+	{
+		
 
 			$comment = new Comment();
-			$comment->setEvent($item);
+			$comment->setEvent($event);
 
 			$form   = $this->createForm(new CommentType(), $comment);
 
@@ -49,9 +51,7 @@ class CommentController extends Controller
        		 ));		
 
 		
-		}
 		
-
 	}
 
 
@@ -91,7 +91,7 @@ class CommentController extends Controller
 				
 
 				return $this->redirect($this->generateUrl('sr_blog_article_view', array(
-	               							'id' => $comment->getNews()->getId())) .'#comment-' . $comment->getId()
+	               							'slug' => $comment->getNews()->getSlug())) .'#comment-' . $comment->getId()
 	           	 );
 			}
 		
@@ -107,11 +107,9 @@ class CommentController extends Controller
 	}
 
 
-	public function createEventAction($id, Request $request)
-	{ 
-		//récupérer l'event à l'aide de l'id
-		$event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
-		var_dump($event);
+
+	public function createEventAction(Event $event, Request $request)
+	{
 
 		if (!$event) {
         	throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
@@ -119,6 +117,8 @@ class CommentController extends Controller
 		//créer un commentaire
 		$comment = new Comment();
    		$comment->setEvent($event);
+
+   		var_dump($comment);
 
 
 		//créer un formulaire avec ce commentaire vide
@@ -134,24 +134,19 @@ class CommentController extends Controller
 				
 
 				//Partie à changer par du dynamique
-	            $user = new User();
-	            $user->setLastName('SAGADEVIN');
-	            $user->setFirstName('ragoupady');
-	            $user->setLogin('oub24');   
-	            $user->setPassword('password');
-	            $user->setEmail('ragou@fake.fr');
+	            $user = $this->getUser();
 				$comment->setUser($user);
 
 				$em = $this->getDoctrine()->getManager();
-	            $em->persist($user);
+	            
 	            $em->persist($comment);
 	            $em->flush();
-				//persister , ne pas oublier user etc...
-				//rediriger sur la page de vue en donnant l'id de la news
+				
+				//rediriger sur la page de vue en donnant l'id de l'event
 				
 
 				return $this->redirect($this->generateUrl('sr_blog_evenement_view', array(
-	               							'id' => $comment->getEvent()->getId())) .'#comment-' . $comment->getId()
+	               							'slug' => $comment->getEvent()->getSlug())) .'#comment-' . $comment->getId()
 	           	 );
 			}
 		
@@ -165,7 +160,7 @@ class CommentController extends Controller
 	}
 
 
-	public function deleteAction($id,Request $request)
+	public function deleteNewsAction($id,Request $request)
 	{
 		$comment = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->find($id);
 		if (!$comment) {
@@ -183,11 +178,39 @@ class CommentController extends Controller
 			$em->remove($comment);
 			$em->flush();
 
-			return $this->redirect($this->generateUrl('sr_blog_article_view', array('id'=> $comment->getNews()->getId())));
+			return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug'=> $comment->getNews()->getSlug())));
 		
 		}
 		
-		return $this->render('SRBlogBundle:Comment:delete.html.twig', array('comment' => $comment,
+		return $this->render('SRBlogBundle:Comment:deleteNews.html.twig', array('comment' => $comment,
+                                                                         'form'   => $form->createView()));
+	}
+
+
+
+	public function deleteEventAction($id,Request $request)
+	{
+		$comment = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->find($id);
+		if (!$comment) {
+        	throw $this->createNotFoundException('Aucun commentaire trouvée pour cet id : '.$id);
+        }
+
+         // On crée un formulaire vide, qui ne contiendra que le champ CSRF
+         // Cela permet de protéger la suppression d'annonce contre cette faille
+        $form = $this->createFormBuilder()->getForm();
+
+        if($form->handleRequest($request)->isValid())
+        { 
+
+			$em = $this->getDoctrine()->getManager();
+			$em->remove($comment);
+			$em->flush();
+
+			return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('slug'=> $comment->getEvent()->getSlug())));
+		
+		}
+		
+		return $this->render('SRBlogBundle:Comment:deleteEvent.html.twig', array('comment' => $comment,
                                                                          'form'   => $form->createView()));
 	}
 }

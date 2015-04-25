@@ -9,6 +9,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
+use Gedmo\Mapping\Annotation as Gedmo;
+
 /**
  * News
  *
@@ -81,6 +83,11 @@ class News
      */
     private $newsStatus;
 
+    /**
+    *@Gedmo\Slug(fields={"title"})
+    *@ORM\Column(length=128, unique=true)
+    */
+    private $slug;
 
     /**
      * Get id
@@ -309,4 +316,27 @@ class News
 {
     return $this->getTitle();
 }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return News
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 }

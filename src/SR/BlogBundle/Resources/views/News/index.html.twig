@@ -22,14 +22,14 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
         <img  class="image_news_minature"src="{{ asset(news.image.webPath| apply_filter('miniature')) }}" alt="{{ news.image.alt }}"/>
       {% endif %}
 
-      <a class="titre_index" href= "{{path('sr_blog_article_view',{'id': news.id})}}">  {{news.title}} </a> 
+      <a class="titre_index" href= "{{path('sr_blog_article_view',{'slug': news.slug})}}">  {{news.title}} </a> 
       <br>
       <p class="auteur_index"> écrit par {{news.user.username}} le {{news.newsDate|date("d/m/Y") }} </p><br>
 
     </li>
     <li class="list-group-item">
      {{news.content[:300] |striptags|raw }} ...
-     <a  href= "{{path('sr_blog_article_view',{'id': news.id})}}">Lire</a>
+     <a  href= "{{path('sr_blog_article_view',{'slug': news.slug})}}">Lire</a>
    </li>
 
      
@@ -44,9 +44,9 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
 
         <ul class="dropdown-menu" role="menu">
           
-          <li><a href="{{path('sr_blog_article_update',{'id': news.id})}}">Editer</a></li>
+          <li><a href="{{path('sr_blog_article_update',{'slug': news.slug})}}">Editer</a></li>
           <li class="divider"></li>
-          <li><a href="{{path('sr_blog_article_delete',{'id': news.id})}}">Supprimer</a></li>
+          <li><a href="{{path('sr_blog_article_delete',{'slug': news.slug})}}">Supprimer</a></li>
         </ul>
     
       </div>

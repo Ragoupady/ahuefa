@@ -13,7 +13,7 @@
 
 	{% for news in listNews %}
 	    <li class="last_news">
-	      <a href="{{ path('sr_blog_article_view', {'id': news.id}) }}">
+	      <a href="{{ path('sr_blog_article_view', {'slug': news.slug}) }}">
 	        {{ news.title }}
 	      </a>
 	    </li>

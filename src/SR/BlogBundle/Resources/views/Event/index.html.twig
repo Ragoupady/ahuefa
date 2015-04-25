@@ -26,7 +26,7 @@
       {{event.postDate| localizeddate('medium', 'none')}}
       </div>
       <div class="event_bloc_index_contenu">
-         <a href= "{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a>
+         <a href= "{{path('sr_blog_evenement_view',{'slug': event.slug})}}">{{event.title}}</a>
       </div>
     </li>
       {% if is_granted('ROLE_MODERATEUR') %}
@@ -40,9 +40,9 @@
 
           <ul class="dropdown-menu" role="menu">
             
-            <li><a href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Editer</a></li>
+            <li><a href="{{path('sr_blog_evenement_update',{'slug': event.slug})}}">Editer</a></li>
             <li class="divider"></li>
-            <li><a href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a></li>
+            <li><a href="{{path('sr_blog_evenement_delete',{'slug': event.slug})}}">Supprimer</a></li>
           </ul>
 
         </div>

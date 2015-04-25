@@ -105,3 +105,8 @@ avalanche_imagine:
                 mode: outbound
                 cache_type: false
                 cache_expires: 1 day
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true

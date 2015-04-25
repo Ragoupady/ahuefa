@@ -13,6 +13,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\Request;
 use \DateTime;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 class EventController extends Controller
 {
     public function indexAction($page)
@@ -33,7 +35,8 @@ class EventController extends Controller
         // On calcule le nombre total de pages grâce au count($listEvent) qui retourne le nombre total d'evenement
          $nbPages = ceil(count($listEvent)/$nbPerPage);
          
-        if ($page > $nbPages ) {
+        if ($page > $nbPages && $nbPages != 0 ) 
+        {
             throw $this->createNotFoundException('Pas de page pour ce numéro de page : '.$page);
         }
 
@@ -42,15 +45,16 @@ class EventController extends Controller
                                                                         'page'     => $page));
     }       
 
-    public function viewAction($id)
+    public function viewAction(Event $event, $slug)
     {
-        $event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+        
 
         if (!$event) {
-          throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+          throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }
 
-        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($id);
+        $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostEventComments($event->getId());
+        
         return $this->render('SRBlogBundle:Event:view.html.twig', array('event' => $event,
                                                                        'comments' => $comments
                                                                        ));
@@ -62,6 +66,7 @@ class EventController extends Controller
     */
     public function addAction(Request $request)
     {
+        
         
         $event = new Event();
         $form = $this->createForm(new EventType, $event);
@@ -78,7 +83,7 @@ class EventController extends Controller
             $em->flush();
             
 
-            return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('id' => $event->getID())));
+            return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('slug' => $event->getSlug())));
 
 
         }
@@ -91,10 +96,10 @@ class EventController extends Controller
     /**
     * @Security("has_role('ROLE_USER')")
     */
-    public function updateAction($id, Request $request)
+    public function updateAction(Event $event, $slug, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+        
         
 
         if (!$event) {
@@ -127,12 +132,12 @@ class EventController extends Controller
                 $em->persist($event);
                 $em->flush();             //Pas besoin de persister car doctrine sait qu'il doit le faire (on vient de le récupérer)
 
-                return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('id' => $event->getId())));
+                return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('slug' => $slug)));
             }
     
         }
 
-        return $this->render('SRBlogBundle:Event:update.html.twig', array('id' => $id,
+        return $this->render('SRBlogBundle:Event:update.html.twig', array('id' => $event->getId(),
                                                                           'form'=> $form->createView()
             ));
     }
@@ -162,7 +167,7 @@ class EventController extends Controller
 
 
 
-        return $this->render('SRBlogBundle:Event:delete.html.twig', array('event' => $event,
+        return $this->render('SRBlogBundle:Event:deleteEvent.html.twig', array('event' => $event,
                                                                           'form' => $form->createView()));
     }
 

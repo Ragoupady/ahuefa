@@ -12,8 +12,8 @@
 
   {# On met l'id de l'article dans la route de l'action du formulaire #}
   
-  <form action="{{ path('sr_blog_article_delete', {'id': news.id}) }}" method="post">
-    <a href="{{ path('sr_blog_article_view', {'id': news.id}) }}" class="btn btn-default">
+  <form action="{{ path('sr_blog_article_delete', {'slug': news.slug}) }}" method="post">
+    <a href="{{ path('sr_blog_article_view', {'slug': news.slug}) }}" class="btn btn-default">
       <i class="glyphicon glyphicon-chevron-left"></i>
       Retour à l'annonce
     </a>

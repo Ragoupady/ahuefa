@@ -24,7 +24,8 @@
 		"ckeditor/ckeditor": "4.*",
 		"friendsofsymfony/elastica-bundle": "3.0.*@dev",
 		"whiteoctober/breadcrumbs-bundle": "dev-master",
-		"avalanche123/imagine-bundle": "dev-master"
+		"avalanche123/imagine-bundle": "dev-master",
+		"stof/doctrine-extensions-bundle": "~1.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

@@ -44,15 +44,15 @@
 
 </ul>
 {% if is_granted('ROLE_MODERATEUR') %}
-    <a class="bouton" href="{{path('sr_blog_evenement_update',{'id': event.id})}}">Modifier</a>
-    <a class="bouton2" href="{{path('sr_blog_evenement_delete',{'id': event.id})}}">Supprimer</a><br><br>
+    <a class="bouton" href="{{path('sr_blog_evenement_update',{'slug': event.slug})}}">Modifier</a>
+    <a class="bouton2" href="{{path('sr_blog_evenement_delete',{'slug': event.slug})}}">Supprimer</a><br><br>
 {% endif %}
          
-    {% include'SRBlogBundle:Comment:index.html.twig' with { 'comments': comments }%}
+    {% include'SRBlogBundle:Comment:indexEvent.html.twig' with { 'comments': comments }%}
 
     <h3>Ajouter un commentaire</h3>
 {% if is_granted('ROLE_USER') %}
-    {% render(controller('SRBlogBundle:Comment:new', { 'item' : event } )) %}
+    {% render(controller('SRBlogBundle:Comment:newEvent', { 'event' : event } )) %}
 
 {% else %}
  <p>Vous devez être enregistré pour laisser un commentaire.</p>
