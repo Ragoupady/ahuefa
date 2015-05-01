@@ -12,7 +12,7 @@
 
 		{% for news in listNews %}
 		<ul>
-			<li><a href="{{path('sr_blog_article_view',{'id': news.id})}}">{{news.title}}</a></li>
+			<li><a href="{{path('sr_blog_article_view',{'slug': news.slug})}}">{{news.title}}</a></li>
 		</ul>
 		{% endfor %}
 
@@ -24,7 +24,7 @@
 	{% else %}
 		{% for event in listEvents %}
 		<ul>
-			<li><a href="{{path('sr_blog_evenement_view',{'id': event.id})}}">{{event.title}}</a></li>
+			<li><a href="{{path('sr_blog_evenement_view',{'slug': event.slug})}}">{{event.title}}</a></li>
 		</ul>
 		{% endfor %}
 	{% endif%}

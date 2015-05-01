@@ -96,14 +96,14 @@ class EventController extends Controller
     /**
     * @Security("has_role('ROLE_USER')")
     */
-    public function updateAction(Event $event, $slug, Request $request)
+    public function updateAction(Event $event, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         
         
 
         if (!$event) {
-            throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+            throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }
 
         $originalMovies= new ArrayCollection();
@@ -132,12 +132,12 @@ class EventController extends Controller
                 $em->persist($event);
                 $em->flush();             //Pas besoin de persister car doctrine sait qu'il doit le faire (on vient de le récupérer)
 
-                return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('slug' => $slug)));
+                return $this->redirect($this->generateUrl('sr_blog_evenement_view', array('slug' => $event->getSlug())));
             }
     
         }
 
-        return $this->render('SRBlogBundle:Event:update.html.twig', array('id' => $event->getId(),
+        return $this->render('SRBlogBundle:Event:update.html.twig', array('slug' => $event->getSlug(),
                                                                           'form'=> $form->createView()
             ));
     }
@@ -145,11 +145,11 @@ class EventController extends Controller
     /**
     * @Security("has_role('ROLE_USER')")
     */
-    public function deleteAction($id, Request $request)
+    public function deleteAction(Event $event, Request $request)
     {
-        $event = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->find($id);
+        
         if (!$event) {
-         throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$id);
+         throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }
           
           // On crée un formulaire vide, qui ne contiendra que le champ CSRF
@@ -167,7 +167,7 @@ class EventController extends Controller
 
 
 
-        return $this->render('SRBlogBundle:Event:deleteEvent.html.twig', array('event' => $event,
+        return $this->render('SRBlogBundle:Event:delete.html.twig', array('event' => $event,
                                                                           'form' => $form->createView()));
     }
 

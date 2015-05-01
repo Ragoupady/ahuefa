@@ -81,7 +81,7 @@ class NewsController extends Controller
             $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
 
 
-            return $this->redirect($this->generateUrl('sr_blog_article_view', array('id' => $news->getId())));
+            return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug' => $news->getSlug())));
         }
 
         return $this->render('SRBlogBundle:News:add.html.twig', array('form' => $form->createView()));
@@ -92,7 +92,7 @@ class NewsController extends Controller
     /**
     * @Security(" has_role('ROLE_USER')")
     */
-    public function updateAction(News $news, $slug, Request $request)
+    public function updateAction(News $news, Request $request)
     {
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '. $news->getId());
@@ -102,6 +102,8 @@ class NewsController extends Controller
         $form = $this->createForm(new NewsType, $news);
         
         $form->handleRequest($request);
+
+
 
         
 
@@ -113,7 +115,7 @@ class NewsController extends Controller
 
             $request->getSession()->getFlashBag()->add('notice', 'Annonce bien modifiée.');
 
-            return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug' => $slug)));
+            return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug' => $news->getSlug())));
     }
             //si c'est la premiere fois qu'on arrive dans la page ou que le formulaire est invalide, on montre le formulaire de mofification
             return $this->render('SRBlogBundle:News:update.html.twig', array('form'   => $form->createView()));
@@ -124,7 +126,7 @@ class NewsController extends Controller
     * @Security("has_role('ROLE_USER')")
     */
 
-    public function deleteAction(News $news, $slug, Request $request)
+    public function deleteAction(News $news, Request $request)
     {
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
@@ -137,7 +139,7 @@ class NewsController extends Controller
 
         if($form->handleRequest($request)->isValid())
         {    $em    =   $this->getDoctrine()->getManager(); 
-             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostComments($news->getId());
+             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostNewsComments($news->getId());
              foreach ($comments as $comment) {
             
                 $em->remove($comment);
@@ -151,7 +153,7 @@ class NewsController extends Controller
              return $this->redirect($this->generateUrl('sr_blog_article'));
         }
 
-        return $this->render('SRBlogBundle:News:deleteNews.html.twig', array('news' => $news,
+        return $this->render('SRBlogBundle:News:delete.html.twig', array('news' => $news,
                                                                          'form'   => $form->createView()));
     }
 
@@ -170,8 +172,9 @@ class NewsController extends Controller
     */
     public function addCategoryAction(Request $request)
     {
-        $newsCategory = new newsCategory();
-        $form = $this->createForm(new newsCategoryType, $newsCategory);
+        
+        $newsCategory = new NewsCategory();
+        $form = $this->createForm(new NewsCategoryType, $newsCategory);
 
         $form->handleRequest($request);  
 

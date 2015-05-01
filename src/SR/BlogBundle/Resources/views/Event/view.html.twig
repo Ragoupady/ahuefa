@@ -7,8 +7,9 @@
         
     <h1 class="event_type">{{event.eventCategory.name}}</h1>
     <h3> {{event.title}}</h3>
-
+    {% if event.image.id is defined %} 
     <img class="image_event"src="{{ asset(event.image.webPath| apply_filter('thumbnail_event')) }}" alt="{{ event.image.alt }}"/>
+    {% endif %}
     <div class="resume_film_encadre">
         <p class="resume_film_contenu"><span class="quand_resume">Quand :</span> Le {{event.eventStartDate| localizeddate('full', 'none')}} à {{event.eventStartDate|date("H:i")}}</p>
         <p class="resume_film_contenu"><span class="quand_resume">Où :</span> <span id="adresse">{{event.eventLocation}}</span></p>
@@ -34,8 +35,10 @@
                 <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>
               
                
-                
-                <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/><br>
+                {% if event.image.id is defined %}
+                <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/>
+                {% endif %}
+                <br>
                 <p>{{ movie.movieContent|raw }}</p>
                 <h3> A propos de {{ movie.author|e }}</h3>
                 <p>{{ movie.authoBio|e }}</p>

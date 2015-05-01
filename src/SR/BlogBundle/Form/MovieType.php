@@ -20,7 +20,8 @@ class MovieType extends AbstractType
                                             'label'=>'Titre du film'))
 
 
-            ->add('image', new ImageType(),array('attr'=> array('class'=>'btn btn-default btn-file')) )
+            ->add('image', new ImageType(),array('attr'=> array('class'=>'btn btn-default btn-file' ),
+                                                'required'=>false) )
             ->add('duration','time', array('widget' => 'choice',
                                             'attr'=> array('class'=>'form-control'),
                                             'label' => 'Durée du film'))

@@ -29,10 +29,10 @@ class Event
      */
     private $id;
 
-     /**
-     * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image",cascade={"persist"})
-     */
-     private $image;
+    /**
+    * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image", cascade={"persist","remove"})
+    */
+    private $image;
 
      /**
      * @ORM\ManyToOne(targetEntity="SR\BlogBundle\Entity\EventCategory")
@@ -128,7 +128,7 @@ class Event
     /**
      * @var string
      *
-     * @ORM\Column(name="event_guest", type="string", length=255)
+     * @ORM\Column(name="event_guest", type="string", length=255, nullable=true)
      */
     private $eventGuest;
 

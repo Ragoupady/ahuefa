@@ -86,7 +86,7 @@ sr_blog_article_delete:
     defaults: { _controller: SRBlogBundle:News:delete }
 
 sr_blog_article_addCategory:
-    path:     /articles/addCategory
+    path:     /article/addCategory
     defaults: { _controller: SRBlogBundle:News:addCategory }
 
 sr_blog_comment_create_news:
@@ -124,7 +124,7 @@ sr_blog_evenement_delete:
     defaults: { _controller: SRBlogBundle:Event:delete}
 
 sr_blog_evenement_add_category:
-    path:    /evenement/addCategory
+    path:    /evenements/addCategory
     defaults: { _controller: SRBlogBundle:Event:addCategory}
 
 sr_blog_soutien_membre:

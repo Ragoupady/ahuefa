@@ -61,15 +61,16 @@
                   <li class="dropdown-submenu"><a href="{{path('sr_blog_actions')}}" class="dropdown-toggle" data-toggle="dropdown">Nos actions</a>
                      
                      <ul class="dropdown-menu">
-                        <li><a href="{{path('sr_blog_actions_voyage_transculturel')}}">Le Voyage Transculturel</a></li>
+                        <li><a href="{{path('sr_blog_actions_mediation')}}">Médiation ethnoclinique</a></li>
                         <li class="divider"></li>
                         <li><a href="{{path('sr_blog_actions_consultation')}}">Consultation psychologique individuelle</a></li>
                         <li class="divider"></li>
-                        <li><a href="{{path('sr_blog_actions_mediation')}}">Mediation ethnoclinique</a></li>
+                        <li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>
                         <li class="divider"></li>
                         <li><a href="{{path('sr_blog_actions_appui_pro')}}">L’appui technique aux professionnels</a></li>
                         <li class="divider"></li>
-                        <li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>
+                        <li><a href="{{path('sr_blog_actions_voyage_transculturel')}}">Le Voyage Transculturel</a></li>
+                                         
                     </ul>
                   </li>
                   <li class="divider"></li>
@@ -82,11 +83,11 @@
 
 
                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles & Evénements <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles & Evènements <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 
                   <li><a href="{{path('sr_blog_article')}}"> Nos Articles</a></li>
-                  <li><a href="{{path('sr_blog_evenement')}}">Nos Evenements</a></li>
+                  <li><a href="{{path('sr_blog_evenement')}}">Nos Evènements</a></li>
 
 
                 </ul>
@@ -147,7 +148,7 @@
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
           <p>
-          <a class="btn btn-primary btn-lg bouton_carousel" href="http://ahuefa.org">
+          <a class="btn btn-primary btn-lg bouton_carousel" href="{{path('sr_blog_actions_voyage_transculturel')}}">
             En savoir plus »
           </a>
           </p>
@@ -161,7 +162,7 @@
           <h1>AHUEFA International France</h1>
           <h2>Association de soutien psychologique aux enfants et à leurs familles, avec une orientation ethnopsychanalytique.</h2>
           <p>
-          <a class="btn btn-primary btn-lg bouton_carousel" href="http://ahuefa.org">
+          <a class="btn btn-primary btn-lg bouton_carousel" href="{{path('sr_blog_actions_consultation')}}">
             En savoir plus »
           </a>
           </p>
@@ -228,7 +229,7 @@
 
         <div id="menu" class="col-md-offset-1 col-md-3">
           <div class="menu">
-            <h4 class="menu_titre"> Prochain évenement</h4>
+            <h4 class="menu_titre"> Prochain évènement</h4>
              {{render(controller("SRBlogBundle:Event:menu", {'limit' : 1}))}}
 
             <h4 class="menu_titre">Derniers articles</h4>

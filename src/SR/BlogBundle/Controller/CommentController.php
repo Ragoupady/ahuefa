@@ -118,7 +118,7 @@ class CommentController extends Controller
 		$comment = new Comment();
    		$comment->setEvent($event);
 
-   		var_dump($comment);
+   		
 
 
 		//créer un formulaire avec ce commentaire vide
