@@ -1,170 +1,170 @@
-sr_blog_home:
-    path:     /
-    defaults: { _controller: SRBlogBundle:Main:index }
-
-sr_blog_historique:
-    path:     /historique
-    defaults: { _controller: SRBlogBundle:Main:historique }
-
-
-sr_blog_objectif:
-    path:     /objectif
-    defaults: { _controller: SRBlogBundle:Main:objectif }
-
-sr_blog_actions:
-    path:     /actions
-    defaults: { _controller: SRBlogBundle:Main:actions }
-
-sr_blog_actions_voyage_transculturel:
-    path:     /actions/voyage-transculturel
-    defaults: { _controller: SRBlogBundle:Main:voyage }
-
-sr_blog_actions_consultation:
-    path:     /actions/consultation
-    defaults: { _controller: SRBlogBundle:Main:consultation }
-
-sr_blog_actions_mediation:
-    path:     /actions/mediation
-    defaults: { _controller: SRBlogBundle:Main:mediation }
-
-
-sr_blog_actions_mediation_definition:
-    path:     /actions/mediation/definition
-    defaults: { _controller: SRBlogBundle:Main:mediationDef }
-
-
-sr_blog_actions_mediation_etapes:
-    path:     /actions/mediation/etapes
-    defaults: { _controller: SRBlogBundle:Main:mediationEtape }
-
-
-sr_blog_actions_mediation_travail:
-    path:     /actions/mediation/travail
-    defaults: { _controller: SRBlogBundle:Main:mediationTravail }
-
-sr_blog_actions_appui_pro:
-    path:     /actions/appui-technique-aux-professionnels
-    defaults: { _controller: SRBlogBundle:Main:appuiPro }
-
-sr_blog_actions_soutien:
-    path:     /actions/consultations-psychologiques-enfants-et-adolescents
-    defaults: { _controller: SRBlogBundle:Main:soutien }
-
-sr_blog_equipe:
-    path:     /equipe
-    defaults: { _controller: SRBlogBundle:Main:equipe }
-
-sr_blog_partenaire:
-    path:     /partenaire
-    defaults: { _controller: SRBlogBundle:Main:partenaire }
-
-
-
-sr_blog_article:
-    path:     /articles/page/{page}
-    defaults: { _controller: SRBlogBundle:News:index, page:1 }
-    requirements:
-        page: \d+
-
-sr_blog_article_add:
-    path:     /articles/add
-    defaults: { _controller: SRBlogBundle:News:add }
-
-sr_blog_article_view:
-    path:     /articles/{slug}
-    defaults: { _controller: SRBlogBundle:News:view }
-
-
-
-
-sr_blog_article_update:
-    path:     /articles/update/{slug}
-    defaults: { _controller: SRBlogBundle:News:update }
-
-sr_blog_article_delete:
-    path:     /articles/delete/{slug}
-    defaults: { _controller: SRBlogBundle:News:delete }
-
-sr_blog_article_addCategory:
-    path:     /article/addCategory
-    defaults: { _controller: SRBlogBundle:News:addCategory }
-
-sr_blog_comment_create_news:
-    path:     /article/comment/{id}
-    defaults: { _controller: SRBlogBundle:Comment:createNews }
-    requirements:
-        id: \d+
-
-sr_blog_comment_create_event:
-    path:     /evenement/comment/{id}
-    defaults: { _controller: SRBlogBundle:Comment:createEvent }
-    requirements:
-        id: \d+
-
-sr_blog_evenement:
-    path:     /evenement/page{page}
-    defaults: { _controller: SRBlogBundle:Event:index, page:1 }
-    requirements:
-        page: \d+
-
-sr_blog_evenement_add:
-    path:     /evenement/add
-    defaults: { _controller: SRBlogBundle:Event:add }
-
-sr_blog_evenement_view:
-    path:     /evenement/{slug}
-    defaults: { _controller: SRBlogBundle:Event:view }
-
-sr_blog_evenement_update:
-    path:     /evenement/update/{slug}
-    defaults: { _controller: SRBlogBundle:Event:update }
-
-sr_blog_evenement_delete:
-    path:     /evenement/delete/{slug}
-    defaults: { _controller: SRBlogBundle:Event:delete}
-
-sr_blog_evenement_add_category:
-    path:    /evenements/addCategory
-    defaults: { _controller: SRBlogBundle:Event:addCategory}
-
-sr_blog_soutien_membre:
-    path:     /soutien/membre
-    defaults: { _controller: SRBlogBundle:Soutien:membre}
-
-sr_blog_soutien_don:
-    path:     /soutien/don
-    defaults: { _controller: SRBlogBundle:Soutien:don}
-
-sr_blog_soutien_message:
-    path:     /soutien/message
-    defaults: { _controller: SRBlogBundle:Soutien:message}
-
-sr_blog_contact:
-    path:     /contact
-    defaults: { _controller: SRBlogBundle:Soutien:contact}
-
-sr_blog_contact_send:
-    path:     /contact/send/{typeContact}
-    defaults: { _controller: SRBlogBundle:Soutien:contact_send}
-
-sr_blog_contact_confirmation:
-    path:    /contact/confirmation
-    defaults: { _controller: SRBlogBundle:Soutien:confirmation}
-
-
-sr_blog_article_comment_delete:
-    path:     /article/comment/delete/{id}
-    defaults: { _controller: SRBlogBundle:Comment:deleteNews}
-    requirements:
-        id: \d+
-
-sr_blog_evenement_comment_delete:
-    path:     /evenement/comment/delete/{id}
-    defaults: { _controller: SRBlogBundle:Comment:deleteEvent}
-    requirements:
-        id: \d+
-
-
-sr_blog_search:
-    path:     /search
-    defaults: { _controller: SRBlogBundle:Main:search}
+#sr_blog_home:
+#    path:     /
+#    defaults: { _controller: SRBlogBundle:Main:index }
+#
+#sr_blog_historique:
+#    path:     /historique
+#    defaults: { _controller: SRBlogBundle:Main:historique }
+#
+#
+#sr_blog_objectif:
+#    path:     /objectif
+#    defaults: { _controller: SRBlogBundle:Main:objectif }
+#
+#sr_blog_actions:
+#    path:     /actions
+#    defaults: { _controller: SRBlogBundle:Main:actions }
+#
+#sr_blog_actions_voyage_transculturel:
+#    path:     /actions/voyage-transculturel
+#    defaults: { _controller: SRBlogBundle:Main:voyage }
+#
+#sr_blog_actions_consultation:
+#    path:     /actions/consultation
+#    defaults: { _controller: SRBlogBundle:Main:consultation }
+#
+#sr_blog_actions_mediation:
+#    path:     /actions/mediation
+#    defaults: { _controller: SRBlogBundle:Main:mediation }
+#
+#
+#sr_blog_actions_mediation_definition:
+#    path:     /actions/mediation/definition
+#    defaults: { _controller: SRBlogBundle:Main:mediationDef }
+#
+#
+#sr_blog_actions_mediation_etapes:
+#    path:     /actions/mediation/etapes
+#    defaults: { _controller: SRBlogBundle:Main:mediationEtape }
+#
+#
+#sr_blog_actions_mediation_travail:
+#    path:     /actions/mediation/travail
+#    defaults: { _controller: SRBlogBundle:Main:mediationTravail }
+#
+#sr_blog_actions_appui_pro:
+#    path:     /actions/appui-technique-aux-professionnels
+#    defaults: { _controller: SRBlogBundle:Main:appuiPro }
+#
+#sr_blog_actions_soutien:
+#    path:     /actions/consultations-psychologiques-enfants-et-adolescents
+#    defaults: { _controller: SRBlogBundle:Main:soutien }
+#
+#sr_blog_equipe:
+#    path:     /equipe
+#    defaults: { _controller: SRBlogBundle:Main:equipe }
+#
+#sr_blog_partenaire:
+#    path:     /partenaire
+#    defaults: { _controller: SRBlogBundle:Main:partenaire }
+#
+#
+#
+#sr_blog_article:
+#    path:     /articles/page/{page}
+#    defaults: { _controller: SRBlogBundle:News:index, page:1 }
+#    requirements:
+#        page: \d+
+#
+#sr_blog_article_add:
+#    path:     /articles/add
+#    defaults: { _controller: SRBlogBundle:News:add }
+#
+#sr_blog_article_view:
+#    path:     /articles/{slug}
+#    defaults: { _controller: SRBlogBundle:News:view }
+#
+#
+#
+#
+#sr_blog_article_update:
+#    path:     /articles/update/{slug}
+#    defaults: { _controller: SRBlogBundle:News:update }
+#
+#sr_blog_article_delete:
+#    path:     /articles/delete/{slug}
+#    defaults: { _controller: SRBlogBundle:News:delete }
+#
+#sr_blog_article_addCategory:
+#    path:     /article/addCategory
+#    defaults: { _controller: SRBlogBundle:News:addCategory }
+#
+#sr_blog_comment_create_news:
+#    path:     /article/comment/{id}
+#    defaults: { _controller: SRBlogBundle:Comment:createNews }
+#    requirements:
+#        id: \d+
+#
+#sr_blog_comment_create_event:
+#    path:     /evenement/comment/{id}
+#    defaults: { _controller: SRBlogBundle:Comment:createEvent }
+#    requirements:
+#        id: \d+
+#
+#sr_blog_evenement:
+#    path:     /evenement/page{page}
+#    defaults: { _controller: SRBlogBundle:Event:index, page:1 }
+#    requirements:
+#        page: \d+
+#
+#sr_blog_evenement_add:
+#    path:     /evenement/add
+#    defaults: { _controller: SRBlogBundle:Event:add }
+#
+#sr_blog_evenement_view:
+#    path:     /evenement/{slug}
+#    defaults: { _controller: SRBlogBundle:Event:view }
+#
+#sr_blog_evenement_update:
+#    path:     /evenement/update/{slug}
+#    defaults: { _controller: SRBlogBundle:Event:update }
+#
+#sr_blog_evenement_delete:
+#    path:     /evenement/delete/{slug}
+#    defaults: { _controller: SRBlogBundle:Event:delete}
+#
+#sr_blog_evenement_add_category:
+#    path:    /evenements/addCategory
+#    defaults: { _controller: SRBlogBundle:Event:addCategory}
+#
+#sr_blog_soutien_membre:
+#    path:     /soutien/membre
+#    defaults: { _controller: SRBlogBundle:Soutien:membre}
+#
+#sr_blog_soutien_don:
+#    path:     /soutien/don
+#    defaults: { _controller: SRBlogBundle:Soutien:don}
+#
+#sr_blog_soutien_message:
+#    path:     /soutien/message
+#    defaults: { _controller: SRBlogBundle:Soutien:message}
+#
+#sr_blog_contact:
+#    path:     /contact
+#    defaults: { _controller: SRBlogBundle:Soutien:contact}
+#
+#sr_blog_contact_send:
+#    path:     /contact/send/{typeContact}
+#    defaults: { _controller: SRBlogBundle:Soutien:contact_send}
+#
+#sr_blog_contact_confirmation:
+#    path:    /contact/confirmation
+#    defaults: { _controller: SRBlogBundle:Soutien:confirmation}
+#
+#
+#sr_blog_article_comment_delete:
+#    path:     /article/comment/delete/{id}
+#    defaults: { _controller: SRBlogBundle:Comment:deleteNews}
+#    requirements:
+#        id: \d+
+#
+#sr_blog_evenement_comment_delete:
+#    path:     /evenement/comment/delete/{id}
+#    defaults: { _controller: SRBlogBundle:Comment:deleteEvent}
+#    requirements:
+#        id: \d+
+#
+#
+#sr_blog_search:
+#    path:     /search
+#    defaults: { _controller: SRBlogBundle:Main:search}

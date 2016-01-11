@@ -14,13 +14,23 @@ use Symfony\Component\HttpFoundation\Request;
 use \DateTime;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * EventController : Ce controller permet de gérer les évenements
+ *
+ * @Route("/evenements")
+ */
 class EventController extends Controller
 {
+    /**
+     * Permet d'accéder à la liste des événements d'AHUEFA
+     *
+     * @Route("/", name="events" )
+     */
     public function indexAction($page)
     {
         $nbPerPage = 3;
-
         $listEvent = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->myFindAll($page, $nbPerPage);
         // On calcule le nombre total de pages grâce au count($listEvent) qui retourne le nombre total d'evenement
         $nbPages = ceil(count($listEvent)/$nbPerPage);
@@ -33,14 +43,18 @@ class EventController extends Controller
             'nbPages'   => $nbPages,
             'page'      => $page,
         ]);
-    }       
+    }
 
+    /**
+     * Permet de récupérer le détail d'un évenement
+     *
+     * @Route("/{id}", name="show_event" )
+     */
     public function viewAction(Event $event, $slug)
     {
         if (!$event) {
           throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }
-
         $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostEventComments($event->getId());
         
         return $this->render('SRBlogBundle:Event:view.html.twig', [
@@ -50,6 +64,9 @@ class EventController extends Controller
     }
 
     /**
+    * Permet de récupérer le détail d'un évènement
+    *
+    * @Route("/{id}/add", name="add_event" )
     * @Security(" has_role('ROLE_USER')")
     */
     public function addAction(Request $request)
@@ -71,8 +88,10 @@ class EventController extends Controller
         return $this->render('SRBlogBundle:Event:add.html.twig',array('form' => $form->createView()));
     }
 
-
     /**
+    * Permet de mettre à jour un évènement
+    *
+    * @Route("/{id}/update", name="update_event" )
     * @Security("has_role('ROLE_USER')")
     */
     public function updateAction(Event $event, Request $request)
@@ -83,9 +102,7 @@ class EventController extends Controller
         }
 
         $originalMovies= new ArrayCollection();
-
-          // Crée un tableau contenant les objets Movie courants de la base de données
-
+        // Crée un tableau contenant les objets Movie courants de la base de données
         foreach ($event->getMovies() as $movie) {
             $originalMovies->add($movie);
         }
@@ -115,8 +132,11 @@ class EventController extends Controller
     }
 
     /**
-    * @Security("has_role('ROLE_USER')")
-    */
+     * Permet de supprimer un évènement
+     *
+     * @Route("/{id}/delete", name="delete_event" )
+     * @Security("has_role('ROLE_USER')")
+     */
     public function deleteAction(Event $event, Request $request)
     {
         if (!$event) {
@@ -139,6 +159,12 @@ class EventController extends Controller
         ]);
     }
 
+    /**
+     * Permet de récupérer les évènements à afficher dans la page d'accueil
+     *
+     * @Route("/menu", name="menu_event" )
+     * @Security("has_role('ROLE_USER')")
+     */
     public function menuAction($limit)
     {
         $listEvent = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->getEventHome($limit);
@@ -149,8 +175,11 @@ class EventController extends Controller
     }
 
     /**
-    * @Security("has_role('ROLE_USER')")
-    */
+     * Permet d'ajouter une nouvelle catégorie pour les événements
+     *
+     * @Route("/ajout-categorie", name="add_event_category" )
+     * @Security("has_role('ROLE_USER')")
+     */
     public function addCategoryAction(Request $request)
     {
         $eventCategory = new EventCategory();

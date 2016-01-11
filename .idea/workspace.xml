@@ -2,417 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aba0283e-ac8d-487d-a5c0-8a9e03a7750d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/web/bootstrap/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/.bower.json" afterPath="$PROJECT_DIR$/web/jquery/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/less/.bower.json" afterPath="$PROJECT_DIR$/web/less/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/.csscomb.json" afterPath="$PROJECT_DIR$/web/bootstrap/less/.csscomb.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/.csslintrc" afterPath="$PROJECT_DIR$/web/bootstrap/less/.csslintrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/.jscsrc" afterPath="$PROJECT_DIR$/web/bootstrap/js/.jscsrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/.jshintrc" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/.jshintrc" afterPath="$PROJECT_DIR$/web/bootstrap/js/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/CHANGES.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/CHANGES.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/CHANGES.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/CHANGES.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Comment.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Comment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/CommentRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/CommentRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/web/jquery/src/data/Data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventCategoryType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventCategoryType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/EventRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/EventRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/web/bootstrap/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/LICENSE.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/scayt/LICENSE.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/scayt/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/LICENSE.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/web/bootstrap/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/DataFixtures/ORM/LoadEventCategory.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/DataFixtures/ORM/LoadEventCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/DataFixtures/ORM/LoadNewsCategory.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/DataFixtures/ORM/LoadNewsCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/web/jquery/MIT-LICENSE.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/MovieType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/MovieType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsCategoryType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsCategoryType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/README.md" afterPath="$PROJECT_DIR$/web/bootstrap/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/README.ru.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/README.ru.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/web/jquery/src/effects/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/web/jquery/src/manipulation/_evalUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/lang/_translationstatus.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/devtools/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/devtools/lang/_translationstatus.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/uicolor/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/uicolor/lang/_translationstatus.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/data/accepts.js" afterPath="$PROJECT_DIR$/web/jquery/src/data/accepts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/web/jquery/src/core/access.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/actions.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/actions.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/add.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/add.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/addCategory.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/addCategory.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/addCategory.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/addCategory.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/addGetHookIf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/affix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/ajax.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/ajax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/web/jquery/src/event/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/alerts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/alerts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/web/jquery/src/event/alias.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/web/jquery/src/exports/amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/web/jquery/src/effects/animatedSelector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/api.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/api.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/appendto.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/appendto.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/appuiPro.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/appuiPro.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/arr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/arta.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/arta.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/ascetic.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/ascetic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/web/jquery/src/attributes/attr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/web/jquery/src/attributes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/autogrow/autogrow.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/autogrow/autogrow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/background-variant.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/badges.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/bbcode/bbcode.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/bbcode/bbcode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/bootstrap/dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/border-radius.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/bower.json" afterPath="$PROJECT_DIR$/web/bootstrap/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/bower.json" afterPath="$PROJECT_DIR$/web/jquery/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/less/bower.json" afterPath="$PROJECT_DIR$/web/less/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/breadcrumbs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_paper.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_paper.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/less/browser.js" afterPath="$PROJECT_DIR$/web/less/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/bs-commonjs-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/bs-glyphicons-data-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/bs-lessdoc-parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/bs-raw-files-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/button-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/web/jquery/src/callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/center-block.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/dialogs/ciframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/class2type.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/web/jquery/src/attributes/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/clearfix.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/close.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/code.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/codesnippet/codesnippet.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/codesnippet/codesnippet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/component-animations.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/concat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/configBridge.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/confirmation.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/confirmation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/consultation.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/consultation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/contact.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/contact.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/contents.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/contents.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/core.js" afterPath="$PROJECT_DIR$/web/jquery/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css.js" afterPath="$PROJECT_DIR$/web/jquery/src/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/var/cssExpand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/curCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/data.js" afterPath="$PROJECT_DIR$/web/jquery/src/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/data/var/data_priv.js" afterPath="$PROJECT_DIR$/web/jquery/src/data/var/data_priv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/data/var/data_user.js" afterPath="$PROJECT_DIR$/web/jquery/src/data/var/data_user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/datafiltering.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/datafiltering.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/defaultDisplay.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/defaultDisplay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/web/jquery/src/deferred.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/web/jquery/src/queue/delay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/delete.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/delete.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/delete.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/delete.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/deleteEvent.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/deleteEvent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/deleteNews.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/deleteNews.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/web/jquery/src/deprecated.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/devtools/devtools.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/devtools/devtools.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/dialog/dialog.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/dialog/dialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_ie.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_ie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_ie.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_ie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_ie7.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_ie7.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_ie8.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_ie8.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_ie8.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_ie8.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_iequirks.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/dialog_iequirks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_iequirks.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/dialog_iequirks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/web/jquery/src/dimensions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/divarea/divarea.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/divarea/divarea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/divreplace.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/divreplace.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/docco.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/docco.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/docprops/docprops.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/docprops/docprops.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/don.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/don.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/dropdowns.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_gecko.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_gecko.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_ie.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_ie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_ie.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_ie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_ie7.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_ie7.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_ie8.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_ie8.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_ie8.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_ie8.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_iequirks.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/editor_iequirks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_iequirks.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/editor_iequirks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/effects.js" afterPath="$PROJECT_DIR$/web/jquery/src/effects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/enterkey/enterkey.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/enterkey/enterkey.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/equipe.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/equipe.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/event.js" afterPath="$PROJECT_DIR$/web/jquery/src/event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/far.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/far.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/web/jquery/src/traversing/findFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/formEvent.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/formEvent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/formNews.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/formNews.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/forms.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/formulaire.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/formulaire.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/foundation.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/foundation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/wysiwygarea/fullpage.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/wysiwygarea/fullpage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/var/getStyles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/github.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/github.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/web/jquery/src/exports/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/glyphicons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/googlecode.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/googlecode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/gradients.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/grid-framework.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/hasOwn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/hide-text.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/historique.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/historique.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/idea.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/idea.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/image.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/image2/image2.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/image2/image2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/index.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/less/index.js" afterPath="$PROJECT_DIR$/web/less/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexEvent.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexEvent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexNews.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexNews.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/indexOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/web/jquery/src/core/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/inlineall.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/inlineall.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/inlinebycode.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/inlinebycode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/inlinetextarea.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/inlinetextarea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/input-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/intro.js" afterPath="$PROJECT_DIR$/web/jquery/src/intro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/ir_black.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/ir_black.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/var/isHidden.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/jquery.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/jquery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/web/jquery/dist/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/web/jquery/src/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/web/jquery/dist/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/jsonp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/jumbotron.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/labels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/labels.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/labels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/less/dist/less.js" afterPath="$PROJECT_DIR$/web/less/dist/less.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/less/dist/less.min.js" afterPath="$PROJECT_DIR$/web/less/dist/less.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/list-group.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/list-group.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/load.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/magicline/magicline.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/magicline/magicline.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/magula.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/magula.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/web/jquery/src/manipulation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/mathjax/mathjax.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/mathjax/mathjax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/media.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediation.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationDef.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationDef.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationEtape.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationEtape.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationTravail.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationTravail.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/membre.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/membre.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/menu.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/menu.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/message.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/message.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/modals.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/mono-blue.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/mono-blue.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/dialog/assets/my_dialog.js" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/dialog/assets/my_dialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/nav-divider.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/nav-vertical-align.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/navs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/var/nonce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/normalize.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/dist/js/npm.js" afterPath="$PROJECT_DIR$/web/bootstrap/dist/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/objectif.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/objectif.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/obsidian.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/obsidian.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/offset.js" afterPath="$PROJECT_DIR$/web/jquery/src/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/opacity.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/htmlwriter/outputforflash.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/htmlwriter/outputforflash.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/htmlwriter/outputhtml.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/htmlwriter/outputhtml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/assets/outputxhtml/outputxhtml.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/assets/outputxhtml/outputxhtml.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/outro.js" afterPath="$PROJECT_DIR$/web/jquery/src/outro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/package.js" afterPath="$PROJECT_DIR$/web/bootstrap/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/package.json" afterPath="$PROJECT_DIR$/web/bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/pager.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/panels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/panels.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/panels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/web/jquery/src/core/parseHTML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/parseJSON.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/parseJSON.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/parseXML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/partenaire.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/partenaire.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/placeholder/placeholder.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/placeholder/placeholder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/pnum.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/popovers.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/assets/posteddata.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/assets/posteddata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/preview/preview.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/preview/preview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/print.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/progress-bar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/progress-bars.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/web/jquery/src/attributes/prop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/push.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/queue.js" afterPath="$PROJECT_DIR$/web/jquery/src/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/railscasts.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/railscasts.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/rainbow.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/rainbow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/web/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/readme.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/kama/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/readme.md" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/skins/moono/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/readonly.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/readonly.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/web/jquery/src/core/ready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/replacebyclass.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/replacebyclass.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/replacebycode.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/replacebycode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/reset-filter.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/resize.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/resize.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/responsive-embed.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/responsive-embed.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/responsive-utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/responsive-visibility.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/var/rmargin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/web/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/rnotwhite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/var/rnumnonpx.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/var/rquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/web/jquery/src/core/var/rsingleTag.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/sample.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/sample.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/stylesheetparser/assets/sample.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/stylesheetparser/assets/sample.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/sample.js" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/sample.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/sample_posteddata.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/sample_posteddata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/web/bootstrap/grunt/sauce_browsers.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/scaffolding.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/searchResult.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/searchResult.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/web/jquery/src/selector-native.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/web/jquery/src/selector-sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/selector.js" afterPath="$PROJECT_DIR$/web/jquery/src/selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/web/jquery/src/serialize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/sharedspace/sharedspace.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/sharedspace/sharedspace.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/size.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/size.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/web/jquery/src/sizzle/dist/sizzle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/web/jquery/src/sizzle/dist/sizzle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/slice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_dark.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_light.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/sourcedialog/sourcedialog.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/sourcedialog/sourcedialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/soutien.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/soutien.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/sr_main.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/sr_main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/strundefined.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/strundefined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/styles.js" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/stylesheetparser/stylesheetparser.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/stylesheetparser/stylesheetparser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/web/jquery/src/attributes/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/web/jquery/src/event/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/web/jquery/src/manipulation/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/support.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/css/swap.js" afterPath="$PROJECT_DIR$/web/jquery/src/css/swap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/tab-focus.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/tabindex.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/tabindex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/table-row.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/tableresize/tableresize.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/tableresize/tableresize.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/tables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/templates/dialogs/templates.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/templates/dialogs/templates.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/text-emphasis.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/text-overflow.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/theme.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/thumbnails.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/web/jquery/src/var/toString.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-blue.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-blue.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-bright.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-bright.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/scayt/dialogs/toolbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/toolbar/toolbar.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/toolbar/toolbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/tooltip.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/web/bootstrap/js/transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/web/jquery/src/traversing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/type.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/uicolor.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/uicolor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/uicolor/uicolor.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/plugins/uicolor/uicolor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/uilanguages.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/uilanguages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/update.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/update.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/update.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/update.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/web/jquery/src/attributes/val.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/mixins/vendor-prefixes.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/view.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/voyage.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/voyage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/vs.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/vs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/web/bootstrap/less/wells.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/web/jquery/src/wrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/wsc/dialogs/wsc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/xcode.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/xcode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/web/jquery/src/ajax/xhr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/xhtmlstyle.html" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/samples/xhtmlstyle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/uicolor/yui/assets/yui.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/uicolor/yui/assets/yui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AHUEFA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -434,73 +32,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.888889">
+              <caret line="132" column="0" selection-start-line="0" selection-start-column="1" selection-end-line="169" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              <folding>
-                <marker date="1452543551000" expanded="true" signature="1717:1762" placeholder="sr_blog_article:" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.764706">
-              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-85.0">
-              <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-55.625">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.083334">
-              <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoutienController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0970745">
-              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.020026702">
+              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -515,13 +71,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml" />
       </list>
     </option>
   </component>
@@ -646,6 +204,152 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DependencyInjection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -881,14 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -913,14 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36726806">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/less/dist/less.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -928,6 +616,14 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13530928">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -939,52 +635,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding>
-            <marker date="1452543551000" expanded="true" signature="1717:1762" placeholder="sr_blog_article:" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.764706">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-85.0">
-          <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-55.625">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.083334">
-          <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+        <state vertical-scroll-proportion="-3.5294118">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0970745">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.25930852">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11968085">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="22" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019946808">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.99202126">
+          <caret line="175" column="50" selection-start-line="175" selection-start-column="50" selection-end-line="175" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.888889">
+          <caret line="132" column="0" selection-start-line="0" selection-start-column="1" selection-end-line="169" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.020026702">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
           <folding />
         </state>
       </provider>

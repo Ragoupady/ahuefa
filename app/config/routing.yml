@@ -1,6 +1,7 @@
 sr_blog:
-    resource: "@SRBlogBundle/Resources/config/routing.yml"
+    resource: "@SRBlogBundle/Controller/"
     prefix:   /
+    type: annotation
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

@@ -16,9 +16,20 @@ use SR\BlogBundle\Form\NewsCategoryType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Finder\Exception\AccessDeniedException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * NewsController : Ce controller permet de gérer les articles (news)
+ *
+ * @Route("/articles")
+ */
 class NewsController extends Controller
 {
+    /**
+     * Permet d'accéder à la liste des articles d'AHUEFA
+     *
+     * @Route("/", name="news" )
+     */
     public function indexAction($page)
     {
         $nbPerPage = 3;
@@ -38,6 +49,11 @@ class NewsController extends Controller
         ]);
     }
 
+    /**
+     * Permet de voir le détail d'un article
+     *
+     * @Route("/{id}", name="show_news" )
+     */
     public function viewAction(News $news, $slug)
     {
         if (!$news) {
@@ -53,6 +69,9 @@ class NewsController extends Controller
     }
 
     /**
+    * Permet d'ajouter un nouvel article
+    *
+    * @Route("/{id}/add", name="add_news" )
     * @Security("has_role('ROLE_USER')")
     */
     public function addAction(Request $request)
@@ -80,8 +99,11 @@ class NewsController extends Controller
     }
 
     /**
-    * @Security(" has_role('ROLE_USER')")
-    */
+     * Permet de mettre à jour un article
+     *
+     * @Route("/{id}/update", name="update_news" )
+     * @Security("has_role('ROLE_USER')")
+     */
     public function updateAction(News $news, Request $request)
     {
         if (!$news) {
@@ -106,9 +128,11 @@ class NewsController extends Controller
     }
 
     /**
-    * @Security("has_role('ROLE_USER')")
-    */
-
+     * Permet de supprimer un article
+     *
+     * @Route("/{id}/delete", name="delete_news" )
+     * @Security("has_role('ROLE_USER')")
+     */
     public function deleteAction(News $news, Request $request)
     {
         if (!$news) {
@@ -134,6 +158,11 @@ class NewsController extends Controller
         ]);
     }
 
+    /**
+     * Permet de récupérer la liste des articles à afficher dans la page d'accueil
+     *
+     * @Route("/menu", name="menu_news" )
+     */
     public function menuAction($limit)
     {
         $listNews = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->getNewsHome($limit);
@@ -144,8 +173,11 @@ class NewsController extends Controller
     }
 
     /**
-    * @Security("has_role('ROLE_USER')")
-    */
+     * Permet d'ajouter une catégorie aux articles
+     *
+     * @Route("/{id}/delete", name="delete_news" )
+     * @Security("has_role('ROLE_USER')")
+     */
     public function addCategoryAction(Request $request)
     {
         $newsCategory = new NewsCategory();
