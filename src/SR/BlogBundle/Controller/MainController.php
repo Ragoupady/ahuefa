@@ -90,16 +90,13 @@ class MainController extends Controller
 
         //recherche des événement contenant $content dans le titre ou le contenu de l'événement
         $listEvents = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->getEventsSearch($content);
-        
 
-        return $this->render('SRBlogBundle:Main:searchResult.html.twig', array('listNews' => $listNews,
-                                                                       'listEvents' => $listEvents,
-                                                                       'content' => $content
-                                                                       ));
-
+        return $this->render('SRBlogBundle:Main:searchResult.html.twig', [
+            'listNews' => $listNews,
+            'listEvents' => $listEvents,
+            'content' => $content
+        ]);
     }
-
-
 }
 
 

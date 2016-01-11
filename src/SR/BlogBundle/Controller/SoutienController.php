@@ -29,15 +29,12 @@ class SoutienController extends Controller
     }
 
     public function contact_sendAction(Request $request, $typeContact)
-    {   
-       
-
+    {
         $message = $this->sendEmail($typeContact,$request);
         $this->get('mailer')->send($message);
         
         //on appelle la route qui va afficher le message de confirmation
         return $this->redirect($this->generateUrl('sr_blog_contact_confirmation'));
-
     }
 
     public function sendEmail($typeContact,$request)
@@ -50,9 +47,6 @@ class SoutienController extends Controller
 
         $contenu_mail = 'Nom: '.$name."\n".'Prénom: '.$firstname."\n".'Email: '.$email."\n".'Téléphone: '.$phone."\n".$messageMail;
 
-
-
-
         $message = \Swift_Message::newInstance()
             ->setSubject($typeContact)
             ->setFrom('ragou.dev@gmail.com')
@@ -61,11 +55,9 @@ class SoutienController extends Controller
 
         return $message;
     }
-
-
+    
     public function confirmationAction()
     {
-
         return $this->render('SRBlogBundle:Soutien:confirmation.html.twig');
     }
 }

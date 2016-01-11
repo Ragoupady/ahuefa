@@ -21,10 +21,7 @@ class NewsController extends Controller
 {
     public function indexAction($page)
     {
-         // Ici je fixe le nombre d'annonces par page à 3
-         // Mais bien sûr il faudrait utiliser un paramètre, et y accéder via $this->container->getParameter('nb_per_page')
         $nbPerPage = 3;
-        
         // On récupère notre objet Paginator
         $listNews = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->myFindAll($page, $nbPerPage);
         // On calcule le nombre total de pages grâce au count($listAdverts) qui retourne le nombre total d'annonces
@@ -34,10 +31,11 @@ class NewsController extends Controller
             throw $this->createNotFoundException('Pas de page pour ce numéro de page : '.$page);
         }
 
-
-        return $this->render('SRBlogBundle:News:index.html.twig', array('listNews' => $listNews,
-                                                                        'nbPages'  => $nbPages,
-                                                                        'page'     => $page));
+        return $this->render('SRBlogBundle:News:index.html.twig', [
+            'listNews' => $listNews,
+            'nbPages'  => $nbPages,
+            'page'     => $page,
+        ]);
     }
 
     public function viewAction(News $news, $slug)
@@ -48,46 +46,38 @@ class NewsController extends Controller
 
         $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostNewsComments($news->getId());
 
-        return $this->render('SRBlogBundle:News:view.html.twig', array('news' => $news,
-                                                                       'comments' => $comments
-                                                                       ));
+        return $this->render('SRBlogBundle:News:view.html.twig', [
+            'news' => $news,
+            'comments' => $comments
+        ]);
     }
-
-    
-
 
     /**
     * @Security("has_role('ROLE_USER')")
     */
     public function addAction(Request $request)
     {
-
-
         $news = new News();
         $form = $this->createForm(new NewsType, $news);
         $form->handleRequest($request);                     // La methode handleRequest permet de remplir notre objet $news avec les valeurs récpérer depuis la request
 
-        if($form->isValid())
-        {
+        if($form->isValid()) {
 
             $user = $this->getUser();
             $news->setUser($user);
-
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($news);
             $em->flush();
-            
             $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
 
-
-            return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug' => $news->getSlug())));
+            return $this->redirect($this->generateUrl('sr_blog_article_view', [
+                'slug' => $news->getSlug(),
+            ]));
         }
-
-        return $this->render('SRBlogBundle:News:add.html.twig', array('form' => $form->createView()));
+        return $this->render('SRBlogBundle:News:add.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
-
-   
 
     /**
     * @Security(" has_role('ROLE_USER')")
@@ -97,31 +87,24 @@ class NewsController extends Controller
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '. $news->getId());
         }
-
-
         $form = $this->createForm(new NewsType, $news);
-        
         $form->handleRequest($request);
 
-
-
-        
-
-        if($form->isValid())
-        {
+        if($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             //Pas besoin de persister car doctrine sait qu'il doit le faire (on vient de le récupérer)
             $em->flush();
-
             $request->getSession()->getFlashBag()->add('notice', 'Annonce bien modifiée.');
 
-            return $this->redirect($this->generateUrl('sr_blog_article_view', array('slug' => $news->getSlug())));
-    }
-            //si c'est la premiere fois qu'on arrive dans la page ou que le formulaire est invalide, on montre le formulaire de mofification
-            return $this->render('SRBlogBundle:News:update.html.twig', array('form'   => $form->createView()));
+            return $this->redirect($this->generateUrl('sr_blog_article_view', [
+                'slug' => $news->getSlug(),
+            ]));
+        }
+        return $this->render('SRBlogBundle:News:update.html.twig', [
+            'form'   => $form->createView(),
+        ]);
     }
 
-        
     /**
     * @Security("has_role('ROLE_USER')")
     */
@@ -131,40 +114,33 @@ class NewsController extends Controller
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
         }
-
-
-         // On crée un formulaire vide, qui ne contiendra que le champ CSRF
-         // Cela permet de protéger la suppression d'annonce contre cette faille
         $form = $this->createFormBuilder()->getForm();
 
-        if($form->handleRequest($request)->isValid())
-        {    $em    =   $this->getDoctrine()->getManager(); 
-             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostNewsComments($news->getId());
-             foreach ($comments as $comment) {
-            
+        if($form->handleRequest($request)->isValid()) {
+            $em    =   $this->getDoctrine()->getManager();
+            $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostNewsComments($news->getId());
+            foreach ($comments as $comment) {
                 $em->remove($comment);
-                 
-             }
+            }
+            $em->remove($news);
+            $em->flush();
 
-             
-             $em->remove($news);
-             $em->flush();
-
-             return $this->redirect($this->generateUrl('sr_blog_article'));
+            return $this->redirect($this->generateUrl('sr_blog_article'));
         }
 
-        return $this->render('SRBlogBundle:News:delete.html.twig', array('news' => $news,
-                                                                         'form'   => $form->createView()));
+        return $this->render('SRBlogBundle:News:delete.html.twig', [
+            'news' => $news,
+            'form'   => $form->createView()
+        ]);
     }
 
     public function menuAction($limit)
-    {   
-
-
+    {
         $listNews = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->getNewsHome($limit);
 
-        return $this->render('SRBlogBundle:News:menu.html.twig', array('listNews'=>$listNews));
-
+        return $this->render('SRBlogBundle:News:menu.html.twig', [
+            'listNews'=>$listNews,
+        ]);
     }
 
     /**
@@ -172,24 +148,22 @@ class NewsController extends Controller
     */
     public function addCategoryAction(Request $request)
     {
-        
         $newsCategory = new NewsCategory();
         $form = $this->createForm(new NewsCategoryType, $newsCategory);
 
-        $form->handleRequest($request);  
+        $form->handleRequest($request);
+        if($form->isValid()) {
 
-        if($form->isValid())
-        {
-            
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsCategory);
             $em->flush();
-            
 
             return $this->redirect($this->generateUrl('sr_blog_article'));
         }
 
-        return $this->render('SRBlogBundle:News:addCategory.html.twig', array('form'   => $form->createView()));
+        return $this->render('SRBlogBundle:News:addCategory.html.twig', [
+            'form'   => $form->createView(),
+        ]);
 
     }
 }
