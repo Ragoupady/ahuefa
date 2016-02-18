@@ -2,264 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e141a0a-d68d-4c70-9f04-80f6828dc0cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/abstrait.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ballon.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/basket.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_centre.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_gauche.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/dessin.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/grillage.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/img/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/tapisserie.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_dots-small_65_a6a6a6_2x2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_flat_0_333333_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_flat_65_ffffff_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_glass_55_fbf8ee_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_highlight-hard_100_eeeeee_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-bg_highlight-soft_15_cc0000_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-icons_004276_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-icons_cc0000_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/js/bootstrap-wysihtml5.fr-FR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/js/bootstrap-wysihtml5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/js/excanvas.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/footer.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/jquery-ui.structure.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/jquery-ui.theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/js-global.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/js/respond.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/AHUEFA.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/ragoupadysagadevin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-commonjs-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/bs-raw-files-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/configBridge.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/grunt/sauce_browsers.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/.jscsrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/affix.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/alert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/popover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/tab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/js/transition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/.csscomb.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/.csslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/badges.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/breadcrumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/code.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/component-animations.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/dark_embroidery.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/dropdowns.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/jumbotron.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/media.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/border-radius.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/gradients.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/grid-framework.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/hide-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/image.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/nav-vertical-align.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/reset-filter.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/responsive-visibility.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/tab-focus.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/table-row.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/mixins/vendor-prefixes.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/modals.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/navs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/normalize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/pager.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/popovers.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/responsive-embed.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/responsive-utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/sr_main.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/tables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/theme.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/less/wells.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/package.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/bootstrap/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/less/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/less/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/less/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/less/dist/less.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/less/dist/less.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/less/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumbnail_event/uploads/img/2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/media/cache/thumbnail_filter/uploads/img/4.jpeg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/CommentRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/CommentRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/EventRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/EventRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/ImageRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/ImageRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsCategoryRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/NewsCategoryRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/NewsRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/TagRepository.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/TagRepository.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/color_admin/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/uploads/img/1.jpeg" afterPath="$PROJECT_DIR$/web/uploads/img/1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/uploads/img/2.jpeg" afterPath="$PROJECT_DIR$/web/uploads/img/2.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/uploads/img/4.jpeg" afterPath="$PROJECT_DIR$/web/uploads/img/4.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Comment.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Image.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/MainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsCategory.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsCategoryType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsCategoryType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Tag.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Tag.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/actions.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/actions.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/add.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/add.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/addCategory.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/addCategory.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/appuiPro.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/appuiPro.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/confirmation.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/confirmation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/consultation.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/consultation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/contact.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/contact.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/delete.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/delete.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/don.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/don.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/equipe.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/equipe.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/formulaire.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/formulaire.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/historique.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/historique.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexEvent.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexEvent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexNews.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexNews.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediation.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationDef.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationDef.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationEtape.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationEtape.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationTravail.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/mediationTravail.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/membre.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/membre.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/menu.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/menu.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/menu.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/message.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/message.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/objectif.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/objectif.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/partenaire.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/partenaire.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/searchResult.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/searchResult.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/security-checker" afterPath="$PROJECT_DIR$/bin/security-checker" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/soutien.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/soutien.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/update.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/update.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/update.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/update.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/view.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/view.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/voyage.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/voyage.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="AHUEFA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -281,31 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig">
+      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+            <state vertical-scroll-proportion="-4.4583335">
+              <caret line="171" column="42" selection-start-line="171" selection-start-column="42" selection-end-line="171" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -314,48 +38,32 @@
       <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-11.875">
               <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7180851">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.11968085">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="2" selection-end-line="12" selection-end-column="3" />
+              <folding>
+                <marker date="1455823123000" expanded="true" signature="139:207" placeholder="..." />
+                <marker date="1455823123000" expanded="true" signature="171:204" placeholder="..." />
+                <marker date="1455823123000" expanded="true" signature="211:314" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <file leaf-file-name="app_dev.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app_dev.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="107" selection-start-line="11" selection-start-column="100" selection-end-line="11" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="171" column="42" selection-start-line="171" selection-start-column="42" selection-end-line="171" selection-end-column="42" />
+            <state vertical-scroll-proportion="-6.25">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="2" selection-end-line="17" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -369,8 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/contact.html.twig" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/formulaire.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
@@ -420,6 +126,8 @@
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
+        <option value="$PROJECT_DIR$/web/app_dev.php" />
+        <option value="$PROJECT_DIR$/web/config.php" />
       </list>
     </option>
   </component>
@@ -462,8 +170,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -832,6 +538,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -952,13 +660,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/CommentRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1176,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1215,14 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="42" selection-start-line="171" selection-start-column="42" selection-end-line="171" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1262,10 +948,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsCategoryType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="107" selection-start-line="11" selection-start-column="100" selection-end-line="11" selection-end-column="107" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7180851">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82047874">
+          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0026595744">
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1278,42 +987,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsCategoryType.php">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <caret line="11" column="107" selection-start-line="11" selection-start-column="100" selection-end-line="11" selection-end-column="107" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+        <state vertical-scroll-proportion="-4.4583335">
+          <caret line="171" column="42" selection-start-line="171" selection-start-column="42" selection-end-line="171" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="2" selection-end-line="17" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-11.875">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7180851">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.11968085">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="2" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <marker date="1455823123000" expanded="true" signature="139:207" placeholder="..." />
+            <marker date="1455823123000" expanded="true" signature="171:204" placeholder="..." />
+            <marker date="1455823123000" expanded="true" signature="211:314" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
