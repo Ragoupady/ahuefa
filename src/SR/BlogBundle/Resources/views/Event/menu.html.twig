@@ -1,31 +1,14 @@
-{# src/SR/BlogBundle/Resources/views/Event/menu.html.twig #}
-
-
-
-{# Ce template n'hérite de personne,
-   tout comme le template inclus avec {{ include() }}. #}
-
-
-
-
-<ul class="nav nav-pills nav-stacked">
-  
-	{% if listEvent is empty %}
-        <p>Aucun évenement à venir</p></br>
-    {% endif %}
-
-	{% for event in listEvent %}
-
-	    <li class="last_event">
-	    	<p class="last_event_date">{{event.postDate|localizeddate('none', 'none', null, null, 'EEEE')|title}} {{event.postDate|localizeddate('none', 'none', null, null, 'd MMMM Y')}}</p>
-	    	<div class="last_event_content">
-		    	<a href="{{ path('sr_blog_evenement_view', {'slug': event.slug}) }}">
-		        	{{ event.title }}
-		     	</a>
- 			</div>
-	    </li>
-	{% endfor %}
+<ul class="sidebar-recent-post">
+	{% if listEvent is not empty %}
+		{% for event in listEvent %}
+			<li>
+				<div class="info">
+					<h4 class="title"><a href="{{ path('sr_blog_evenement_view', {'slug': event.slug}) }}">{{ event.title }}</a></h4>
+					<div class="date">{{event.postDate|localizeddate('none', 'none', null, null, 'd MMMM Y')}}</div>
+				</div>
+			</li>
+		{% endfor %}
+	{% else %}
+    	<p>Aucun évenement à venir</p></br>
+	{% endif %}
 </ul>
-
-
-

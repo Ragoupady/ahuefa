@@ -1,37 +1,28 @@
-{# src/SR/BlogBundle/Resources/views/Soutien/contact.html.twig #}
 {% extends "SRBlogBundle::layout.html.twig" %}
 
-{% block body %}
+{% block content %}
 
-  <style type="text/css">
-        #map-canvas {  margin: 0; padding: 0; vertical-align: top;}
-        
-    </style>
+    {% if type == 1 %}
+        {% set typeContact = 'Soutien' %}
+    {% elseif type == 2 %}
+        {% set typeContact = 'Devenir membre' %}
+    {% elseif type == 3 %}
+        {% set typeContact = 'Contact' %}
+    {% endif %}
 
-<h2>Nous contacter</h2><br>
+    {#FORMULAIRE DE CONTACT#}
+    {% include 'SRBlogBundle:Soutien:formulaire.html.twig' %}
 
-<p>Cette section vous permet de nous contacter pour:</p>
-<ul>
-    <li>Prendre rendez-vous (par téléphone ou <a href="#formulaire">mail</a>)</li>
-    <li>Nous demander plus d'information (par téléphone ou <a href="#formulaire">mail</a>)</li>
-</ul>
-<div class="contact_adresse">
-    <h4>Adresse</h4>
-    <p>Association AHUEFA</p>
-    <p>13, rue Courtois 93500 Pantin</p>
-    
-    <h4>Téléphone</h4>
-    <p>01 48 45 93 23</p>
-</div>
+    {#On affiche la carte googlemap seulement sur la page contact#}
+    {% if typeContact == 'Contact' %}
+        <style type="text/css">
+            #map-canvas {  margin: 0; padding: 0; vertical-align: top;}
+        </style>
 
-
-    <div class="col-md-11">
-        <div id="map-canvas"></div>
-    </div>
-
-
-{% set typeContact = 'Contact :' %}
-{% include 'SRBlogBundle:Soutien:formulaire.html.twig' %}
+        <div class="col-md-11">
+            <div id="map-canvas"></div>
+        </div>
+    {% endif %}
 
 {# GOOGLE MAP #}
 

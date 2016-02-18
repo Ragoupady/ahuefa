@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
  * Image
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="SR\BlogBundle\Entity\ImageRepository")
+ * @ORM\Entity(repositoryClass="SR\BlogBundle\Entity\Repository\ImageRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class Image

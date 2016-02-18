@@ -1,67 +1,241 @@
-{# src/SR/BlogBundle/Resources/views/Event/index.html.twig #}
 {% extends "SRBlogBundle::layout.html.twig" %}
 
-{% block body %}
+{% block content %}
           <h2> Nos évenements</h2>
 {% if is_granted('ROLE_MODERATEUR') %}
   <div class="space">
 
-
-    <p><a href="{{path('sr_blog_evenement_add')}}" class="bouton">Nouvel Evénement</a></p>
-    <p><a href="{{path('sr_blog_evenement_add_category')}}" class="bouton2">Type Evénement</a></p>
+    <p><a href="javascript:;" data-target="#addEventModal" data-toggle="modal" class="bouton">Nouvel Evénement</a></p>
+    <p><a href="javascript:;" data-target="#addEventTypeModal" data-toggle="modal" class="bouton2">Type Evénement</a></p>
 
   </div>
 {% endif %}
 <br><br>
          
 <ul>
-
-  {% if listEvent is empty %}
-    <p>Aucun événement</p>
+  {% if listEvent is not empty %}
+    <ul class="result-list">
+      {%for event in listEvent%}
+        <li>
+          <div class="result-image">
+            <a href="javascript:;">
+              {% if event.image is defined and event.image %}
+                <img  class="image_news_minature"src="{{ asset(event.image.webPath| apply_filter('miniature')) }}" alt="{{ event.image.alt }}"/>
+              {% endif %}
+            </a>
+          </div>
+          <div class="result-info">
+            <h4 class="title">
+              <a class="titre_index" href= "{{path('sr_blog_evenement_view',{'slug': event.slug})}}">  {{event.title}} </a>
+            </h4>
+            <p class="desc">
+              {{event.content|truncate(300, true, '...')|raw }}
+            </p>
+            {% if is_granted('ROLE_MODERATEUR') %}
+            <div class="btn-row">
+              <a title="" href="{{ path('sr_blog_evenement_update', {'slug': event.slug}) }}" data-slug="{{ event.slug }}" data-target="#updateEventModal" data-toggle="modal" data-title="Modifier"><i class="fa fa-fw fa-pencil"></i></a>
+              <a title="" href="{{ path('sr_blog_evenement_delete', {'slug': event.slug}) }}" data-slug="{{ event.slug }}" data-target="#deleteEventModal" data-toggle="modal" data-title="Supprimer"><i class="fa fa-fw fa-trash-o"></i></a>
+            </div>
+            {% endif %}
+          </div>
+          <div class="result-price">
+            <small>{{event.eventStartDate|date("d/m/Y") }} par {{event.user.username}}</small>
+            <a href="{{path('sr_blog_evenement_view',{'slug': event.slug})}}" class="btn btn-inverse btn-block">Voir</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
   {% else %}
-
-  	{%for event in listEvent%}
-  	<li class="list-group-item">
-      <div class="event_bloc_index">
-      {{event.postDate| localizeddate('medium', 'none')}}
-      </div>
-      <div class="event_bloc_index_contenu">
-         <a href= "{{path('sr_blog_evenement_view',{'slug': event.slug})}}">{{event.title}}</a>
-      </div>
-    </li>
-      {% if is_granted('ROLE_MODERATEUR') %}
-        <div class="btn-group">
-
-          <button type="button" class="btn btn-danger btn-xs">Action</button>
-            <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-
-          <ul class="dropdown-menu" role="menu">
-            
-            <li><a href="{{path('sr_blog_evenement_update',{'slug': event.slug})}}">Editer</a></li>
-            <li class="divider"></li>
-            <li><a href="{{path('sr_blog_evenement_delete',{'slug': event.slug})}}">Supprimer</a></li>
-          </ul>
-
-        </div>
-      {% endif %}
-  	{%endfor%}
-
+    <p>Aucun événement</p>
   {% endif %}
 
+  {#MODAL AJOUTER EVENEMENT#}
+  <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+  {#MODAL AJOUTER TYPE EVENEMENT#}
+  <div class="modal fade" id="addEventTypeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+  {#MODAL MODIFIER EVENEMENT#}
+  <div class="modal fade" id="updateEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+  {#MODAL SUPPRIMER TYPE EVENEMENT#}
+  <div class="modal fade" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 
 </ul>
 
-<ul class="pagination">
-  {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
-  {% for p in range(1, nbPages) %}
-    <li{% if p == page %} class="active"{% endif %}>
-      <a href="{{ path('sr_blog_evenement', {'page': p}) }}">{{ p }}</a>
-    </li>
-  {% endfor %}
-</ul>
+  {% if nbPages > 1 %}
+    <ul class="pagination">
+      {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+      {% for p in range(1, nbPages) %}
+        <li{% if p == page %} class="active"{% endif %}>
+          <a href="{{ path('sr_blog_evenement', {'page': p}) }}">{{ p }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
+{% endblock %}
 
+{% block javascripts %}
+  {{ parent() }}
+  <script>
+    (function(){
+
+      $("#addEventModal").on('show.bs.modal', function(e){
+
+        $.ajax({
+          url :  Routing.generate('sr_blog_evenement_add'),
+          type : 'GET',
+          success : function(html, statut){ // code_html contient le HTML renvoyé
+            $("#addEventModal").html(html);
+            datepicker();
+            wysiwyg();
+            addMovie();
+
+          },
+          error : function(resultat, statut, erreur){
+            console.log("La requète n'a pas abouti")
+          }
+        });
+      });
+
+      $("#addEventTypeModal").on('show.bs.modal', function(e){
+
+        $.ajax({
+          url :  Routing.generate('sr_blog_evenement_add_category'),
+          type : 'GET',
+          success : function(html, statut){ // code_html contient le HTML renvoyé
+            $("#addEventTypeModal").html(html);
+          },
+          error : function(resultat, statut, erreur){
+            console.log("La requète n'a pas abouti")
+          }
+        });
+      });
+
+      $("#updateEventModal").on('show.bs.modal', function(e){
+        var button = $(e.relatedTarget);
+        var slug = button.data('slug');
+
+        $.ajax({
+          url :  Routing.generate('sr_blog_evenement_update', {slug: slug} ),
+          type : 'GET',
+          success : function(html, statut){ // code_html contient le HTML renvoyé
+            $("#updateEventModal").html(html);
+            datepicker();
+            wysiwyg();
+          },
+          error : function(resultat, statut, erreur){
+            console.log("La requète n'a pas abouti")
+          }
+        });
+      });
+
+      $("#deleteEventModal").on('show.bs.modal', function(e){
+        var button = $(e.relatedTarget);
+        var slug = button.data('slug');
+
+        $.ajax({
+          url :  Routing.generate('sr_blog_evenement_delete', {slug: slug} ),
+          type : 'GET',
+          success : function(html, statut){ // code_html contient le HTML renvoyé
+            $("#deleteEventModal").html(html);
+          },
+          error : function(resultat, statut, erreur){
+            console.log("La requète n'a pas abouti")
+          }
+        });
+      });
+
+      {# Fonction qui permet d'utiliser le datepicker bootstrap dans une modal #}
+      var datepicker =  function (){
+
+        $('.datepicker').datepicker({
+          dateFormat: "dd-mm-yy"
+        });
+        //Ce code permet d'éviter que l'utilisation du datepicker déclenche l'évenement show.bs.modal.
+        $(".datepicker").datepicker().on('show.bs.modal', function(event) {
+          event.stopPropagation();
+        });
+      };
+
+      var wysiwyg = function () {
+        $('#sr_blogbundle_event_content').wysihtml5({
+          "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+          "emphasis": true, //Italics, bold, etc. Default true
+          "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+          "html": false, //Button which allows you to edit the generated HTML. Default false
+          "link": true, //Button to insert a link. Default true
+          "image": true, //Button to insert an image. Default true,
+          "color": true //Button to change color of font
+        });
+      };
+
+      var addMovie = function(){
+
+        // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+        var $container = $('div#sr_blogbundle_event_movies');
+
+        // On ajoute un lien pour ajouter un nouveau film
+        var $addLink = $('<a href="#" id="add_movie" class="btn btn-default">Ajouter un film</a>');
+        $container.append($addLink);
+
+        // On ajoute un nouved
+        $addLink.click(function(e) {
+          addMovie($container);
+          e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+          return false;
+        });
+
+        // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+        var index = $container.find(':input').length;
+
+        // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvel article par exemple).
+        if (index == 0) {
+          addCategory($container);
+        } else {
+          // Pour chaque film déjà existante, on ajoute un lien de suppression
+          $container.children('div').each(function() {
+            addDeleteLink($(this));
+          });
+        }
+
+        // La fonction qui ajoute un formulaire Movie
+        function addMovie($container) {
+          // Dans le contenu de l'attribut « data-prototype », on remplace :
+          // - le texte "__name__label__" qu'il contient par le label du champ
+          // - le texte "__name__" qu'il contient par le numéro du champ
+          var $prototype = $($container.attr('data-prototype').replace(/__name__label__/g, 'Film n°' + (index+1))
+                  .replace(/__name__/g, index));
+
+          // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+          addDeleteLink($prototype);
+
+          // On ajoute le prototype modifié à la fin de la balise <div>
+          $container.append($prototype);
+
+          // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+          index++;
+        }
+
+        // La fonction qui ajoute un lien de suppression d'une catégorie
+        function addDeleteLink($prototype) {
+          // Création du lien
+          $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+
+          // Ajout du lien
+          $prototype.append($deleteLink);
+
+          // Ajout du listener sur le clic du lien
+          $deleteLink.click(function(e) {
+            $prototype.remove();
+
+            e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+
+            return false;
+          });
+        }
+
+      }
+
+    })();
+
+  </script>
 {% endblock %}

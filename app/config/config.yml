@@ -29,12 +29,15 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources: ['bootstrap_3_horizontal_layout.html.twig']
+        # resources: ['bootstrap_3_horizontal_layout.html.twig']
 
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [SRBlogBundle, FOSUserBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -66,13 +69,12 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
     spool:     { type: memory }
-    encryption: ssl
-    auth_mode: login
+
 
 fos_user:
     db_driver:     orm                       # Le type de BDD à utiliser, nous utilisons l'ORM Doctrine depuis le début
@@ -97,11 +99,10 @@ avalanche_imagine:
                 cache_type: false
                 cache_expires: 1 day
 
-
         miniature:
             type:    thumbnail
             options: 
-                size: [100, 100]
+                size: [240, 180]
                 mode: outbound
                 cache_type: false
                 cache_expires: 1 day

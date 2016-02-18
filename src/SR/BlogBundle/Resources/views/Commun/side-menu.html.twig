@@ -1,0 +1,10 @@
+<div class="section-container">
+    <h4 class="section-title"><span>Prochain évènement</span></h4>
+    {{render(controller("SRBlogBundle:Event:menu", {'limit' : 1}))}}
+</div>
+
+
+<div class="section-container">
+    <h4 class="section-title"><span>Derniers articles</span></h4>
+    {{ render(controller("SRBlogBundle:News:menu", {'limit': 3})) }}
+</div>

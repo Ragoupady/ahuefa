@@ -15,17 +15,38 @@ class NewsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title','text')
-            ->add('content','textarea',array('attr'=> array('class'=>'ckeditor')))
-            ->add('image', new ImageType(),array('required'=>false))
-            ->add('newsDate','date')
-            ->add('newsStatus','checkbox', array('required' => false))
-            ->add('newsCategories','entity',array('class'=>'SRBlogBundle:NewsCategory',
-                                                  'property'=> 'name',
-                                                  'multiple'=> true))
-            
-            ->add('envoyer','submit')
-
+            ->add('title','text', [
+                'label' => 'Titre'
+            ])
+            ->add('content','textarea',[
+                'label' => 'Contenu',
+                'attr' => ['cols' => '5', 'rows' => '30'],
+            ])
+            ->add('newsDate','date',  [
+                'widget' => 'single_text',
+                'format' => 'dd-MM-yyyy',
+                'label' => 'Date de publication',
+                'attr' => ['class' => 'datepicker']
+            ])
+            ->add('newsStatus','checkbox', [
+                'label' => 'publié',
+                'required' => false,
+            ])
+            ->add('newsCategories','entity', [
+                'label' => 'Catégorie(s)',
+                'class'=>'SRBlogBundle:NewsCategory',
+                'property'=> 'name',
+                'multiple'=> true,
+            ])
+            ->add('image', new ImageType(), [
+                'required'=>false,
+            ])
+            ->add('envoyer','submit', [
+                'attr' => [
+                    'class' => 'btn btn-info'
+                ],
+                'label' => 'Ajouter'
+            ])
         ;
     }
     

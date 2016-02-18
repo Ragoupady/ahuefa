@@ -26,7 +26,7 @@ class EventController extends Controller
     /**
      * Permet d'accéder à la liste des événements d'AHUEFA
      *
-     * @Route("/", name="events" )
+     * @Route("/evenement/page/{page}", name="sr_blog_evenement",requirements={"page" = "\d+"}, defaults={"page" = 1} )
      */
     public function indexAction($page)
     {
@@ -48,7 +48,7 @@ class EventController extends Controller
     /**
      * Permet de récupérer le détail d'un évenement
      *
-     * @Route("/{id}", name="show_event" )
+     * @Route("/evenement/{slug}", name="sr_blog_evenement_view" )
      */
     public function viewAction(Event $event, $slug)
     {
@@ -64,15 +64,18 @@ class EventController extends Controller
     }
 
     /**
-    * Permet de récupérer le détail d'un évènement
+    * Permet d'ajouter un évènement
     *
-    * @Route("/{id}/add", name="add_event" )
+    * @Route("/add", name="sr_blog_evenement_add", options={"expose" = true} )
     * @Security(" has_role('ROLE_USER')")
     */
     public function addAction(Request $request)
     {
         $event = new Event();
-        $form = $this->createForm(new EventType, $event);
+        $form = $this->createForm(new EventType, $event, [
+            'action' => $this->generateUrl('sr_blog_evenement_add'),
+            'method' => 'POST'
+        ]);
         $form->handleRequest($request);
 
         if($form->isValid()) {
@@ -91,7 +94,7 @@ class EventController extends Controller
     /**
     * Permet de mettre à jour un évènement
     *
-    * @Route("/{id}/update", name="update_event" )
+    * @Route("/evenement/update/{slug}", name="sr_blog_evenement_update", options={"expose" = true} )
     * @Security("has_role('ROLE_USER')")
     */
     public function updateAction(Event $event, Request $request)
@@ -107,7 +110,11 @@ class EventController extends Controller
             $originalMovies->add($movie);
         }
 
-        $form = $this->createForm(new EventType, $event);
+        $form = $this->createForm(new EventType, $event, [
+            'action' => $this->generateUrl('sr_blog_evenement_update', [
+                'slug' => $event->getSlug(),
+            ])
+        ]);
 
         if($request->isMethod('POST')) {
             $form->handleRequest($request);
@@ -134,7 +141,7 @@ class EventController extends Controller
     /**
      * Permet de supprimer un évènement
      *
-     * @Route("/{id}/delete", name="delete_event" )
+     * @Route("/evenement/delete/{slug}", name="sr_blog_evenement_delete", options={"expose" = true} )
      * @Security("has_role('ROLE_USER')")
      */
     public function deleteAction(Event $event, Request $request)
@@ -163,7 +170,6 @@ class EventController extends Controller
      * Permet de récupérer les évènements à afficher dans la page d'accueil
      *
      * @Route("/menu", name="menu_event" )
-     * @Security("has_role('ROLE_USER')")
      */
     public function menuAction($limit)
     {
@@ -177,7 +183,7 @@ class EventController extends Controller
     /**
      * Permet d'ajouter une nouvelle catégorie pour les événements
      *
-     * @Route("/ajout-categorie", name="add_event_category" )
+     * @Route("/evenements/addCategory", name="sr_blog_evenement_add_category", options={"expose" = true} )
      * @Security("has_role('ROLE_USER')")
      */
     public function addCategoryAction(Request $request)

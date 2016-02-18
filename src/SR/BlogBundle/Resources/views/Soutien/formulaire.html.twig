@@ -1,63 +1,65 @@
-<div class="container" id="formulaire">
-    <div class="row">
-        <div class="col-md-7">
-            <div class="well well-sm">
-
-                <form class="form-horizontal" action="{{path('sr_blog_contact_send',{'typeContact': typeContact})}}" method="post">
-                    <fieldset>
-                        <legend class="text-center header">Votre message</legend>
-
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="fname" name="name" type="text" placeholder="Votre Nom" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="lname" name="firstname" type="text" placeholder="Votre Prénom" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="email" name="email" type="text" placeholder="Votre Email" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="phone" name="phone" type="text" placeholder="Votre N° de téléphone" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                            <div class="col-md-8">
-                                <textarea class="form-control" id="message" name="message" placeholder="Entrer votre message ici. Nous vous répondrons le plus rapidement possible." rows="7"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-default btn-lg "><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Envoyer</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
+<div class="section-container">
+    <h4 class="section-title m-b-20"><span>{{ typeContact }}</span></h4>
+    <p class="m-b-30 f-s-13">
+        {{ message }}
+    </p>
+    <!-- begin row -->
+    <div class="row row-space-30 f-s-12 text-inverse">
+        <!-- begin col-8 -->
+        <div class="col-md-8">
+            <form class="form-horizontal" action="{{path('sr_blog_contact_send',{'typeContact': typeContact})}}" method="post">
+                <div class="form-group">
+                    <label class="control-label col-md-3">Name <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="name" placeholder="Votre Nom" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3">Name <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="firstname" placeholder="Votre Prénom" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3">Email <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="email" type="text" placeholder="Votre Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3">Téléphone <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                        <input class="form-control" name="phone" type="text" placeholder="Votre N° de téléphone" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3">Message <span class="text-danger">*</span></label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" rows="10" name="message" placeholder="Entrer votre message ici. Nous vous répondrons le plus rapidement possible."></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3"></label>
+                    <div class="col-md-9 text-left">
+                        <button type="submit" class="btn btn-inverse btn-lg btn-block">Envoyer</button>
+                    </div>
+                </div>
+            </form>
         </div>
+        <!-- end col-8 -->
+        <!-- begin col-4 -->
+        <div class="col-md-4">
+            <p>
+                <strong>Association AHUEFA</strong><br>
+                13, rue Courtois<br>
+                93500 Pantin<br>
+            </p>
+            <p>
+                <span class="phone"> 01 48 45 93 23</span><br>
+                <a href="mailto:hello@emailaddress.com">aremplacer@toto.com</a>
+            </p>
+        </div>
+        <!-- end col-4 -->
     </div>
+    <!-- end row -->
 </div>
-
-<style>
-    .header {
-        color: #36A0FF;
-        font-size: 27px;
-        padding: 10px;
-    }
-
-</style>

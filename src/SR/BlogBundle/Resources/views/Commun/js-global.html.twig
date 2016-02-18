@@ -1,0 +1,13 @@
+{% javascripts
+'@SRBlogBundle/Resources/public/color_admin/js/wysihtml5-0.3.0.min.js'
+'@SRBlogBundle/Resources/public/js/jquery.min.js'
+'@SRBlogBundle/Resources/public/js/bootstrap.min.js'
+'@SRBlogBundle/Resources/public/js/jquery-ui.min.js'
+'@SRBlogBundle/Resources/public/color_admin/js/bootstrap-wysihtml5.js'
+'@SRBlogBundle/Resources/public/color_admin/js/bootstrap-wysihtml5.fr-FR.js'
+%}
+
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+<script src="{{ asset_url }}" type="text/javascript"></script>
+{% endjavascripts %}

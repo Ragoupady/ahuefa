@@ -15,8 +15,14 @@ class NewsCategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name','text')
-            ->add('creer','submit')
+            ->add('name','text', [
+                'label' => 'Nom de la catégorie'
+            ])
+            ->add('Creer','submit', [
+                'attr' => [
+                  'class' => 'btn btn-info'
+                ],
+            ])
         ;
     }
     

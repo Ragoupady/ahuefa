@@ -2,15 +2,9 @@
 
 namespace SR\BlogBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use SR\BlogBundle\Entity\News;
-use SR\UserBundle\Entity\User;
-use SR\BlogBundle\Entity\Comment;
 use SR\BlogBundle\Entity\NewsCategory;
-
 use SR\BlogBundle\Form\NewsType;
-use SR\BlogBundle\Form\CommentType;
 use SR\BlogBundle\Form\NewsCategoryType;
 
 use Symfony\Component\HttpFoundation\Request;
@@ -23,12 +17,12 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @Route("/articles")
  */
-class NewsController extends Controller
+class NewsController extends BlogController
 {
     /**
      * Permet d'accéder à la liste des articles d'AHUEFA
      *
-     * @Route("/", name="news" )
+     * @Route("/page/{page}", name="sr_blog_article", requirements={"page" = "\d+"}, defaults={"page" = 1} )
      */
     public function indexAction($page)
     {
@@ -52,7 +46,7 @@ class NewsController extends Controller
     /**
      * Permet de voir le détail d'un article
      *
-     * @Route("/{id}", name="show_news" )
+     * @Route("/articles/{slug}", name="sr_blog_article_view" )
      */
     public function viewAction(News $news, $slug)
     {
@@ -71,15 +65,24 @@ class NewsController extends Controller
     /**
     * Permet d'ajouter un nouvel article
     *
-    * @Route("/{id}/add", name="add_news" )
+    * @Route("/add", name="sr_blog_article_add", options={"expose"=true} )
     * @Security("has_role('ROLE_USER')")
     */
     public function addAction(Request $request)
     {
         $news = new News();
-        $form = $this->createForm(new NewsType, $news);
-        $form->handleRequest($request);                     // La methode handleRequest permet de remplir notre objet $news avec les valeurs récpérer depuis la request
+        $form = $this->createForm(new NewsType, $news, [
+            'action' => $this->generateUrl('sr_blog_article_add'),
+            'method' => 'POST'
+        ]);
 
+        if ($request->isXmlHttpRequest()) {
+
+            return $this->render('SRBlogBundle:News:add.html.twig', [
+                'form' => $form->createView(),
+            ]);
+        }
+        $form->handleRequest($request);
         if($form->isValid()) {
 
             $user = $this->getUser();
@@ -93,25 +96,34 @@ class NewsController extends Controller
                 'slug' => $news->getSlug(),
             ]));
         }
-        return $this->render('SRBlogBundle:News:add.html.twig', [
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
      * Permet de mettre à jour un article
      *
-     * @Route("/{id}/update", name="update_news" )
+     * @Route("/articles/update/{slug}", name="sr_blog_article_update", options={"expose" = true} )
      * @Security("has_role('ROLE_USER')")
      */
-    public function updateAction(News $news, Request $request)
+    public function updateAction(Request $request, News $news)
     {
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '. $news->getId());
         }
-        $form = $this->createForm(new NewsType, $news);
-        $form->handleRequest($request);
+        $form = $this->createForm(new NewsType, $news, [
+            'action' => $this->generateUrl('sr_blog_article_update', [
+                'slug' => $news->getSlug(),
+            ]),
+            'method' => 'POST',
+        ]);
 
+        if ($request->isXmlHttpRequest()) {
+            return $this->render('SRBlogBundle:News:update.html.twig', [
+                'form'   => $form->createView(),
+                'news'   => $news,
+            ]);
+        }
+
+        $form->handleRequest($request);
         if($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             //Pas besoin de persister car doctrine sait qu'il doit le faire (on vient de le récupérer)
@@ -122,25 +134,34 @@ class NewsController extends Controller
                 'slug' => $news->getSlug(),
             ]));
         }
-        return $this->render('SRBlogBundle:News:update.html.twig', [
-            'form'   => $form->createView(),
-        ]);
     }
 
     /**
      * Permet de supprimer un article
      *
-     * @Route("/{id}/delete", name="delete_news" )
+     * @Route("/articles/delete/{slug}", name="sr_blog_article_delete" , options={"expose" = true})
      * @Security("has_role('ROLE_USER')")
      */
-    public function deleteAction(News $news, Request $request)
+    public function deleteAction(Request $request, News $news)
     {
         if (!$news) {
-            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$id);
+            throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$news->getId());
         }
-        $form = $this->createFormBuilder()->getForm();
+
+        $form = $this->createDeleteForm($this->generateUrl('sr_blog_article_delete', [
+            'slug' => $news->getSlug(),
+        ]));
+
+        if ($request->isXmlHttpRequest()) {
+
+            return $this->render('SRBlogBundle:News:delete.html.twig', [
+                'news' => $news,
+                'form'   => $form->createView()
+            ]);
+        }
 
         if($form->handleRequest($request)->isValid()) {
+
             $em    =   $this->getDoctrine()->getManager();
             $comments = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Comment')->getPostNewsComments($news->getId());
             foreach ($comments as $comment) {
@@ -152,10 +173,6 @@ class NewsController extends Controller
             return $this->redirect($this->generateUrl('sr_blog_article'));
         }
 
-        return $this->render('SRBlogBundle:News:delete.html.twig', [
-            'news' => $news,
-            'form'   => $form->createView()
-        ]);
     }
 
     /**
@@ -175,27 +192,31 @@ class NewsController extends Controller
     /**
      * Permet d'ajouter une catégorie aux articles
      *
-     * @Route("/{id}/delete", name="delete_news" )
+     * @Route("/article/addCategory", name="sr_blog_article_addCategory", options={"expose"=true}  )
      * @Security("has_role('ROLE_USER')")
      */
     public function addCategoryAction(Request $request)
     {
         $newsCategory = new NewsCategory();
-        $form = $this->createForm(new NewsCategoryType, $newsCategory);
+        $form = $this->createForm(new NewsCategoryType, $newsCategory,[
+            'method' => 'POST',
+            'action' => $this->generateUrl('sr_blog_article_addCategory')
+        ]);
+
+        if ($request->isXmlHttpRequest()) {
+            return $this->render('SRBlogBundle:News:addCategory.html.twig', [
+                'form'   => $form->createView(),
+            ]);
+        }
 
         $form->handleRequest($request);
         if($form->isValid()) {
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsCategory);
             $em->flush();
 
             return $this->redirect($this->generateUrl('sr_blog_article'));
         }
-
-        return $this->render('SRBlogBundle:News:addCategory.html.twig', [
-            'form'   => $form->createView(),
-        ]);
 
     }
 }

@@ -24,8 +24,8 @@ security:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            pattern:   ^/
-            anonymous: true 
+            pattern:   ^/   # ne pas oublier de mettre en prod avec ^/ et non ^/app_dev.php, car on était obligé de mettre ca surement à cause de MAMP
+            anonymous: true
             provider: main
             form_login:
                 login_path: fos_user_security_login
@@ -35,10 +35,8 @@ security:
                 target: /
             remember_me:
                 key:      %secret% # %secret% est un paramètre de parameters.yml
-        
-
-    # with these settings you can restrict or allow access for different parts
-    # of your application based on roles, ip, host or methods
-    # http://symfony.com/doc/current/cookbook/security/access_control.html
-    access_control:
-        - { path: ^/admin, roles: ROLE_ADMIN }
+#    # with these settings you can restrict or allow access for different parts
+#    # of your application based on roles, ip, host or methods
+#    # http://symfony.com/doc/current/cookbook/security/access_control.html
+#    access_control:
+#        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

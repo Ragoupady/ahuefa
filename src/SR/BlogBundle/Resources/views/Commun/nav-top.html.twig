@@ -1,0 +1,79 @@
+<!-- Static navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="http://placehold.it/150x50&text=Logo" alt="">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{path('sr_blog_home')}}">Accueil</a></li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Qui sommes nous ? <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{{path('sr_blog_historique')}}">Historique</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{path('sr_blog_objectif')}}">Objectifs</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-submenu"><a href="{{path('sr_blog_actions')}}" class="dropdown-toggle" data-toggle="dropdown">Nos actions</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{path('sr_blog_actions_mediation')}}">Médiation ethnoclinique</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{path('sr_blog_actions_consultation')}}">Consultation psychologique individuelle</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{path('sr_blog_actions_appui_pro')}}">L’appui technique aux professionnels</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{path('sr_blog_actions_voyage_transculturel')}}">Le Voyage Transculturel</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="{{path('sr_blog_equipe')}}">Notre équipe</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{path('sr_blog_partenaire')}}">Nos partenaires</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles & Evènements <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{{path('sr_blog_article')}}"> Nos Articles</a></li>
+                        <li><a href="{{path('sr_blog_evenement')}}">Nos Evènements</a></li>
+                    </ul>
+                </li>
+                <!-- Soutien & Contact -->
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nous soutenir<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{path('sr_blog_contact', {'type': 1})}}">Message de soutien</a></li>
+                    <li><a href="{{path('sr_blog_contact', {'type': 2})}}">Devenir membre</a></li>
+                    <li><a href="{{path('sr_blog_soutien_don')}}">Faire un Don</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{path('sr_blog_contact', {'type': 3})}}">Nous contacter</a></li>
+                </ul>
+                </li>
+            </ul>
+            <form action="{{path('sr_blog_search')}}" method="post" class="navbar-form navbar-left " role="search">
+                <div class="form-group">
+                    <input type="text" name="content" class="form-control" placeholder="Rechercher">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" style="color:blue"></span></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{path('sr_blog_contact', {'type': 3})}}">Contact</a></li>
+                {% if app.user%}
+                <li class="active"><a href="{{path('fos_user_security_logout')}}">Se Déconnecter <span class="sr-only">(current)</span></a></li>
+                {% else %}
+                <li class="active"><a href="{{path('fos_user_security_login')}}">Se connecter <span class="sr-only">(current)</span></a></li>
+                {% endif %}
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>

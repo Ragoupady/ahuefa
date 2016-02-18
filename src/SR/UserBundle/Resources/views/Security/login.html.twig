@@ -1,36 +1,175 @@
-{# src/SR/UserBundle/Resources/views/Security/login.html.twig #}
-
-{% extends "::layout.html.twig" %}
+{#{% extends "SRUserBundle::layout.html.twig" %}#}
 
 
-{% block body %}
+{#{% block body %}#}
+    {#{{ parent() }}#}
+
+    {#<div class="login">#}
+        {#&#123;&#35; S'il y a une erreur, on l'affiche dans un joli cadre &#35;&#125;#}
+        {#{% if error %}#}
+            {#<div class="alert alert-danger">{{ error.message }}</div>#}
+        {#{% endif %}#}
+
+        {#&#123;&#35; Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu &#35;&#125;#}
+        {#<form role="form" action="{{ path('fos_user_security_check') }}" method="post">#}
+            {#<div class="form-group">#}
+                {#<label for="username">Login :</label>#}
+                {#<input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" />#}
+
+            {#</div>#}
+            {#<div class="form-group">#}
+                {#<label for="password">Mot de passe :</label>#}
+                {#<input type="password" class="form-control" id="password" name="_password" />#}
+            {#</div>#}
+
+            {#<div class="checkbox">#}
+                {#<label><input type="checkbox"> Se souvenir de moi</label>#}
+            {#</div>#}
+            {#<button type="submit" class="btn btn-default">Connexion</button>#}
+        {#</form>#}
+
+    {#</div>#}
 
 
-<div class="login">
-  {# S'il y a une erreur, on l'affiche dans un joli cadre #}
-  {% if error %}
-    <div class="alert alert-danger">{{ error.message }}</div>
-  {% endif %}
+{#{% endblock %}#}
 
-  {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
-  <form role="form" action="{{ path('fos_user_security_check') }}" method="post">
-    <div class="form-group">
-      <label for="username">Login :</label>
-      <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" />
-      
+{#TODO: METTRE AU PROPRE AVEC LES CSS ET JS, MIEUX ORGANISER LES DOSSIER JS ET CSS SELON LES BUNDLES#}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>AHUEFA | Page d'authentification</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="{{ asset('bundles/srblog/css/jquery-ui.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/srblog/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/srblog/color_admin/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/srblog/color_admin/css/animate.css') }}"  rel="stylesheet" />
+    <link href="{{ asset('bundles/srblog/color_admin/css/style.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/srblog/color_admin/css/style-responsive.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/srblog/color_admin/css/default.css') }}" rel="stylesheet" id="theme" />
+    <!-- ================== END BASE CSS STYLE ================== -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="{{ asset('bundles/srblog/color_admin/js/pace.min.js') }}"></script>
+    <!-- ================== END BASE JS ================== -->
+</head>
+<body class="pace-top bg-white">
+<!-- begin #page-loader -->
+<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+<!-- end #page-loader -->
+
+<!-- begin #page-container -->
+<div id="page-container" class="fade">
+    <!-- begin login -->
+    <div class="login login-with-news-feed">
+        <!-- begin news-feed -->
+        <div class="news-feed">
+            <div class="news-image">
+                <img src="{{ asset('bundles/srblog/images/chaise_gauche.JPG') }}" data-id="login-cover-image" alt="" />
+            </div>
+            <div class="news-caption">
+                <h4 class="caption-title"><i class="fa fa-diamond text-success"></i> Announcing the Color Admin app</h4>
+                <p>
+                    Download the Color Admin app for iPhone®, iPad®, and Android™. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+        <!-- end news-feed -->
+        <!-- begin right-content -->
+        <div class="right-content">
+            <!-- begin login-header -->
+            <div class="login-header">
+                <div class="brand">
+                    <span class="logo"></span> AHUEFA association
+                    <small>international France</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sign-in"></i>
+                </div>
+            </div>
+            <!-- end login-header -->
+            <!-- begin login-content -->
+            <div class="login-content">
+                <form action="{{ path('fos_user_security_check') }}" method="POST" class="margin-bottom-0">
+                    <div class="form-group m-b-15">
+                        <input type="text" class="form-control" placeholder="Login" id="username" name="_username" value="{{ last_username }}" />
+                    </div>
+                    <div class="form-group m-b-15">
+                        <input type="password" class="form-control input-lg" placeholder="Mot de pass" id="password" name="_password" />
+                    </div>
+                    <div class="checkbox m-b-30">
+                        <label>
+                            <input type="checkbox" /> Se rappeler de moi
+                        </label>
+                    </div>
+                    <div class="login-buttons">
+                        <button type="submit" class="btn btn-success btn-block btn-lg">Se connecter</button>
+                    </div>
+                    {#<div class="m-t-20 m-b-40 p-b-40">#}
+                        {#Not a member yet? Click <a href="register_v3.html" class="text-success">here</a> to register.#}
+                    {#</div>#}
+                    <hr />
+                </form>
+            </div>
+            <!-- end login-content -->
+        </div>
+        <!-- end right-container -->
     </div>
-    <div class="form-group">
-      <label for="password">Mot de passe :</label>
-      <input type="password" class="form-control" id="password" name="_password" />
-    </div>
-    
-        <div class="checkbox">
-      <label><input type="checkbox"> Se souvenir de moi</label>
-    </div>
-    <button type="submit" class="btn btn-default">Connexion</button>
-  </form>
-
+    <!-- end login -->
 </div>
+<!-- end page container -->
+
+<!-- ================== BEGIN BASE JS ================== -->
 
 
-{% endblock %}
+
+{% javascripts
+'@SRBlogBundle/Resources/public/js/jquery.min.js'
+'@SRBlogBundle/Resources/public/color_admin/js/jquery-migrate-1.1.0.min.js'
+'@SRBlogBundle/Resources/public/js/jquery-ui.min.js'
+'@SRBlogBundle/Resources/public/js/bootstrap.min.js'
+'@SRBlogBundle/Resources/public/color_admin/js/jquery.slimscroll.min.js'
+'@SRBlogBundle/Resources/public/color_admin/js/jquery.cookie.js'
+'@SRBlogBundle/Resources/public/color_admin/js/apps.min.js'
+%}
+
+
+<script src="{{ asset_url }}" type="text/javascript"></script>
+{% endjavascripts %}
+
+
+
+{#<script src="{{ asset('bundles/srblog/js/jquery.min.js') }}"></script>#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/jquery-migrate-1.1.0.min.js') }}"></script>#}
+{#<script src="{{ asset('bundles/srblog/js/jquery-ui.min.js') }}"></script>#}
+{#<script src="{{ asset('bundles/srblog/js/bootstrap.min.js') }}"></script>#}
+{#<!--[if lt IE 9]>#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/excanvas.min.js')}}"></script>#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/html5shiv.js') }}"></script>#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/respond.min.js') }}"></script>#}
+{#<![endif]-->#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/jquery.slimscroll.min.js') }}"></script>#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/jquery.cookie.js') }}"></script>#}
+{#<!-- ================== END BASE JS ================== -->#}
+
+{#<!-- ================== BEGIN PAGE LEVEL JS ================== -->#}
+{#<script src="{{ asset('bundles/srblog/color_admin/js/apps.min.js') }}"></script>#}
+{#<!-- ================== END PAGE LEVEL JS ================== -->#}
+
+<script>
+    $(document).ready(function() {
+        App.init();
+    });
+</script>
+</body>
+</html>
+

@@ -1,21 +1,17 @@
-{# src/SR/BlogBundle/Resources/views/Main/searchResult.html.twig #}
 {% extends "SRBlogBundle::layout.html.twig" %}
 
-{% block body %}
+{% block content %}
 <div class="contenu_static">
 	<h2> Resultats de la recherche</h2>
-
 	<h3>Les articles contenant: {{content}} </h3>
 	{% if listNews is empty %}
 		<p>Aucun article correspond à votre recherche</p>
 	{% else %}
-
 		{% for news in listNews %}
-		<ul>
-			<li><a href="{{path('sr_blog_article_view',{'slug': news.slug})}}">{{news.title}}</a></li>
-		</ul>
+			<ul>
+				<li><a href="{{path('sr_blog_article_view',{'slug': news.slug})}}">{{news.title}}</a></li>
+			</ul>
 		{% endfor %}
-
 	{% endif%}
 
 	<h3>Les événement contenant : {{content}} </h3>
@@ -23,14 +19,10 @@
 		<p>Aucun événement correspond à votre recherche</p>
 	{% else %}
 		{% for event in listEvents %}
-		<ul>
-			<li><a href="{{path('sr_blog_evenement_view',{'slug': event.slug})}}">{{event.title}}</a></li>
-		</ul>
+			<ul>
+				<li><a href="{{path('sr_blog_evenement_view',{'slug': event.slug})}}">{{event.title}}</a></li>
+			</ul>
 		{% endfor %}
 	{% endif%}
-
-
-
-
 </div>
 {% endblock %}

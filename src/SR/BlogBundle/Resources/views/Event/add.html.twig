@@ -1,229 +1,22 @@
-{# src/SR/BlogBundle/Resources/views/Event/add.html.twig #}
-{% extends "SRBlogBundle::layout.html.twig" %}
+{% extends "SRBlogBundle::modal.html.twig" %}
 
-{% block body %}
-          <h1> Ajouter un nouvel évènement</h1></br>
+{% block modal_title %}
+    Ajouter un événement
+{% endblock %}
 
+{% block modal_body %}
 
-<div class="well">
-  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+    {{ form(form) }}
 
-    {# Les erreurs générales du formulaire. #}
-    {{ form_errors(form) }}
+{% endblock %}
 
-
-
-    <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventCategory, "Type de l'évenement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventCategory) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventCategory, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-
-
-    <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.title, "Titre de l'évenement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.title) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-    {# Champ content pour le contenu de l'évenement #}
-    <div class="form-group">
-      {{ form_label(form.content, "Contenu de l'évenement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-      {{ form_errors(form.title) }}
-      <div class="col-sm-8">
-        {{ form_widget(form.content, {'attr': {'cols': '80', 'rows': '10'} }) }}
-      </div>
-    </div>
-
-  {# Génération du label + error + widget pour la Date de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.postDate, "Date de publication", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.postDate) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.postDate, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-  {# Génération du label + error + widget pour status de publication de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.status, "Publier", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.status) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.status, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-      {# Génération du label + error + widget pour status de l'évenement, eventStatus#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventStatus, "Statut", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventStatus) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventStatus, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-
-
-
-
-      {# Génération du label + error + widget pour eventStartDate de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventStartDate, "Date de début", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventStartDate) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventStartDate, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-      {# Génération du label + error + widget pour eventEndDate de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventEndDate, "Date de fin", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventEndDate) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventEndDate, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-      {# Génération du label + error + widget pour eventRate de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventRate, "Tarif", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventRate) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventRate, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-
-
-
-      {# Génération du label + error + widget pour eventGuest de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventGuest, "Invités", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventGuest) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventGuest, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-
-          {# Génération du label + error + widget pour eventLocation de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.eventLocation, "Lieu", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.eventLocation) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.eventLocation, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
-
-<div class="well">
-
-      {# Génération du label + error + widget pour les films de l'évenement#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.movies, "Films", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.movies) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.movies, {'attr': {'class': ''}}) }}
-      </div>
-    </div>
- </div>
-    {# Génération du label + error + widget pour Image#}
-  <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.image, "Image de l'événement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.image) }}
-
-    <div class="col-sm-4">
-        <span class="btn btn-default btn-file">
-          {# Génération de l'input. #}
-          {{ form_widget(form.image, {'attr': {'class': ''}}) }}
-        </span>
-      </div>
-    </div>
-
-  {# Pour le bouton Envoyer, pas de label ni d'erreur, on affiche juste le widget #}
-  {{ form_widget(form.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
-
-  {# Génération automatique des champs pas encore écrits.
-     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
-     et tous les champs cachés (type « hidden »). #}
-  {{ form_rest(form) }}
-  
-  {# Fermeture de la balise <form> du formulaire HTML #}
-  {{ form_end(form) }}
-</div>
-
-
-
-
-{# On charge la bibliothèque jQuery. Ici, je la prends depuis le CDN google
-   mais si vous l'avez en local, changez simplement l'adresse. #}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+{% block javascripts %}
+{{ parent() }}
+{#<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>#}
 
 {# Voici le script en question : #}
 <script type="text/javascript">
-  $(document).ready(function() {
+    console.log("toto");
     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
     var $container = $('div#sr_blogbundle_event_movies');
 
@@ -286,7 +79,7 @@
         return false;
       });
     }
-  });
+
 </script>
 {% endblock %}
 

@@ -15,7 +15,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * News
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="SR\BlogBundle\Entity\NewsRepository")
+ * @ORM\Entity(repositoryClass="SR\BlogBundle\Entity\Repository\NewsRepository")
  */
 class News
 {
@@ -36,7 +36,7 @@ class News
     private $image;
 
     /**
-    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory",cascade={"remove"})
+    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory")
     *
     */
     private $newsCategories;

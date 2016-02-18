@@ -1,13 +1,75 @@
-{# src/SR/BlogBundle/Resources/views/layout.html.twig #}
+{% extends "::base.html.twig" %}
 
-{%extends "::layout.html.twig"%}
+{% block icon %}{% endblock %}
 
-
-
-{% block title %}Accueil - {{parent()}}{% endblock %}
+{% block title %}AHUEFA{% endblock %}
 
 
-        {% block body %}
-          <p> test </p>
-        {% endblock %}
-      
+
+{% block CSS %}
+    {{ parent() }}
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:700italic' rel='stylesheet' type='text/css'/>
+    {% stylesheets
+        'bundles/srblog/color_admin/css/bootstrap-wysihtml5.css'
+        'bundles/srblog/color_admin/css/font-awesome.min.css'
+        'bundles/srblog/css/*'
+        filter='cssrewrite'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    {#NAVIGATION BAR#}
+    {% include 'SRBlogBundle:Commun:nav-top.html.twig' %}
+
+    {% block carousel %}{% endblock %}
+    {#CAROUSEL#}
+    {% include 'SRBlogBundle:Commun:carousel.html.twig' %}
+
+    <div class="space"></div>
+
+    <div class="container">
+        <div class="row">
+            {#CONTENT#}
+            <div class="col-lg-9">
+                {% block content %}{% endblock %}
+            </div>
+            {#SIDE MENU#}
+            <div class="col-lg-3">
+                {% include 'SRBlogBundle:Commun:side-menu.html.twig' %}
+            </div>
+        </div>
+        {#FOOTER#}
+        {% include 'SRBlogBundle:Commun:footer.html.twig' %}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% include 'SRBlogBundle:Commun:js-global.html.twig' %}
+
+    <script>
+
+        (function(){
+
+            $('.datepicker').datepicker({
+                format: 'yyyy-mm-dd',
+            });
+
+            $('.carousel').carousel({
+                interval: 15000
+            })
+
+        })();
+
+    </script>
+
+
+
+{% endblock %}
+
+

@@ -1,23 +1,17 @@
-{# src/SR/BlogBundle/Resources/views/Comment/indexEvent.html.twig #}
-
-
-			
-			<h2>Commentaires</h2>
-				<ul class="nav nav-pills nav-stacked">
-					{% if comments is empty %}
-						<p>Aucun commentaire</p>
-					
-					{% else %}
-						{% for comment in comments %}
-							<li class="list-group-item">
-								<span class="auteur_comment">{{ comment.user.username }} </span> <span class="postDate_comment">Le {{ comment.postDate|date("d/m/Y \\à H:i") }} : </span> <br>
-								<span>{{ comment.content|e }}</span>
-								{% if is_granted('ROLE_MODERATEUR') %}    
-									<a href="{{path('sr_blog_evenement_comment_delete',{'id':comment.id})}}">Supprimer</a>
-								{% endif %}
-							</li>
-						{% endfor %}
-					{% endif %}
-
-				</ul>
+<h2>Commentaires</h2>
+<ul class="nav nav-pills nav-stacked">
+    {% if comments is empty %}
+        <p>Aucun commentaire</p>
+    {% else %}
+        {% for comment in comments %}
+            <li class="list-group-item">
+                <span class="auteur_comment">{{ comment.user.username }} </span> <span class="postDate_comment">Le {{ comment.postDate|date("d/m/Y \\à H:i") }} : </span> <br>
+                <span>{{ comment.content|e }}</span>
+                {% if is_granted('ROLE_MODERATEUR') %}
+                    <a href="{{path('sr_blog_evenement_comment_delete',{'id':comment.id})}}">Supprimer</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% endif %}
+</ul>
 			 

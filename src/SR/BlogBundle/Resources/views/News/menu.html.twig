@@ -1,21 +1,9 @@
-{# src/SR/BlogBundle/Resources/views/News/menu.html.twig #}
-
-
-
-{# Ce template n'hérite de personne,
-   tout comme le template inclus avec {{ include() }}. #}
-
-<ul class="nav nav-pills nav-stacked">
-
-	{% if listNews is empty %}
-        <p>Aucun article</p></br>
+<ul class="sidebar-list">
+	{% if listNews is not empty %}
+		{% for news in listNews %}
+			<li><a href="{{ path('sr_blog_article_view', {'slug': news.slug}) }}">{{ news.title }}</a></li>
+		{% endfor %}
+	{% else %}
+	        <p>Aucun article</p></br>
     {% endif %}
-
-	{% for news in listNews %}
-	    <li class="last_news">
-	      <a href="{{ path('sr_blog_article_view', {'slug': news.slug}) }}">
-	        {{ news.title }}
-	      </a>
-	    </li>
-	{% endfor %}
 </ul>

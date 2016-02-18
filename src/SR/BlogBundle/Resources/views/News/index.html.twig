@@ -1,7 +1,6 @@
-{# src/SR/BlogBundle/Resources/views/News/index.html.twig #}
 {% extends "SRBlogBundle::layout.html.twig" %}
 
-{% block body %}
+{% block content %}
           <h2> Nos articles</h2></br>
 
 <p>Cette section contient les articles écrits par les contributeurs d’Ahuefa.
@@ -10,72 +9,168 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
 <div class="space">
 
 {% if is_granted('ROLE_MODERATEUR') %}
-  <p><a href="{{path('sr_blog_article_add')}}" class="bouton">Nouvel article</a></p>
-  <p><a href="{{path('sr_blog_article_addCategory')}}" class="bouton2">Nouvel catégorie</a></p>
+    <p><a href="javascript:;" data-target="#addNewsModal" data-toggle="modal" class="bouton">Nouvel article</a></p>
+    <p><a href="javascript:;" data-target="#addNewsCategoryModal" data-toggle="modal" class="bouton2">Nouvel catégorie</a></p>
 {% endif %}
 </div>
 <br>
 
-	{%for news in listNews%}
-  	<li class="list-group-item bloc_news">
-      {% if news.image.id is defined %}
-        <img  class="image_news_minature"src="{{ asset(news.image.webPath| apply_filter('miniature')) }}" alt="{{ news.image.alt }}"/>
-      {% endif %}
-
-      <a class="titre_index" href= "{{path('sr_blog_article_view',{'slug': news.slug})}}">  {{news.title}} </a> 
-      <br>
-      <p class="auteur_index"> écrit par {{news.user.username}} le {{news.newsDate|date("d/m/Y") }} </p><br>
-
-    </li>
-    <li class="list-group-item">
-     {{news.content[:300] |striptags|raw }} ...
-     <a  href= "{{path('sr_blog_article_view',{'slug': news.slug})}}">Lire</a>
-   </li>
-
-     
-  {% if is_granted('ROLE_MODERATEUR') %}
-
-     <div class="btn-group">
-        <button type="button" class="btn btn-danger btn-xs">Action</button>
-        <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">
-        <span class="caret"></span>
-        <span class="sr-only">Toggle Dropdown</span>
-        </button>
-
-        <ul class="dropdown-menu" role="menu">
-          
-          <li><a href="{{path('sr_blog_article_update',{'slug': news.slug})}}">Editer</a></li>
-          <li class="divider"></li>
-          <li><a href="{{path('sr_blog_article_delete',{'slug': news.slug})}}">Supprimer</a></li>
+    {% if listNews is not empty %}
+        <ul class="result-list">
+        {%for news in listNews%}
+            <li>
+                <div class="result-image">
+                    <a href="javascript:;">
+                    {% if news.image is defined and news.image %}
+                        <img  class="image_news_minature"src="{{ asset(news.image.webPath| apply_filter('miniature')) }}" alt="{{ news.image.alt }}"/>
+                    {% endif %}
+                    </a>
+                </div>
+                <div class="result-info">
+                    <h4 class="title">
+                        <a class="titre_index" href= "{{path('sr_blog_article_view',{'slug': news.slug})}}">  {{news.title}} </a>
+                    </h4>
+                    <p class="desc">
+                        {{news.content|truncate(300, true, '...')|raw  }}
+                    </p>
+                    {% if is_granted('ROLE_MODERATEUR') %}
+                    <div class="btn-row">
+                        <a title="" href="{{ path('sr_blog_article_update', {'slug': news.slug}) }}" data-slug="{{ news.slug }}" data-target="#updateNewsModal" data-toggle="modal" data-title="Modifier"><i class="fa fa-fw fa-pencil"></i></a>
+                        <a title="" href="{{ path('sr_blog_article_delete', {'slug': news.slug}) }}" data-slug="{{ news.slug }}" data-target="#deleteNewsModal" data-toggle="modal" data-title="Supprimer"><i class="fa fa-fw fa-trash-o"></i></a>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="result-price">
+                    <small>{{news.newsDate|date("d/m/Y") }} par {{news.user.username}}</small>
+                    <a href="{{path('sr_blog_article_view',{'slug': news.slug})}}" class="btn btn-inverse btn-block">Voir</a>
+                </div>
+            </li>
+        {% endfor %}
         </ul>
-    
-      </div>
-  {% endif %}
-    </br>
-    </br>
+    {% else %}
+        <p>Aucun article</p>
+    {% endif %}
 
-        {% if is_granted('ROLE_MODERATEUR') %}
-        
-        {% endif %}
-
-    </li>
-	{%endfor%}
-
+    {#MODAL AJOUTER ARTICLE#}
+    <div class="modal fade" id="addNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    {#MODAL AJOUTER CATEGORIE ARTICLE#}
+    <div class="modal fade" id="addNewsCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    	{#MODAL MODIFIER ARTICLE#}
+	<div class="modal fade" id="updateNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+	{#MODAL SUPPRIMER CATEGORIE ARTICLE#}
+	<div class="modal fade" id="deleteNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 
 </ul>
 
-<ul class="pagination">
-  {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
-  {% for p in range(1, nbPages) %}
-    <li{% if p == page %} class="active"{% endif %}>
-      <a href="{{ path('sr_blog_article', {'page': p}) }}">{{ p }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% if nbPages > 1 %}
+    <ul class="pagination">
+      {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+      {% for p in range(1, nbPages) %}
+        <li{% if p == page %} class="active"{% endif %}>
+          <a href="{{ path('sr_blog_article', {'page': p}) }}">{{ p }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+{% endif %}
 
+{% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        (function(){
 
+            $("#addNewsModal").on('show.bs.modal', function(e){
 
+                $.ajax({
+                    url :  Routing.generate('sr_blog_article_add'),
+                    type : 'GET',
+                    success : function(html, statut){ // code_html contient le HTML renvoyé
+                        console.log('toto');
+                        $("#addNewsModal").html(html);
+                        datepicker();
+                        wysiwyg();
 
+                    },
+                    error : function(resultat, statut, erreur){
+                        console.log("La requète n'a pas abouti")
+                    }
+                });
+            });
 
+            $("#addNewsCategoryModal").on('show.bs.modal', function(e){
+
+                $.ajax({
+                    url :  Routing.generate('sr_blog_article_addCategory'),
+                    type : 'GET',
+                    success : function(html, statut){ // code_html contient le HTML renvoyé
+                        $("#addNewsCategoryModal").html(html);
+                    },
+                    error : function(resultat, statut, erreur){
+                        console.log("La requète n'a pas abouti")
+                    }
+                });
+            });
+
+            $("#updateNewsModal").on('show.bs.modal', function(e){
+                var button = $(e.relatedTarget);
+                var slug = button.data('slug');
+
+                $.ajax({
+                    url :  Routing.generate('sr_blog_article_update', {slug: slug} ),
+                    type : 'GET',
+                    success : function(html, statut){ // code_html contient le HTML renvoyé
+                        $("#updateNewsModal").html(html);
+                        datepicker();
+                        wysiwyg();
+                    },
+                    error : function(resultat, statut, erreur){
+                        console.log("La requète n'a pas abouti")
+                    }
+                });
+            });
+
+            $("#deleteNewsModal").on('show.bs.modal', function(e){
+                var button = $(e.relatedTarget);
+                var slug = button.data('slug');
+
+                $.ajax({
+                    url :  Routing.generate('sr_blog_article_delete', {slug: slug} ),
+                    type : 'GET',
+                    success : function(html, statut){ // code_html contient le HTML renvoyé
+                        $("#deleteNewsModal").html(html);
+                    },
+                    error : function(resultat, statut, erreur){
+                        console.log("La requète n'a pas abouti")
+                    }
+                });
+            });
+
+            {# Fonction qui permet d'utiliser le datepicker bootstrap dans une modal #}
+            var datepicker =  function (){
+
+                $('.datepicker').datepicker({
+                    dateFormat: "dd-mm-yy"
+                });
+                //Ce code permet d'éviter que l'utilisation du datepicker déclenche l'évenement show.bs.modal.
+                $(".datepicker").datepicker().on('show.bs.modal', function(event) {
+                    event.stopPropagation();
+                });
+            };
+
+            var wysiwyg = function (){
+                $('#sr_blogbundle_news_content').wysihtml5({
+                    "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+                    "emphasis": true, //Italics, bold, etc. Default true
+                    "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+                    "html": false, //Button which allows you to edit the generated HTML. Default false
+                    "link": true, //Button to insert a link. Default true
+                    "image": true, //Button to insert an image. Default true,
+                    "color": true //Button to change color of font
+                });
+            };
+
+        })();
+
+    </script>
 {% endblock %}

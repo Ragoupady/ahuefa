@@ -15,28 +15,70 @@ class EventType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('eventCategory', 'entity',array(
-                                                    'class'=>'SRBlogBundle:EventCategory',
-                                                    'property'=> 'name',
-                                                    'multiple'=> false))
-            ->add('title','text')
-            ->add('image', new ImageType(),array('required'=>false))
-            ->add('content','textarea',array('attr'=> array('class'=>'ckeditor')))
-            ->add('postDate','date')
-            ->add('status','checkbox',array('required'=>false))
-            ->add('eventStatus','checkbox',array('required'=>false))
-            ->add('eventStartDate','date')
-            ->add('eventEndDate','date')
-            ->add('eventRate','text')
-            ->add('movies', 'collection', array(
-                                          'type' => new MovieType(),
-                                          'by_reference' => false,
-                                          'allow_add' => true,
-                                          'allow_delete'=> true))
-            ->add('eventGuest','text',array('required'=>false))
-            ->add('eventLocation','text',array('attr'=> array('placeholder' => 'ex: "104 Avenue Jean Lolive, 93500 Pantin"','required'=>false)))
-            ->add('envoyer','submit')
-
+            ->add('eventCategory', 'entity',[
+                'class'=>'SRBlogBundle:EventCategory',
+                'property'=> 'name',
+                'multiple'=> false,
+                'label' => 'Type d\'événement',
+            ])
+            ->add('title','text', [
+                'label' => 'Titre',
+            ])
+            ->add('image', new ImageType(), [
+                'required'=>false,
+            ])
+            ->add('content','textarea', [
+                'label' => 'Description',
+                'attr' => ['cols' => '5', 'rows' => '30'],
+            ])
+            ->add('postDate','date',  [
+                'widget' => 'single_text',
+                'format' => 'dd-MM-yyyy',
+                'label' => 'Date de publication',
+                'attr' => ['class' => 'datepicker']
+            ])
+            ->add('status','checkbox', [
+                'required'=>false,
+            ])
+            ->add('eventStatus','checkbox', [
+                'required'=>false,
+            ])
+            ->add('eventStartDate','date', [
+                'widget' => 'single_text',
+                'format' => 'dd-MM-yyyy',
+                'label' => 'Date début',
+                'attr' => ['class' => 'datepicker']
+            ])
+            ->add('eventEndDate','date', [
+                'widget' => 'single_text',
+                'format' => 'dd-MM-yyyy',
+                'label' => 'Date de fin',
+                'attr' => ['class' => 'datepicker']
+            ])
+            ->add('eventRate','text', [
+                'label' => 'Prix',
+            ])
+            ->add('movies', 'collection', [
+                'type' => new MovieType(),
+                'by_reference' => false,
+                'allow_add' => true,
+                'allow_delete'=> true,
+            ])
+            ->add('eventGuest','text', [
+                'required'=>false,
+            ])
+            ->add('eventLocation','text', [
+                'attr'=> [
+                    'placeholder' => 'ex: "104 Avenue Jean Lolive, 93500 Pantin"',
+                    'required'=>false,
+                    'label' => 'Les invités',
+                ]
+            ])
+            ->add('envoyer','submit', [
+                'attr' => [
+                    'class' => 'btn-info',
+                ]
+            ])
         ;
     }
     

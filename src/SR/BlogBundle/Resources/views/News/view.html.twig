@@ -1,9 +1,7 @@
-{# src/SR/BlogBundle/Resources/views/News/view.html.twig #}
 {% extends "SRBlogBundle::layout.html.twig" %}
 
-{% block body %}
+{% block content %}
 
-       
 	<h1>{{news.title}}</h1>
 	<p>Par : {{news.user.username}} le {{news.newsDate|date("d/m/Y") }}</p>
 
@@ -11,25 +9,64 @@
 		<img  class="image_post"src="{{ asset(news.image.webPath| apply_filter('thumbnail_filter')) }}" alt="{{ news.image.alt }}"/>
 	{% endif %}
 
-		         {{news.content| raw}}
-		 	
+	{{news.content| raw}}
 
-{% if is_granted('ROLE_MODERATEUR') %}     
-	<a class="bouton" href="{{path('sr_blog_article_update',{'slug': news.slug})}}">Modifier</a>
-	<a class="bouton2" href="{{path('sr_blog_article_delete',{'slug': news.slug})}}">Supprimer</a><br><br>
-{% endif %}
-		
-		
+	{% if is_granted('ROLE_MODERATEUR') %}
+		<p><a href="javascript:;" data-target="#updateNewsModal"  data-toggle="modal" class="bouton">Modifier</a></p>
+		<p><a href="javascript:;" data-target="#deleteNewsModal" data-toggle="modal" class="bouton2">Supprimer</a></p>
+	{% endif %}
 
+	{#BLOC COMMENTAIRE#}
+	<br>
 	{% include'SRBlogBundle:Comment:indexNews.html.twig' with { 'comments': comments }%}
 
+	<h3>Ajouter un commentaire</h3>
+	{% if is_granted('ROLE_USER') %}
+		{% render(controller('SRBlogBundle:Comment:newNews', { 'news' : news } )) %}
+	{% else %}
+		<p>Vous devez être connecté pour laisser un commentaire.</p>
+	{% endif %}
 
-<h3>Ajouter un commentaire</h3>
-{% if is_granted('ROLE_USER') %}
-    {% render(controller('SRBlogBundle:Comment:newNews', { 'news' : news } )) %}
+	{#MODAL MODIFIER ARTICLE#}
+	<div class="modal fade" id="updateNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+	{#MODAL SUPPRIMER CATEGORIE ARTICLE#}
+	<div class="modal fade" id="deleteNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 
-{% else %}
- <p>Vous devez être enregistré pour laisser un commentaire.</p>
-{% endif %}
-		
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script>
+		(function(){
+
+			$("#updateNewsModal").on('show.bs.modal', function(e){
+				$.ajax({
+					url :  Routing.generate('sr_blog_article_update', {slug: '{{news.slug}}'} ),
+					type : 'GET',
+					success : function(html, statut){ // code_html contient le HTML renvoyé
+						$("#updateNewsModal").html(html);
+					},
+					error : function(resultat, statut, erreur){
+						console.log("La requète n'a pas abouti")
+					}
+				});
+			});
+
+			$("#deleteNewsModal").on('show.bs.modal', function(e){
+
+				$.ajax({
+					url :  Routing.generate('sr_blog_article_delete', {slug: '{{news.slug}}'} ),
+					type : 'GET',
+					success : function(html, statut){ // code_html contient le HTML renvoyé
+						$("#deleteNewsModal").html(html);
+					},
+					error : function(resultat, statut, erreur){
+						console.log("La requète n'a pas abouti")
+					}
+				});
+			});
+
+		})();
+
+	</script>
 {% endblock %}
