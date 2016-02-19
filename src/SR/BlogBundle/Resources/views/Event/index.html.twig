@@ -21,6 +21,8 @@
             <a href="javascript:;">
               {% if event.image is defined and event.image %}
                 <img  class="image_news_minature"src="{{ asset(event.image.webPath| apply_filter('miniature')) }}" alt="{{ event.image.alt }}"/>
+              {% else %}
+                <img  class="image_news_minature"src="{{ asset('bundles/srblog/images/default_event.jpg'| apply_filter('miniature')) }}" alt="default"/>
               {% endif %}
             </a>
           </div>
@@ -39,7 +41,7 @@
             {% endif %}
           </div>
           <div class="result-price">
-            <small>{{event.eventStartDate|date("d/m/Y") }} par {{event.user.username}}</small>
+            <small>Le {{event.eventStartDate|date("d/m/Y") }}</small>
             <a href="{{path('sr_blog_evenement_view',{'slug': event.slug})}}" class="btn btn-inverse btn-block">Voir</a>
           </div>
         </li>

@@ -23,6 +23,8 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
                     <a href="javascript:;">
                     {% if news.image is defined and news.image %}
                         <img  class="image_news_minature"src="{{ asset(news.image.webPath| apply_filter('miniature')) }}" alt="{{ news.image.alt }}"/>
+                    {% else %}
+                        <img  class="image_news_minature"src="{{ asset('bundles/srblog/images/default_news.jpg'| apply_filter('miniature')) }}" alt="default"/>
                     {% endif %}
                     </a>
                 </div>
