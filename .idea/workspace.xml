@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e141a0a-d68d-4c70-9f04-80f6828dc0cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/default_event.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/default_news.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ballon.JPG" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ballon.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_gauche.JPG" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_gauche.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom.JPG" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="AHUEFA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +27,41 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding>
-                <element signature="e#835#873#0#Twig" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4587766">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="26" column="110" selection-start-line="26" selection-start-column="110" selection-end-line="26" selection-end-column="110" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.039893616">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="2" selection-end-line="4" selection-end-column="3" />
+              <folding>
+                <marker date="1455977941000" expanded="true" signature="45:124" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +69,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0588236">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="103" selection-start-line="24" selection-start-column="103" selection-end-line="24" selection-end-column="103" />
               <folding />
             </state>
@@ -118,13 +128,13 @@
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
-        <option value="$PROJECT_DIR$/web/config.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/config.php" />
       </list>
     </option>
   </component>
@@ -167,6 +177,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -182,6 +194,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,10 +453,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -527,13 +583,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -552,6 +608,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="103" selection-start-line="24" selection-start-column="103" selection-end-line="24" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19946809">
@@ -706,13 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27061856">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -804,14 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25930852">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37898937">
@@ -830,7 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.958334">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51724136">
           <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79787236">
           <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,11 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49568966">
           <caret line="30" column="68" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="68" />
-          <folding>
-            <element signature="e#989#1025#0#Twig" expanded="false" />
-            <element signature="e#1598#1634#0#Twig" expanded="false" />
-            <element signature="e#2215#2251#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,15 +927,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding>
-            <element signature="e#835#873#0#Twig" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="103" selection-start-line="24" selection-start-column="103" selection-end-line="24" selection-end-column="103" />
           <folding />
         </state>
@@ -902,9 +941,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4587766">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="26" column="110" selection-start-line="26" selection-start-column="110" selection-end-line="26" selection-end-column="110" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.039893616">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="2" selection-end-line="4" selection-end-column="3" />
+          <folding>
+            <marker date="1455977941000" expanded="true" signature="45:124" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
