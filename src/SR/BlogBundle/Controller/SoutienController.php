@@ -15,13 +15,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class SoutienController extends Controller
 {
     /**
-     * Permet d'accéder à la page don
+     * Permet d'accéder à la page devenir membre
      *
-     * @Route("/don", name="sr_blog_soutien_don" )
+     * @Route("/devenir-membre", name="sr_blog_devenir_membre" )
      */
-    public function donAction()
+    public function devenirMembreAction()
     {
-        return $this->render('SRBlogBundle:Soutien:don.html.twig');
+        return $this->render('SRBlogBundle:Soutien:devenir-membre.html.twig');
     }
 
     /**
@@ -36,11 +36,11 @@ class SoutienController extends Controller
                 $message = "Cette section vous permet de nous soutenir en nous envoyant des messages";
                 break;
             case 2:
-                $message = "Si vous souhaitez devenir membre d'AHEUFA, contacter nous avec ce formulaire";
+                $message = "Si vous souhaitez devenir membre d'AHUEFA, contacter nous avec ce formulaire.";
                 break;
             case 3:
                 $message = "Cette section vous permet de nous contacter pour prendre rendez-vous (par téléphone ou mail)
-                           ou nous demander plus d'information (par téléphone ou mail)";
+                           ou nous demander plus d'informations (par téléphone ou mail)";
                 break;
         }
 

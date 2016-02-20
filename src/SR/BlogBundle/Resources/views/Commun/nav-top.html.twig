@@ -28,9 +28,9 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="{{path('sr_blog_actions_mediation')}}">Médiation ethnoclinique</a></li>
                                         <li class="divider"></li>
-                                        <li><a href="{{path('sr_blog_actions_consultation')}}">Consultation psychologique individuelle</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>
+                                        <li><a href="{{path('sr_blog_actions_consultation')}}">Suivi individuel</a></li>
+                                        {#<li class="divider"></li>#}
+                                        {#<li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>#}
                                         <li class="divider"></li>
                                         <li><a href="{{path('sr_blog_actions_appui_pro')}}">L’appui technique aux professionnels</a></li>
                                         <li class="divider"></li>
@@ -55,8 +55,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nous soutenir<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{path('sr_blog_contact', {'type': 1})}}">Message de soutien</a></li>
-                            <li><a href="{{path('sr_blog_contact', {'type': 2})}}">Devenir membre</a></li>
-                            <li><a href="{{path('sr_blog_soutien_don')}}">Faire un Don</a></li>
+                            {#<li><a href="{{path('sr_blog_contact', {'type': 2})}}">Devenir membre</a></li>#}
+                            <li><a href="{{path('sr_blog_devenir_membre')}}">Devenir membre</a></li> {#changer le nom du path etc...#}
                             <li class="divider"></li>
                             <li><a href="{{path('sr_blog_contact', {'type': 3})}}">Nous contacter</a></li>
                         </ul>
