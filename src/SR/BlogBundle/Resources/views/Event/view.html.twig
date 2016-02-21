@@ -48,8 +48,12 @@
                 {% endif %}
                 <br>
                 <p>{{ movie.movieContent|raw }}</p>
-                <h3> A propos de {{ movie.author|e }}</h3>
-                <p>{{ movie.authoBio|e }}</p>
+                {% if movie.author %}
+                    <h3> A propos de {{ movie.author|e }}</h3>
+                {% endif %}
+                {% if movie.authoBio %}
+                    <p>{{ movie.authoBio|e }}</p>
+                {% endif %}
             {% endfor %}
         </ul>
         {% if is_granted('ROLE_MODERATEUR') %}

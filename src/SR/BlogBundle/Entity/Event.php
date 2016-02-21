@@ -76,7 +76,6 @@ class Event
      * @var string
      *
      * @ORM\Column(name="content", type="text")
-     * @Assert\NotBlank
      */
     private $content;
 
@@ -113,6 +112,7 @@ class Event
      * @var \DateTime
      *
      * @ORM\Column(name="event_end_date", type="datetime")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $eventEndDate;
 

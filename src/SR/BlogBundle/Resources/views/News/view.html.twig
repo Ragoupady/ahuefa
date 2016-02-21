@@ -8,8 +8,9 @@
 	{% if news.image.id is defined %}
 		<img  class="image_post"src="{{ asset(news.image.webPath| apply_filter('thumbnail_filter')) }}" alt="{{ news.image.alt }}"/>
 	{% endif %}
-
-	{{news.content| raw}}
+	<p class="text-justify">
+		{{news.content| raw}}
+	</p>
 
 	{% if is_granted('ROLE_MODERATEUR') %}
 		<p><a href="javascript:;" data-target="#updateNewsModal"  data-toggle="modal" class="bouton">Modifier</a></p>

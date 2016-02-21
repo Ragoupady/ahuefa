@@ -30,9 +30,9 @@
             <h4 class="title">
               <a class="titre_index" href= "{{path('sr_blog_evenement_view',{'slug': event.slug})}}">  {{event.title}} </a>
             </h4>
-            <p class="desc">
-              {{event.content|truncate(300, true, '...')|raw }}
-            </p>
+            {#<p class="desc">#}
+              {#{{event.content|truncate(300, true, '...')|raw }}#}
+            {#</p>#}
             {% if is_granted('ROLE_MODERATEUR') %}
             <div class="btn-row">
               <a title="" href="{{ path('sr_blog_evenement_update', {'slug': event.slug}) }}" data-slug="{{ event.slug }}" data-target="#updateEventModal" data-toggle="modal" data-title="Modifier"><i class="fa fa-fw fa-pencil"></i></a>

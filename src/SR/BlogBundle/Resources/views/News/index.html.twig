@@ -32,9 +32,9 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
                     <h4 class="title">
                         <a class="titre_index" href= "{{path('sr_blog_article_view',{'slug': news.slug})}}">  {{news.title}} </a>
                     </h4>
-                    <p class="desc">
-                        {{news.content|truncate(300, true, '...')|raw  }}
-                    </p>
+                    {#<p class="desc">#}
+                        {#{{news.content|truncate(300, true, '...')|raw  }}#}
+                    {#</p>#}
                     {% if is_granted('ROLE_MODERATEUR') %}
                     <div class="btn-row">
                         <a title="" href="{{ path('sr_blog_article_update', {'slug': news.slug}) }}" data-slug="{{ news.slug }}" data-target="#updateNewsModal" data-toggle="modal" data-title="Modifier"><i class="fa fa-fw fa-pencil"></i></a>

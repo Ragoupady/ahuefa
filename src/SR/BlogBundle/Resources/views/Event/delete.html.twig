@@ -1,26 +1,36 @@
+{% extends 'SRBlogBundle::modal.html.twig' %}
 {# src/SR/BlogBundle/Resources/views/Event/delete.html.twig #}
-{% extends "SRBlogBundle::layout.html.twig" %}
+{#{% extends "SRBlogBundle::layout.html.twig" %}#}
 
-{% block body %}
+{#{% block body %}#}
 
 
-  <h2>Supprimer un évenement</h2>
+  {#<h2>Supprimer un évenement</h2>#}
 
-  <p>
-    Etes-vous certain de vouloir supprimer l'évenement "{{ event.title }}" ?
-  </p>
+  {#<p>#}
+    {#Etes-vous certain de vouloir supprimer l'évenement "{{ event.title }}" ?#}
+  {#</p>#}
 
-  {# On met le slug de l'évenement dans la route de l'action du formulaire #}
-  
-  <form action="{{ path('sr_blog_evenement_delete', {'slug': event.slug}) }}" method="post">
-    <a href="{{ path('sr_blog_evenement_view', {'slug': event.slug}) }}" class="btn btn-default">
-      <i class="glyphicon glyphicon-chevron-left"></i>
-      Retour à l'évenement
-    </a>
-    {# Ici j'ai écrit le bouton de soumission à la main #}
-    <input type="submit" value="Supprimer" class="btn btn-danger" />
-    {# Ceci va générer le champ CSRF #}
-    {{ form_rest(form) }}
-  </form>
+  {#&#123;&#35; On met le slug de l'évenement dans la route de l'action du formulaire &#35;&#125;#}
+  {##}
+  {#<form action="{{ path('sr_blog_evenement_delete', {'slug': event.slug}) }}" method="post">#}
+    {#<a href="{{ path('sr_blog_evenement_view', {'slug': event.slug}) }}" class="btn btn-default">#}
+      {#<i class="glyphicon glyphicon-chevron-left"></i>#}
+      {#Retour à l'évenement#}
+    {#</a>#}
+    {#&#123;&#35; Ici j'ai écrit le bouton de soumission à la main &#35;&#125;#}
+    {#<input type="submit" value="Supprimer" class="btn btn-danger" />#}
+    {#&#123;&#35; Ceci va générer le champ CSRF &#35;&#125;#}
+    {#{{ form_rest(form) }}#}
+  {#</form>#}
 
+{#{% endblock %}#}
+
+{% block modal_title %}
+  Supprimer cet événement
+{% endblock %}
+
+{% block modal_body %}
+  <p>Etes-vous sûr de vouloir supprimer cet événement ? </p>
+  {{ form(form) }}
 {% endblock %}
