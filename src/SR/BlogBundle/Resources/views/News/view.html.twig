@@ -45,6 +45,9 @@
 					type : 'GET',
 					success : function(html, statut){ // code_html contient le HTML renvoyé
 						$("#updateNewsModal").html(html);
+						datepicker();
+						wysiwyg();
+
 					},
 					error : function(resultat, statut, erreur){
 						console.log("La requète n'a pas abouti")
@@ -65,6 +68,30 @@
 					}
 				});
 			});
+
+			{# Fonction qui permet d'utiliser le datepicker bootstrap dans une modal #}
+			var datepicker =  function (){
+
+				$('.datepicker').datepicker({
+					dateFormat: "dd-mm-yy"
+				});
+				//Ce code permet d'éviter que l'utilisation du datepicker déclenche l'évenement show.bs.modal.
+				$(".datepicker").datepicker().on('show.bs.modal', function(event) {
+					event.stopPropagation();
+				});
+			};
+
+			var wysiwyg = function (){
+				$('#sr_blogbundle_news_content').wysihtml5({
+					"font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+					"emphasis": true, //Italics, bold, etc. Default true
+					"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+					"html": false, //Button which allows you to edit the generated HTML. Default false
+					"link": true, //Button to insert a link. Default true
+					"image": true, //Button to insert an image. Default true,
+					"color": true //Button to change color of font
+				});
+			};
 
 		})();
 
