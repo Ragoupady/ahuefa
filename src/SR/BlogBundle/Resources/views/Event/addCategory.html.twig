@@ -1,46 +1,58 @@
-{# src/SR/BlogBundle/Resources/views/Event/addCategory.html.twig #}
-{% extends "SRBlogBundle::layout.html.twig" %}
+{#&#123;&#35; src/SR/BlogBundle/Resources/views/Event/addCategory.html.twig &#35;&#125;#}
+{#{% extends "SRBlogBundle::layout.html.twig" %}#}
 
-{% block body %}
+{#{% block body %}#}
 
-<div class="well">
-  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+{#<div class="well">#}
+  {#{{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}#}
 
-    {# Les erreurs générales du formulaire. #}
-    {{ form_errors(form) }}
-
-
-
-    <div class="form-group">
-      {# Génération du label. #}
-      {{ form_label(form.name, "Type de l'évenement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
-
-      {# Affichage des erreurs pour ce champ précis. #}
-      {{ form_errors(form.name) }}
-
-      <div class="col-sm-4">
-        {# Génération de l'input. #}
-        {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
-      </div>
-    </div>
+    {#&#123;&#35; Les erreurs générales du formulaire. &#35;&#125;#}
+    {#{{ form_errors(form) }}#}
 
 
-   <a href="{{ path('sr_blog_evenement') }}" class="btn btn-default">
-      <i class="glyphicon glyphicon-chevron-left"></i>
-      Retour à la liste des événements
-    </a>
 
-  {# Pour le bouton Envoyer, pas de label ni d'erreur, on affiche juste le widget #}
-  {{ form_widget(form.creer, {'attr': {'class': 'btn btn-primary'}}) }}
+    {#<div class="form-group">#}
+      {#&#123;&#35; Génération du label. &#35;&#125;#}
+      {#{{ form_label(form.name, "Type de l'évenement", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}#}
 
-  {# Génération automatique des champs pas encore écrits.
-     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
-     et tous les champs cachés (type « hidden »). #}
-  {{ form_rest(form) }}
-  
-  {# Fermeture de la balise <form> du formulaire HTML #}
-  {{ form_end(form) }}
-</div>
+      {#&#123;&#35; Affichage des erreurs pour ce champ précis. &#35;&#125;#}
+      {#{{ form_errors(form.name) }}#}
+
+      {#<div class="col-sm-4">#}
+        {#&#123;&#35; Génération de l'input. &#35;&#125;#}
+        {#{{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}#}
+      {#</div>#}
+    {#</div>#}
 
 
+   {#<a href="{{ path('sr_blog_evenement') }}" class="btn btn-default">#}
+      {#<i class="glyphicon glyphicon-chevron-left"></i>#}
+      {#Retour à la liste des événements#}
+    {#</a>#}
+
+  {#&#123;&#35; Pour le bouton Envoyer, pas de label ni d'erreur, on affiche juste le widget &#35;&#125;#}
+  {#{{ form_widget(form.creer, {'attr': {'class': 'btn btn-primary'}}) }}#}
+
+  {#&#123;&#35; Génération automatique des champs pas encore écrits.#}
+     {#Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)#}
+     {#et tous les champs cachés (type « hidden »). &#35;&#125;#}
+  {#{{ form_rest(form) }}#}
+  {##}
+  {#&#123;&#35; Fermeture de la balise <form> du formulaire HTML &#35;&#125;#}
+  {#{{ form_end(form) }}#}
+{#</div>#}
+
+
+{#{% endblock %}#}
+
+{% extends 'SRBlogBundle::modal.html.twig' %}
+
+{% block modal_title %}
+    Ajouter un type d'événement
 {% endblock %}
+
+{% block modal_body %}
+    {{ form(form) }}
+{% endblock %}
+
+

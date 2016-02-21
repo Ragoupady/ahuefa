@@ -191,7 +191,11 @@ class EventController extends BlogController
     public function addCategoryAction(Request $request)
     {
         $eventCategory = new EventCategory();
-        $form = $this->createForm(new EventCategoryType, $eventCategory);
+        $form = $this->createForm(new EventCategoryType, $eventCategory, [
+            'action' => $this->generateUrl('sr_blog_evenement_add_category'),
+            'method' => 'POST'
+        ]);
+
         $form->handleRequest($request);
 
         if($form->isValid()) {
@@ -200,7 +204,7 @@ class EventController extends BlogController
             $em->persist($eventCategory);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('sr_blog_home'));
+            return $this->redirect($this->generateUrl('sr_blog_evenement'));
         }
         return $this->render('SRBlogBundle:Event:addCategory.html.twig', [
             'form' => $form->createView(),
