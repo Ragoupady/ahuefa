@@ -31,31 +31,32 @@
         </div>
 
         <div id="map-canvas"></div>
+        <div class="text-justify">
+            <p>{{event.content| raw}}</p>
+            <ul class="bloc_movies">
+                {%for movie in event.movies %}
+                    {% if event.movies| length < 2 %}
+                        <h3 class="film_projete">Film projeté</h3>
+                    {% else %}
+                        <h3 class="film_projete">Film projeté N°{{ loop.index }}</h3>
+                    {% endif %}
+                    <h3 class="movie_title">{{ movie.title|e }}</h3>
+                    <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>
 
-        <p>{{event.content| raw}}</p>
-        <ul class="bloc_movies">
-            {%for movie in event.movies %}
-                {% if event.movies| length < 2 %}
-                    <h3 class="film_projete">Film projeté</h3>
-                {% else %}
-                    <h3 class="film_projete">Film projeté N°{{ loop.index }}</h3>
-                {% endif %}
-                <h3 class="movie_title">{{ movie.title|e }}</h3>
-                <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>
-
-                {% if event.image.id is defined %}
-                    <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/>
-                {% endif %}
-                <br>
-                <p>{{ movie.movieContent|raw }}</p>
-                {% if movie.author %}
-                    <h3> A propos de {{ movie.author|e }}</h3>
-                {% endif %}
-                {% if movie.authoBio %}
-                    <p>{{ movie.authoBio|e }}</p>
-                {% endif %}
-            {% endfor %}
-        </ul>
+                    {% if event.image.id is defined %}
+                        <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/>
+                    {% endif %}
+                    <br>
+                    <p>{{ movie.movieContent|raw }}</p>
+                    {% if movie.author %}
+                        <h3> A propos de {{ movie.author|e }}</h3>
+                    {% endif %}
+                    {% if movie.authoBio %}
+                        <p>{{ movie.authoBio|e }}</p>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
         {% if is_granted('ROLE_MODERATEUR') %}
             <p><a href="javascript:;" data-target="#updateEventModal"  data-toggle="modal" class="bouton">Modifier</a></p>
             <p><a href="javascript:;" data-target="#deleteEventModal" data-toggle="modal" class="bouton2">Supprimer</a></p>
