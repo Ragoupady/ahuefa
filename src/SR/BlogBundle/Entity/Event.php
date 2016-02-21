@@ -76,6 +76,7 @@ class Event
      * @var string
      *
      * @ORM\Column(name="content", type="text")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $content;
 
@@ -120,10 +121,9 @@ class Event
      * @var string
      *
      * @ORM\Column(name="event_rate", type="string", length=255)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $eventRate;
-
-
 
     /**
      * @var string

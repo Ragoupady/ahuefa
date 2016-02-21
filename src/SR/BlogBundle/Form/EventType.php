@@ -30,6 +30,7 @@ class EventType extends AbstractType
             ->add('content','textarea', [
                 'label' => 'Description',
                 'attr' => ['cols' => '5', 'rows' => '30'],
+                'required'=> false,
             ])
             ->add('postDate','date',  [
                 'widget' => 'single_text',
@@ -38,10 +39,10 @@ class EventType extends AbstractType
                 'attr' => ['class' => 'datepicker']
             ])
             ->add('status','checkbox', [
-                'required'=>false,
+                'required'=> false,
             ])
             ->add('eventStatus','checkbox', [
-                'required'=>false,
+                'required'=> false,
             ])
             ->add('eventStartDate','date', [
                 'widget' => 'single_text',
@@ -53,10 +54,12 @@ class EventType extends AbstractType
                 'widget' => 'single_text',
                 'format' => 'dd-MM-yyyy',
                 'label' => 'Date de fin',
-                'attr' => ['class' => 'datepicker']
+                'attr' => ['class' => 'datepicker'],
+                'required'=> false,
             ])
             ->add('eventRate','text', [
                 'label' => 'Prix',
+                'required'=> false,
             ])
             ->add('movies', 'collection', [
                 'type' => new MovieType(),
@@ -65,12 +68,12 @@ class EventType extends AbstractType
                 'allow_delete'=> true,
             ])
             ->add('eventGuest','text', [
-                'required'=>false,
+                'required'=> false,
             ])
             ->add('eventLocation','text', [
                 'attr'=> [
                     'placeholder' => 'ex: "104 Avenue Jean Lolive, 93500 Pantin"',
-                    'required'=>false,
+                    'required'=> false,
                     'label' => 'Les invités',
                 ]
             ])
