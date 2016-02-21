@@ -43,7 +43,7 @@ Si vous souhaitez vous aussi écrire un article, vous pouvez contacter Ahuefa po
                     {% endif %}
                 </div>
                 <div class="result-price">
-                    <small>{{news.newsDate|date("d/m/Y") }} par {{news.user.username}}</small>
+                    <small>{{news.newsDate|date("d/m/Y") }} par {{news.auteur}}</small>
                     <a href="{{path('sr_blog_article_view',{'slug': news.slug})}}" class="btn btn-inverse btn-block">Voir</a>
                 </div>
             </li>

@@ -54,6 +54,13 @@ class News
     */
     private $user;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="auteur", type="text")
+     */
+    private $auteur;
+
     /** 
      * @var string
      *
@@ -341,4 +348,21 @@ class News
     {
         return $this->slug;
     }
+
+    /**
+     * @return string
+     */
+    public function getAuteur()
+    {
+        return $this->auteur;
+    }
+
+    /**
+     * @param string $auteur
+     */
+    public function setAuteur($auteur)
+    {
+        $this->auteur = $auteur;
+    }
+
 }

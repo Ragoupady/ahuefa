@@ -42,6 +42,9 @@ class NewsType extends AbstractType
             ->add('image', new ImageType(), [
                 'required'=> false,
             ])
+            ->add('auteur', 'text', [
+                'required'=> false,
+            ])
             ->add('envoyer','submit', [
                 'attr' => [
                     'class' => 'btn btn-info'
