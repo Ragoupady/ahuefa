@@ -39,6 +39,7 @@ class Movie
 
     /**
     * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image",cascade={"persist"})
+    * @ORM\JoinColumn(nullable=true)
     */
     private $image;
 
@@ -46,6 +47,7 @@ class Movie
      * @var \DateTime
      *
      * @ORM\Column(name="duration", type="time")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $duration;
 
@@ -53,6 +55,7 @@ class Movie
      * @var string
      *
      * @ORM\Column(name="year", type="string", length=255)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $year;
 
@@ -60,6 +63,7 @@ class Movie
      * @var string
      *
      * @ORM\Column(name="movieContent", type="text")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $movieContent;
 
@@ -67,6 +71,7 @@ class Movie
      * @var string
      *
      * @ORM\Column(name="author", type="string", length=255)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $author;
 
@@ -74,6 +79,7 @@ class Movie
      * @var string
      *
      * @ORM\Column(name="authoBio", type="text")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $authoBio;
 

@@ -15,25 +15,63 @@ class MovieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', 'text',array('attr'=> array('class'=>'form-control','placeholder' => 'ex: "Matrix"'),
-                                        'label_attr' => array('class' => 'col-sm-20 control-label'),
-                                            'label'=>'Titre du film'))
+            ->add('title', 'text', [
+                'attr'=> [
+                    'class'=>'form-control','placeholder' => 'ex: "Matrix"'
+                ],
+                'label_attr' => [
+                    'class' => 'col-sm-20 control-label'
+                ],
+                'label'=>'Titre du film',
+                'required' => false,
+            ])
 
 
-            ->add('image', new ImageType(),array('attr'=> array('class'=>'btn btn-default btn-file' ),
-                                                'required'=>false) )
-            ->add('duration','time', array('widget' => 'choice',
-                                            'attr'=> array('class'=>'form-control'),
-                                            'label' => 'Durée du film'))
+            ->add('image', new ImageType(), [
+                'attr'=> [
+                    'class'=>'btn btn-default btn-file'
+                ],
+                'required'=>false,
+            ])
+            ->add('duration','time', [
+                'widget' => 'choice',
+                'attr'=> [
+                    'class'=>'form-control'
+                ],
+                'label' => 'Durée du film',
+                'required'=>false,
+            ])
 
-            ->add('year','text',array('attr'=> array('class'=>'form-control','placeholder' => 'ex: "2002"'),
-                                                     'label' => 'Année'))
-            ->add('movieContent','textarea',array('attr'=> array('class'=>'form-control'),
-                                                    'label'=> 'Contenu du film'))
-            ->add('author','text',array('attr'=> array('class'=>'form-control'),
-                                                    'label'=>'Nom de l\'auteur'))
-            ->add('authoBio','textarea',array('attr'=> array('class'=>'form-control'),
-                                                'label'=> 'A propos de l\'auteur'))
+            ->add('year','text', [
+                'attr'=> [
+                    'class'=>'form-control',
+                    'placeholder' => 'ex: "2002"'
+                ],
+                'label' => 'Année',
+                'required'=>false,
+            ])
+
+            ->add('movieContent','textarea', [
+                'attr'=> [
+                    'class'=>'form-control'
+                ],
+                'label'=> 'Contenu du film',
+                'required'=>false,
+            ])
+            ->add('author','text', [
+                'attr'=> [
+                    'class'=>'form-control'
+                ],
+                'label'=>'Nom de l\'auteur',
+                'required'=>false,
+            ])
+            ->add('authoBio','textarea', [
+                'attr'=> [
+                    'class'=>'form-control'
+                ],
+                'label'=> 'A propos de l\'auteur',
+                'required'=>false,
+            ])
        
         ;
     }
