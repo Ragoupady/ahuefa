@@ -150,7 +150,9 @@ class EventController extends Controller
          throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }
 
-        $form = $this->createFormBuilder()->getForm();
+        $form = $this->createDeleteForm($this->generateUrl('sr_blog_evenement_delete', [
+            'slug' => $event->getSlug(),
+        ]));
         
         if( $form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e141a0a-d68d-4c70-9f04-80f6828dc0cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
     </list>
     <ignored path="AHUEFA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,98 +24,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/view.html.twig">
+      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="64" selection-start-line="67" selection-start-column="64" selection-end-line="67" selection-end-column="64" />
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="152" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.52393615">
+              <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
               <folding>
-                <element signature="e#12#42#0#Twig" expanded="false" />
-                <element signature="e#719#759#0#Twig" expanded="false" />
+                <element signature="e#5416#5442#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/modal.html.twig">
+      <file leaf-file-name="delete.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/delete.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.725491">
-              <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.875">
-              <caret line="51" column="31" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-52.5">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="116" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sr_main.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28994846">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.875">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
               <folding>
-                <element signature="e#12#42#0#Twig" expanded="false" />
-                <element signature="e#1472#1492#0#Twig" expanded="false" />
-                <element signature="e#1866#1888#0#Twig" expanded="false" />
-                <element signature="e#2107#2129#0#Twig" expanded="false" />
-                <element signature="e#2556#2576#0#Twig" expanded="false" />
-                <element signature="e#3727#3742#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.625">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="34" selection-end-column="18" />
-              <folding>
-                <element signature="e#12#42#0#Twig" expanded="false" />
-                <element signature="e#1198#1220#0#Twig" expanded="false" />
-                <element signature="e#1536#1560#0#Twig" expanded="false" />
-                <element signature="e#1772#1796#0#Twig" expanded="false" />
-                <element signature="e#2165#2187#0#Twig" expanded="false" />
-                <element signature="e#3309#3326#0#Twig" expanded="false" />
+                <element signature="e#12#41#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,16 +66,6 @@
               <folding>
                 <element signature="e#12#41#0#Twig" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delete.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/delete.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -170,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexEvent.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Comment/indexNews.html.twig" />
         <option value="$PROJECT_DIR$/app/logs/prod.log" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" />
         <option value="$PROJECT_DIR$/app/logs/dev.log" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
@@ -202,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php" />
       </list>
     </option>
   </component>
@@ -1001,13 +928,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1247,21 +1167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95212764">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4534575">
@@ -1307,9 +1212,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28994846">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6755319">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="116" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53856385">
+          <caret line="51" column="31" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0358621">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6981383">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="e#12#42#0#Twig" expanded="false" />
+            <element signature="e#1472#1492#0#Twig" expanded="false" />
+            <element signature="e#1866#1888#0#Twig" expanded="false" />
+            <element signature="e#2107#2129#0#Twig" expanded="false" />
+            <element signature="e#2556#2576#0#Twig" expanded="false" />
+            <element signature="e#3727#3742#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.625">
+        <state vertical-scroll-proportion="-0.17952128">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="34" selection-end-column="18" />
           <folding>
             <element signature="e#12#42#0#Twig" expanded="false" />
@@ -1332,58 +1284,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31914893">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="152" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/delete.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/News/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
           <folding>
-            <element signature="e#12#42#0#Twig" expanded="false" />
-            <element signature="e#1472#1492#0#Twig" expanded="false" />
-            <element signature="e#1866#1888#0#Twig" expanded="false" />
-            <element signature="e#2107#2129#0#Twig" expanded="false" />
-            <element signature="e#2556#2576#0#Twig" expanded="false" />
-            <element signature="e#3727#3742#0#Twig" expanded="false" />
+            <element signature="e#12#41#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/view.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.725491">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-52.5">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="116" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/css/sr_main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28994846">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.52393615">
+          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+          <folding>
+            <element signature="e#5416#5442#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
