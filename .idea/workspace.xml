@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e141a0a-d68d-4c70-9f04-80f6828dc0cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ballon_barre.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_gauche_barre.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom_login.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/ballon.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_gauche.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom.JPG" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom_login.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" afterPath="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AHUEFA.iws" />
@@ -37,7 +33,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.8235295">
               <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
-              <folding />
+              <folding>
+                <element signature="e#12#42#0#Twig" expanded="false" />
+                <element signature="e#885#921#0#Twig" expanded="false" />
+                <element signature="e#2647#2683#0#Twig" expanded="false" />
+                <element signature="e#3321#3357#0#Twig" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,23 +56,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav-top.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig">
+      <file leaf-file-name="NewsType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7058825">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding>
-                <element signature="e#2037#2065#0#Twig" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-15.458333">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig">
+      <file leaf-file-name="News.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4680851">
-              <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+            <state vertical-scroll-proportion="-0.37898937">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-29.833334">
+              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,7 +109,6 @@
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/NewsCategoryRepository.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/NewsCategory.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/NewsRepository.php" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Repository/TagRepository.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/Tag.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Event/add.html.twig" />
@@ -115,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/NewsController.php" />
         <option value="$PROJECT_DIR$/app/logs/dev.log" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php" />
         <option value="$PROJECT_DIR$/web/app.php" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
@@ -133,9 +140,11 @@
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Controller/SoutienController.php" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Soutien/formulaire.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Main/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig" />
         <option value="$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php" />
+        <option value="$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php" />
       </list>
     </option>
   </component>
@@ -620,6 +629,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AHUEFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlogBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -921,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82047874">
-          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/EventType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0026595744">
@@ -946,13 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19946809">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="2" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.958334">
-          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1098,7 +1145,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.8235295">
           <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
-          <folding />
+          <folding>
+            <element signature="e#12#42#0#Twig" expanded="false" />
+            <element signature="e#885#921#0#Twig" expanded="false" />
+            <element signature="e#2647#2683#0#Twig" expanded="false" />
+            <element signature="e#3321#3357#0#Twig" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1107,19 +1159,28 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_gauche_barre.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7058825">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="e#2037#2065#0#Twig" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.36835107">
+          <caret line="76" column="75" selection-start-line="76" selection-start-column="75" selection-end-line="76" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/public/images/chaise_zoom_login.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/nav-top.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20689656">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding>
+            <element signature="e#580#592#0#Twig" expanded="false" />
+            <element signature="e#2061#2089#0#Twig" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Resources/views/Commun/carousel.html.twig">
@@ -1133,10 +1194,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SR/UserBundle/Resources/views/Security/login.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4680851">
-          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        <state vertical-scroll-proportion="-29.833334">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Form/NewsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.458333">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SR/BlogBundle/Entity/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.37898937">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding />
         </state>
       </provider>

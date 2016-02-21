@@ -37,9 +37,10 @@ class NewsType extends AbstractType
                 'class'=>'SRBlogBundle:NewsCategory',
                 'property'=> 'name',
                 'multiple'=> true,
+                'required' => false,
             ])
             ->add('image', new ImageType(), [
-                'required'=>false,
+                'required'=> false,
             ])
             ->add('envoyer','submit', [
                 'attr' => [

@@ -32,11 +32,13 @@ class News
 
     /**
     * @ORM\OneToOne(targetEntity="SR\BlogBundle\Entity\Image", cascade={"persist","remove"})
+    * @ORM\JoinColumn(nullable=true)
     */
     private $image;
 
     /**
-    *@ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory")
+    * @ORM\ManyToMany(targetEntity="SR\BlogBundle\Entity\NewsCategory")
+    * @ORM\JoinColumn(nullable=true)
     *
     */
     private $newsCategories;
