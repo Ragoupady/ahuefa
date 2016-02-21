@@ -48,7 +48,7 @@
                     {% endif %}
                     <br>
                     <p>{{ movie.movieContent|raw }}</p>
-                    {% if movie.author %}
+                    {% if movie.author and movie.author is not null %}
                         <h3> A propos de {{ movie.author|e }}</h3>
                     {% endif %}
                     {% if movie.authoBio %}
