@@ -21,7 +21,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @Route("/evenements")
  */
-class EventController extends Controller
+class EventController extends BlogController
 {
     /**
      * Permet d'accéder à la liste des événements d'AHUEFA
