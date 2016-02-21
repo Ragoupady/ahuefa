@@ -137,6 +137,13 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
 }
 
 
+.result-list > li > div {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px;
+    position: relative;
+    width: 345px;
+}
 
 
 

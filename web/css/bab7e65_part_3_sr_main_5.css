@@ -8,6 +8,13 @@
 }
 
 
+.result-list > li > div {
+    display: table-cell;
+    vertical-align: top;
+    padding: 20px;
+    position: relative;
+    width: 345px;
+}
 
 
 
