@@ -151,6 +151,37 @@ class MainController extends Controller
     }
 
     /**
+     * Permet d'accéder à la page seminaire et formation
+     *
+     * @Route("/seminaire-formation", name="sr_blog_seminaire_formation" )
+     */
+    public function seminaireFormationAction()
+    {
+        return $this->render('SRBlogBundle:Main:seminaire_formation.html.twig');
+    }
+
+    /**
+     * Permet d'accéder à la page groupes de parole
+     *
+     * @Route("/groupes-de-parole", name="sr_blog_groupes_parole" )
+     */
+    public function groupesDeParoleAction()
+    {
+        return $this->render('SRBlogBundle:Main:groupes_de_parole.html.twig');
+    }
+
+    /**
+     * Permet d'accéder à la page visite mediatisee
+     *
+     * @Route("/visite-mediatisee", name="sr_blog_actions_visite_mediatisee" )
+     */
+    public function visiteMediatiseeAction()
+    {
+        return $this->render('SRBlogBundle:Main:visite_mediatisee.html.twig');
+    }
+
+
+    /**
      * Permet de rechercher du contenu à l'aide d'une chaine de caractère. La recheche permet de retourner les articles et/ou les events
      *
      * @Route("/search", name="sr_blog_search" )

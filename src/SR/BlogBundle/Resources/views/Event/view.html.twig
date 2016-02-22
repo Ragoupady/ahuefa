@@ -43,7 +43,7 @@
                     <h3 class="movie_title">{{ movie.title|e }}</h3>
                     <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>
 
-                    {% if event.image.id is defined %}
+                    {% if event.image.id is defined and event.image is not null %}
                         <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/>
                     {% endif %}
                     <br>
