@@ -26,10 +26,14 @@ class EventController extends BlogController
     /**
      * Permet d'accéder à la liste des événements d'AHUEFA
      *
-     * @Route("/evenement/page/{page}", name="sr_blog_evenement",requirements={"page" = "\d+"}, defaults={"page" = 1} )
+     * @Route("/evenement/page/{page}", name="sr_blog_evenement", requirements={"page" = "\d+"}, defaults={"page" = 1} )
      */
-    public function indexAction($page)
+    public function indexAction(Request $request, $page)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('événements', $this->get("router")->generate($request->get('_route')));
+
         $nbPerPage = 3;
         $listEvent = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:Event')->myFindAll($page, $nbPerPage);
         // On calcule le nombre total de pages grâce au count($listEvent) qui retourne le nombre total d'evenement
@@ -50,8 +54,15 @@ class EventController extends BlogController
      *
      * @Route("/evenement/{slug}", name="sr_blog_evenement_view" )
      */
-    public function viewAction(Event $event, $slug)
+    public function viewAction(Request $request, Event $event, $slug)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('événement', $this->get("router")->generate('sr_blog_evenement'));
+        $breadcrumbs->addItem($slug, $this->get("router")->generate($request->get('_route'), [
+            'slug' => $slug
+        ]));
+
         if (!$event) {
           throw $this->createNotFoundException('Aucun évenement trouvée pour cet id : '.$event->getId());
         }

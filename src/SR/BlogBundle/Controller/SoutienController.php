@@ -12,15 +12,19 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @Route("/soutien")
  */
-class SoutienController extends Controller
+class SoutienController extends BlogController
 {
     /**
      * Permet d'accéder à la page devenir membre
      *
      * @Route("/devenir-membre", name="sr_blog_devenir_membre" )
      */
-    public function devenirMembreAction()
+    public function devenirMembreAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Devenir membre', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Soutien:devenir-membre.html.twig');
     }
 
@@ -29,8 +33,13 @@ class SoutienController extends Controller
      *
      * @Route("/contact/{type}", name="sr_blog_contact", requirements={"type" = "\d+"}, defaults={"type" = 1} )
      */
-    public function contactAction($type)
-    {   $message = null;
+    public function contactAction(Request $request, $type)
+    {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Contact', $this->get("router")->generate($request->get('_route')));
+
+        $message = null;
         switch ($type) {
             case 1:
                 $message = "Cette section vous permet de nous soutenir en nous envoyant des messages";
@@ -95,8 +104,17 @@ class SoutienController extends Controller
      *
      * @Route("/contact/confirmation", name="sr_blog_contact_confirmation" )
      */
-    public function confirmationAction()
+    public function confirmationAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Contact', $this->get("router")->generate('sr_blog_contact'));
+        $breadcrumbs->addItem('Confrmation', $this->get("router")->generate($request->get('_route')));
+
+        $this->createBreadCrumbs([
+            'Contact' => 'sr_blog_contact',
+            'Confirmation' => $request->get('_route'),
+        ]);
         return $this->render('SRBlogBundle:Soutien:confirmation.html.twig');
     }
 }

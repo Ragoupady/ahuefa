@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use SR\BlogBundle\Entity\News;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MainController extends Controller
+class MainController extends BlogController
 {
     /**
      * Permet d'accéder à la page d'accueil
@@ -25,8 +25,12 @@ class MainController extends Controller
      *
      * @Route("/historique", name="sr_blog_historique" )
      */
-    public function historiqueAction()
+    public function historiqueAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Historique', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:historique.html.twig');
     }
 
@@ -35,8 +39,12 @@ class MainController extends Controller
      *
      * @Route("/objectif", name="sr_blog_objectif" )
      */
-    public function objectifAction()
+    public function objectifAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Objectif', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:objectif.html.twig');
     }
 
@@ -45,8 +53,12 @@ class MainController extends Controller
      *
      * @Route("/actions", name="sr_blog_actions" )
      */
-    public function actionsAction()
+    public function actionsAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Actions', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:actions.html.twig');
     }
 
@@ -55,8 +67,12 @@ class MainController extends Controller
      *
      * @Route("/voyage-transculturel", name="sr_blog_actions_voyage_transculturel" )
      */
-    public function voyageAction()
+    public function voyageAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Voyage transculturel', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:voyage.html.twig');
     }
 
@@ -65,8 +81,12 @@ class MainController extends Controller
      *
      * @Route("/consultation", name="sr_blog_actions_consultation" )
      */
-    public function consultationAction()
+    public function consultationAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Consultation', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:consultation.html.twig');
     }
 
@@ -75,8 +95,12 @@ class MainController extends Controller
      *
      * @Route("/mediation", name="sr_blog_actions_mediation" )
      */
-    public function mediationAction()
+    public function mediationAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Médiation', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:mediation.html.twig');
     }
 
@@ -85,8 +109,14 @@ class MainController extends Controller
      *
      * @Route("/mediation-definition", name="sr_blog_actions_mediation_definition" )
      */
-    public function mediationDefAction()
+    public function mediationDefAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Médiation', $this->get("router")->generate('sr_blog_actions_mediation'));
+        $breadcrumbs->addItem('Définition', $this->get("router")->generate($request->get('_route')));
+
+
         return $this->render('SRBlogBundle:Main:mediationDef.html.twig');
     }
 
@@ -95,8 +125,13 @@ class MainController extends Controller
      *
      * @Route("/mediation-etape", name="sr_blog_actions_mediation_etapes" )
      */
-    public function mediationEtapeAction()
+    public function mediationEtapeAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Médiation', $this->get("router")->generate('sr_blog_actions_mediation'));
+        $breadcrumbs->addItem('Etape', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:mediationEtape.html.twig');
     }
 
@@ -105,8 +140,13 @@ class MainController extends Controller
      *
      * @Route("/mediation-travail", name="sr_blog_actions_mediation_travail" )
      */
-    public function mediationTravailAction()
+    public function mediationTravailAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Médiation', $this->get("router")->generate('sr_blog_actions_mediation'));
+        $breadcrumbs->addItem('Travail', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:mediationTravail.html.twig');
     }
 
@@ -115,8 +155,12 @@ class MainController extends Controller
      *
      * @Route("/appui-pro", name="sr_blog_actions_appui_pro" )
      */
-    public function appuiProAction()
+    public function appuiProAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Appui professionnel', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:appuiPro.html.twig');
     }
 
@@ -125,8 +169,12 @@ class MainController extends Controller
      *
      * @Route("/soutien", name="sr_blog_actions_soutien" )
      */
-    public function soutienAction()
+    public function soutienAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Soutien', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:soutien.html.twig');
     }
 
@@ -135,8 +183,12 @@ class MainController extends Controller
      *
      * @Route("/equipe", name="sr_blog_equipe" )
      */
-    public function equipeAction()
+    public function equipeAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Equipe', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:equipe.html.twig');
     }
 
@@ -145,8 +197,12 @@ class MainController extends Controller
      *
      * @Route("/partenaire", name="sr_blog_partenaire" )
      */
-    public function partenaireAction()
+    public function partenaireAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Partenaire', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:partenaire.html.twig');
     }
 
@@ -155,8 +211,12 @@ class MainController extends Controller
      *
      * @Route("/seminaire-formation", name="sr_blog_seminaire_formation" )
      */
-    public function seminaireFormationAction()
+    public function seminaireFormationAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Séminaire et formations', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:seminaire_formation.html.twig');
     }
 
@@ -165,8 +225,12 @@ class MainController extends Controller
      *
      * @Route("/groupes-de-parole", name="sr_blog_groupes_parole" )
      */
-    public function groupesDeParoleAction()
+    public function groupesDeParoleAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Groupes de parole', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:groupes_de_parole.html.twig');
     }
 
@@ -175,8 +239,12 @@ class MainController extends Controller
      *
      * @Route("/visite-mediatisee", name="sr_blog_actions_visite_mediatisee" )
      */
-    public function visiteMediatiseeAction()
+    public function visiteMediatiseeAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Visite mediatisée', $this->get("router")->generate($request->get('_route')));
+
         return $this->render('SRBlogBundle:Main:visite_mediatisee.html.twig');
     }
 
@@ -188,6 +256,10 @@ class MainController extends Controller
      */
     public function searchAction(Request $request)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('Recherche', $this->get("router")->generate($request->get('_route')));
+
         $content = $request->request->get('content');
         //recherche des article contenant $content dans le titre ou le contenu de l'article
         $listNews = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->getNewsSearch($content); 

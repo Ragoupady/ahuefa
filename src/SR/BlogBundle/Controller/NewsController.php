@@ -24,8 +24,12 @@ class NewsController extends BlogController
      *
      * @Route("/page/{page}", name="sr_blog_article", requirements={"page" = "\d+"}, defaults={"page" = 1} )
      */
-    public function indexAction($page)
+    public function indexAction(Request $request, $page)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('articles', $this->get("router")->generate($request->get('_route')));
+
         $nbPerPage = 3;
         // On récupère notre objet Paginator
         $listNews = $this->getDoctrine()->getManager()->getRepository('SRBlogBundle:News')->myFindAll($page, $nbPerPage);
@@ -48,8 +52,15 @@ class NewsController extends BlogController
      *
      * @Route("/articles/{slug}", name="sr_blog_article_view" )
      */
-    public function viewAction(News $news, $slug)
+    public function viewAction(Request $request, News $news, $slug)
     {
+        $breadcrumbs = $this->get("white_october_breadcrumbs");
+        $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
+        $breadcrumbs->addItem('articles', $this->get("router")->generate('sr_blog_article'));
+        $breadcrumbs->addItem($slug, $this->get("router")->generate($request->get('_route'), [
+            'slug' => $slug
+        ]));
+
         if (!$news) {
             throw $this->createNotFoundException('Aucun article trouvée pour cet id : '.$news->getId());
         }

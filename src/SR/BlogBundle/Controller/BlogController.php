@@ -22,7 +22,6 @@ class BlogController extends Controller
             ->getForm()
             ->add('Supprimer', 'submit');
     }
-
 }
 
 
