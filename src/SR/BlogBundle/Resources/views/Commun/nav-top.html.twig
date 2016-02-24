@@ -13,8 +13,6 @@
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <div class="row">
-                <div class="col-lg-5">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{path('sr_blog_home')}}">Accueil</a></li>
                         <li class="dropdown">
@@ -29,12 +27,14 @@
                                         <li><a href="{{path('sr_blog_actions_mediation')}}">Médiation ethnoclinique</a></li>
                                         <li class="divider"></li>
                                         <li><a href="{{path('sr_blog_actions_consultation')}}">Suivi individuel</a></li>
-                                        {#<li class="divider"></li>#}
-                                        {#<li><a href="{{path('sr_blog_actions_soutien')}}">Soutien psychologique enfants et ados</a></li>#}
                                         <li class="divider"></li>
-                                        <li><a href="{{path('sr_blog_actions_appui_pro')}}">L’appui technique aux professionnels</a></li>
+                                        <li><a href="{{path('sr_blog_actions_visite_mediatisee')}}">Visite médiatisée</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{path('sr_blog_seminaire_formation')}}">Séminaire et Formations</a></li>
                                         <li class="divider"></li>
                                         <li><a href="{{path('sr_blog_actions_voyage_transculturel')}}">Le Voyage Transculturel</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{path('sr_blog_groupes_parole')}}">Groupes de parole</a></li>
                                     </ul>
                                 </li>
                                 <li class="divider"></li>
@@ -62,26 +62,23 @@
                         </ul>
                         </li>
                     </ul>
-                </div>
-                <div class="col-md-3">
+
                     <form action="{{path('sr_blog_search')}}" method="post" class="navbar-form navbar-left " role="search">
                         <div class="form-group">
                             <input type="text" name="content" class="form-control" placeholder="Rechercher">
                         </div>
                         <button type="submit" class="btn btn-warning"><i class="fa fa-lg fa-search"></i></button>
                     </form>
-                </div>
-                <div class="col-md-2">
+
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="{{path('sr_blog_contact', {'type': 3})}}"><i class="fa fa-2x fa-envelope-o"></i></a></li>
                         {% if app.user%}
-                        <li class="active"><a href="{{path('fos_user_security_logout')}}"><i class="fa fa-2x fa-sign-out"></i></a></li>
+                        <li class="active"><a href="{{path('fos_user_security_logout')}}" title="Se déconnecter"><i class="fa fa-2x fa-sign-out"></i></a></li>
                         {% else %}
-                        <li class="active"><a href="{{path('fos_user_security_login')}}"><i class="fa fa-2x fa-sign-in"></i></a></li>
+                        <li><a href="{{path('fos_user_security_login')}}"title="Se connecter"><i class="fa fa-2x fa-sign-in"></i></a></li>
                         {% endif %}
                     </ul>
-                </div>
-            </div>
+
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
 </nav>

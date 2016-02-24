@@ -50,12 +50,28 @@ class EventType extends AbstractType
                 'label' => 'Date début',
                 'attr' => ['class' => 'datepicker']
             ])
+            ->add('time_start','time', [
+                'widget' => 'choice',
+                'attr'=> [
+                    'class'=>'form-control'
+                ],
+                'label' => 'Heure de début',
+                'required'=>false,
+            ])
             ->add('eventEndDate','date', [
                 'widget' => 'single_text',
                 'format' => 'dd-MM-yyyy',
                 'label' => 'Date de fin',
                 'attr' => ['class' => 'datepicker'],
                 'required'=> false,
+            ])
+            ->add('time_end','time', [
+                'widget' => 'choice',
+                'attr'=> [
+                    'class'=>'form-control'
+                ],
+                'label' => 'Heure de fin',
+                'required'=>false,
             ])
             ->add('eventRate','text', [
                 'label' => 'Prix',

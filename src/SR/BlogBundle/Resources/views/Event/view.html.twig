@@ -2,73 +2,91 @@
 {% extends "SRBlogBundle::layout.html.twig" %}
 
 {% block content %}
-   
-    <div class="contenu_static">
-        <h1 class="event_type">{{event.eventCategory.name}}</h1>
-        <h3> {{event.title}}</h3>
 
-        {% if event.image.id is defined %}
-            <img class="image_event"src="{{ asset(event.image.webPath| apply_filter('thumbnail_event')) }}" alt="{{ event.image.alt }}"/>
-        {% endif %}
-        <div class="resume_film_encadre">
-            <p class="resume_film_contenu">
-                <span class="quand_resume">Quand :</span>
-                Le {{event.eventStartDate| localizeddate('full', 'none')}} à {{event.eventStartDate|date("H:i")}}
-            </p>
-            <p class="resume_film_contenu">
-                <span class="quand_resume">Où :</span>
-                <span id="adresse">{{event.eventLocation}}</span>
-            </p>
-
-            <p class="resume_film_contenu">
-                <span class="quand_resume">Participation aux frais:</span>
-                {{event.eventRate}}
-            </p>
-            <p class="resume_film_contenu">
-                <span class="quand_resume">Invités: </span>
-                {{event.eventGuest}}
-            </p>
+    <h1 class="event_type">{{event.eventCategory.name}}</h1>
+    <h3> {{event.title}}</h3>
+    <div class="row">
+        <div class="col-md-6">
+            {% if event.image.id is defined %}
+                <img src="{{ asset(event.image.webPath| apply_filter('thumbnail_event')) }}" alt="{{ event.image.alt }}"/>
+            {% else %}
+                <img  class="image_event"src="{{ asset('bundles/srblog/images/default_event.jpg'| apply_filter('thumbnail_event')) }}" alt="default"/>
+            {% endif %}
         </div>
-
-        <div id="map-canvas"></div>
-        <div class="text-justify">
-            <p>{{event.content| raw}}</p>
-            <ul class="bloc_movies">
-                {%for movie in event.movies %}
-                    {% if event.movies| length < 2 %}
-                        <h3 class="film_projete">Film projeté</h3>
-                    {% else %}
-                        <h3 class="film_projete">Film projeté N°{{ loop.index }}</h3>
-                    {% endif %}
-                    <h3 class="movie_title">{{ movie.title|e }}</h3>
-                    <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>
-
-                    {% if event.image.id is defined and event.image is not null %}
-                        <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/>
+        <div class="col-md-6">
+            {#<div class="resume_film_encadre">#}
+                <p class="resume_film_contenu">
+                    <span class="quand_resume">Quand :</span>
+                    {% if event.eventStartDate %}
+                        Le {{event.eventStartDate| localizeddate('full', 'none')}}
                     {% endif %}
                     <br>
-                    <p>{{ movie.movieContent|raw }}</p>
-                    {% if movie.authoBio and movie.author %}
-                        <h3> A propos de {{ movie.author|e }}</h3>
-                        <p>{{ movie.authoBio|e }}</p>
+                    {% if event.timestart is defined and event.timestart %}
+                       de {{event.timestart|date("H:i")}}
                     {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-        {% if is_granted('ROLE_MODERATEUR') %}
-            <p><a href="javascript:;" data-target="#updateEventModal"  data-toggle="modal" class="bouton">Modifier</a></p>
-            <p><a href="javascript:;" data-target="#deleteEventModal" data-toggle="modal" class="bouton2">Supprimer</a></p>
-        {% endif %}
-        <br>
-        {% include'SRBlogBundle:Comment:indexEvent.html.twig' with { 'comments': comments }%}
+                    {% if event.timeend is defined and event.timeend %}
+                        à {{event.timeend|date("H:i")}}
+                    {% endif %}
+                </p>
+                <p class="resume_film_contenu">
+                    <span class="quand_resume">Où :</span>
+                    <span id="adresse">{{event.eventLocation}}</span>
+                </p>
 
-        <h3>Ajouter un commentaire</h3>
-        {% if is_granted('ROLE_USER') %}
-            {% render(controller('SRBlogBundle:Comment:newEvent', { 'event' : event } )) %}
-        {% else %}
-            <p>Vous devez être enregistré pour laisser un commentaire.</p>
-        {% endif %}
+                <p class="resume_film_contenu">
+                    <span class="quand_resume">Participation aux frais:</span>
+                    {{event.eventRate}}
+                </p>
+                <p class="resume_film_contenu">
+                    <span class="quand_resume">Invités: </span>
+                    {{event.eventGuest}}
+                </p>
+            {#</div>#}
+        </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map-canvas"></div>
+       </div>
+    </div>
+    <div class="text-justify">
+        <p>{{event.content| raw}}</p>
+        <ul class="bloc_movies">
+            {%for movie in event.movies %}
+                {% if event.movies| length < 2 %}
+                    <h3 class="film_projete">Film projeté</h3>
+                {% else %}
+                    <h3 class="film_projete">Film projeté N°{{ loop.index }}</h3>
+                {% endif %}
+                <h3 class="movie_title">{{ movie.title|e }}</h3>
+                <p class="movie_author">de {{ movie.author|e }} ({{ movie.year|e }})  {{ movie.duration|date('H\\hi\\m\\i\\n')}}</p>
+
+                {% if movie.image.id is defined and movie.image is not null %}
+                    <img class="image_post"src="{{ asset(movie.image.webPath | apply_filter('thumbnail_filter')) }}" alt="{{ movie.image.alt }}"/>
+                {% endif %}
+                <br>
+                <p>{{ movie.movieContent|raw }}</p>
+                {% if movie.authoBio and movie.author %}
+                    <h3> A propos de {{ movie.author|e }}</h3>
+                    <p>{{ movie.authoBio|e }}</p>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% if is_granted('ROLE_MODERATEUR') %}
+        <p><a href="javascript:;" data-target="#updateEventModal"  data-toggle="modal" class="bouton">Modifier</a></p>
+        <p><a href="javascript:;" data-target="#deleteEventModal" data-toggle="modal" class="bouton2">Supprimer</a></p>
+    {% endif %}
+    <br>
+    {% include'SRBlogBundle:Comment:indexEvent.html.twig' with { 'comments': comments }%}
+
+    <h3>Ajouter un commentaire</h3>
+    {% if is_granted('ROLE_USER') %}
+        {% render(controller('SRBlogBundle:Comment:newEvent', { 'event' : event } )) %}
+    {% else %}
+        <p>Vous devez être enregistré pour laisser un commentaire.</p>
+    {% endif %}
+
 
     {#MODAL MODIFIER EVENEMENT#}
     <div class="modal fade" id="updateEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>

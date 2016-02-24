@@ -112,10 +112,26 @@ class Event
     /**
      * @var \DateTime
      *
+     * @ORM\Column(name="time_start", type="time")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $timeStart;
+
+    /**
+     * @var \DateTime
+     *
      * @ORM\Column(name="event_end_date", type="datetime")
      * @ORM\JoinColumn(nullable=true)
      */
     private $eventEndDate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="time_end", type="time")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $timeEnd;
 
     /**
      * @var string
@@ -599,4 +615,38 @@ class Event
     {
         $this->movies->removeElement($movies);
     }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTimeStart()
+    {
+        return $this->timeStart;
+    }
+
+    /**
+     * @param \DateTime $timeStart
+     */
+    public function setTimeStart($timeStart)
+    {
+        $this->timeStart = $timeStart;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getTimeEnd()
+    {
+        return $this->timeEnd;
+    }
+
+    /**
+     * @param \DateTime $timeEnd
+     */
+    public function setTimeEnd($timeEnd)
+    {
+        $this->timeEnd = $timeEnd;
+    }
+
+
 }

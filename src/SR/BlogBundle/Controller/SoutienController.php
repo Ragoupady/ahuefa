@@ -84,7 +84,7 @@ class SoutienController extends Controller
         $message = \Swift_Message::newInstance()
             ->setSubject($typeContact)
             ->setFrom('ragou.dev@gmail.com')
-            ->setTo('sagadevin.ragoupady@gmail.com')
+            ->setTo('ahuefai.france@gmail.com')
             ->setBody($contenu_mail);
 
         return $message;

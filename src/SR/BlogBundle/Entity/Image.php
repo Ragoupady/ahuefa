@@ -145,64 +145,65 @@ class Image
     // On retourne le chemin relatif vers l'image pour notre code PHP
     return __DIR__.'/../../../../web/'.$this->getUploadDir();
   }
-    public function getWebPath()    // Permet de retouner le chemin relatif à notre vue, pour que cela soit plus facile à écrire dans notre vue
-    {
-        return $this->getUploadDir().'/'.$this->getId().'.'.$this->getUrl();
-    }
 
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+  public function getWebPath()    // Permet de retouner le chemin relatif à notre vue, pour que cela soit plus facile à écrire dans notre vue
+  {
+      return $this->getUploadDir().'/'.$this->getId().'.'.$this->getUrl();
+  }
 
-    /**
-     * Set url
-     *
-     * @param string $url
-     * @return Image
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
+  /**
+   * Get id
+   *
+   * @return integer
+   */
+  public function getId()
+  {
+      return $this->id;
+  }
 
-        return $this;
-    }
+  /**
+   * Set url
+   *
+   * @param string $url
+   * @return Image
+   */
+  public function setUrl($url)
+  {
+      $this->url = $url;
 
-    /**
-     * Get url
-     *
-     * @return string 
-     */
-    public function getUrl()
-    {
-        return $this->url;
-    }
+      return $this;
+  }
 
-    /**
-     * Set alt
-     *
-     * @param string $alt
-     * @return Image
-     */
-    public function setAlt($alt)
-    {
-        $this->alt = $alt;
+  /**
+   * Get url
+   *
+   * @return string
+   */
+  public function getUrl()
+  {
+      return $this->url;
+  }
 
-        return $this;
-    }
+  /**
+   * Set alt
+   *
+   * @param string $alt
+   * @return Image
+   */
+  public function setAlt($alt)
+  {
+      $this->alt = $alt;
 
-    /**
-     * Get alt
-     *
-     * @return string 
-     */
-    public function getAlt()
-    {
-        return $this->alt;
-    }
+      return $this;
+  }
+
+  /**
+   * Get alt
+   *
+   * @return string
+   */
+  public function getAlt()
+  {
+      return $this->alt;
+  }
 }

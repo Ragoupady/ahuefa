@@ -5,13 +5,16 @@
 	<h1>{{news.title}}</h1>
 	<p>Par : {{news.auteur}} le {{news.newsDate|date("d/m/Y") }}</p>
 
-	{% if news.image.id is defined %}
-		<img  class="image_post"src="{{ asset(news.image.webPath| apply_filter('thumbnail_filter')) }}" alt="{{ news.image.alt }}"/>
-	{% endif %}
-	<div class="text-justify">
-		{{news.content| raw}}
+	<div class="row">
+		<div class="col-md-12">
+		{% if news.image.id is defined %}
+			<img  class="image_post img-responsive"src="{{ asset(news.image.webPath) }}" alt="{{ news.image.alt }}"/>
+		{% endif %}
+		</div>
+		<div class="text-justify">
+			{{news.content| raw}}
+		</div>
 	</div>
-
 	{% if is_granted('ROLE_MODERATEUR') %}
 		<p><a href="javascript:;" data-target="#updateNewsModal"  data-toggle="modal" class="bouton">Modifier</a></p>
 		<p><a href="javascript:;" data-target="#deleteNewsModal" data-toggle="modal" class="bouton2">Supprimer</a></p>
