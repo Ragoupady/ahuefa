@@ -109,12 +109,9 @@ class SoutienController extends BlogController
         $breadcrumbs = $this->get("white_october_breadcrumbs");
         $breadcrumbs->addItem('Accueil', $this->get("router")->generate('sr_blog_home'));
         $breadcrumbs->addItem('Contact', $this->get("router")->generate('sr_blog_contact'));
-        $breadcrumbs->addItem('Confrmation', $this->get("router")->generate($request->get('_route')));
+        $breadcrumbs->addItem('Confirmation', $this->get("router")->generate($request->get('_route')));
 
-        $this->createBreadCrumbs([
-            'Contact' => 'sr_blog_contact',
-            'Confirmation' => $request->get('_route'),
-        ]);
+
         return $this->render('SRBlogBundle:Soutien:confirmation.html.twig');
     }
 }
