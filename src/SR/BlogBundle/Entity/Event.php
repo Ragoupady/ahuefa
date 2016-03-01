@@ -76,7 +76,7 @@ class Event
      * @var string
      *
      * @ORM\Column(name="content", type="text")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $content;
 

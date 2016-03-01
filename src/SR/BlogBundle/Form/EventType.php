@@ -30,7 +30,7 @@ class EventType extends AbstractType
             ->add('content','textarea', [
                 'label' => 'Description',
                 'attr' => ['cols' => '5', 'rows' => '30'],
-                'required'=> false,
+                'required'=> true,
             ])
             ->add('postDate','date',  [
                 'widget' => 'single_text',
@@ -56,14 +56,14 @@ class EventType extends AbstractType
                     'class'=>'form-control'
                 ],
                 'label' => 'Heure de début',
-                'required'=>false,
+                'required' => true,
             ])
             ->add('eventEndDate','date', [
                 'widget' => 'single_text',
                 'format' => 'dd-MM-yyyy',
                 'label' => 'Date de fin',
                 'attr' => ['class' => 'datepicker'],
-                'required'=> false,
+                'required' => false,
             ])
             ->add('time_end','time', [
                 'widget' => 'choice',
@@ -71,11 +71,10 @@ class EventType extends AbstractType
                     'class'=>'form-control'
                 ],
                 'label' => 'Heure de fin',
-                'required'=>false,
+                'required' => true,
             ])
             ->add('eventRate','text', [
                 'label' => 'Prix',
-                'required'=> false,
             ])
             ->add('movies', 'collection', [
                 'type' => new MovieType(),
