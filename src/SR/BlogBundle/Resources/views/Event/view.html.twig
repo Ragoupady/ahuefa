@@ -49,6 +49,7 @@
             <div id="map-canvas"></div>
        </div>
     </div>
+    <br>
     <div class="text-justify">
         <p>{{event.content| raw}}</p>
         <ul class="bloc_movies">
@@ -110,9 +111,9 @@
                 type : 'GET',
                 success : function(html, statut){ // code_html contient le HTML renvoyé
                     $("#updateEventModal").html(html);
-                    addMovie();
                     datepicker();
                     wysiwyg();
+                    addMovie();
                 },
                 error : function(resultat, statut, erreur){
                     console.log("La requète n'a pas abouti")
@@ -235,7 +236,7 @@
 
             // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvel article par exemple).
             if (index == 0) {
-                addCategory($container);
+                addMovie($container);
             } else {
                 // Pour chaque film déjà existante, on ajoute un lien de suppression
                 $container.children('div').each(function() {
