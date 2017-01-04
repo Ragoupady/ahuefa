@@ -67,8 +67,10 @@ class SoutienController extends BlogController
     public function contactSendAction(Request $request, $typeContact)
     {
         $message = $this->sendEmail($typeContact,$request);
-        $this->get('mailer')->send($message);
-        
+        if ($message) {
+            $this->get('mailer')->send($message);
+        }
+
         //on appelle la route qui va afficher le message de confirmation
         return $this->redirect($this->generateUrl('sr_blog_contact_confirmation'));
     }
@@ -85,6 +87,10 @@ class SoutienController extends BlogController
         $email= $request->request->get('email');
         $phone= $request->request->get('phone');
         $messageMail= $request->request->get('message');
+
+        if(stristr($messageMail, 'http') === TRUE) {
+            return false;
+        }
 
         $contenu_mail = 'Nom: '.$name."\n".'Prénom: '.$firstname."\n".'Email: '.$email."\n".'Téléphone: '.$phone."\n".$messageMail;
 
