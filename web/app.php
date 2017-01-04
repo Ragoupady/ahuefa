@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\HttpFoundation\Request;
