@@ -87,11 +87,9 @@ class SoutienController extends BlogController
         $email= $request->request->get('email');
         $phone= $request->request->get('phone');
         $messageMail= $request->request->get('message');
-
-        if(stristr($messageMail, 'http') === TRUE) {
+        if(stristr($messageMail, 'http') !== FALSE) {
             return false;
         }
-
         $contenu_mail = 'Nom: '.$name."\n".'Prénom: '.$firstname."\n".'Email: '.$email."\n".'Téléphone: '.$phone."\n".$messageMail;
 
 
