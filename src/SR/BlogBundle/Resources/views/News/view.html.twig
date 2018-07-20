@@ -1,8 +1,31 @@
 {% extends "SRBlogBundle::layout.html.twig" %}
 
+		{% if news.image.id is defined %}
+			{% set image = asset(news.image.webPath) %}
+        {% endif %}
+
+        {% block og %}
+            {{ parent() }}
+
+			<meta property="og:url"           content="{{ app.request.uri }}" />
+			<meta property="og:type"          content="website" />
+			<meta property="og:title"         content="AHUEFA" />
+			<meta property="og:description"   content="{{news.title}}" />
+            {% if news.image.id is defined %}
+				<meta property="og:image"         content="{{ asset(news.image.webPath) }}" />
+            {% endif %}
+        {% endblock %}
+
+
+
 {% block content %}
 
 	<h1>{{news.title}}</h1>
+	<!-- Your share button code -->
+	<div class="fb-share-button"
+		 data-href="{{ app.request.uri }}"
+		 data-layout="button_count">
+	</div>
 	<p>Par : {{news.auteur}} le {{news.newsDate|date("d/m/Y") }}</p>
 
 	<div class="row">
@@ -35,6 +58,16 @@
 	<div class="modal fade" id="updateNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 	{#MODAL SUPPRIMER CATEGORIE ARTICLE#}
 	<div class="modal fade" id="deleteNewsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
 {% endblock %}
 

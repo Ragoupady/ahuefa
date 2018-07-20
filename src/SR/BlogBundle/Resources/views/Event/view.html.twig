@@ -1,10 +1,35 @@
 {# src/SR/BlogBundle/Resources/views/Event/view.html.twig #}
 {% extends "SRBlogBundle::layout.html.twig" %}
 
+
+		{% if event.image.id is defined %}
+            {% set image = asset(event.image.webPath) %}
+        {% endif %}
+
+        {% block og %}
+            {{ parent() }}
+
+            <meta property="og:url"           content="{{ app.request.uri }}" />
+            <meta property="og:type"          content="website" />
+            <meta property="og:title"         content="AHUEFA" />
+            <meta property="og:description"   content="{{event.title}}" />
+            {% if event.image.id is defined %}
+                <meta property="og:image"         content="{{ asset(event.image.webPath) }}" />
+            {% endif %}
+        {% endblock %}
+
+
+
+
 {% block content %}
 
     <h1 class="event_type">{{event.eventCategory.name}}</h1>
     <h3> {{event.title}}</h3>
+    <!-- Your share button code -->
+    <div class="fb-share-button"
+         data-href="{{ app.request.uri }}"
+         data-layout="button_count">
+    </div>
     <div class="row">
         <div class="col-md-6">
             {% if event.image.id is defined %}
@@ -94,10 +119,23 @@
     {#MODAL SUPPRIMER EVENEMENT#}
     <div class="modal fade" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 
+
+
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=fr&region=FR&key=AIzaSyBwBVUW3YT_rVM4HFA68-h5l9VRqIg92lo"></script>
     <script type="text/javascript">

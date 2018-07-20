@@ -5,6 +5,9 @@
 {% block title %}AHUEFA{% endblock %}
 
 
+        {% block og %}
+            {{ parent() }}
+        {% endblock %}
 
 {% block CSS %}
     {{ parent() }}
